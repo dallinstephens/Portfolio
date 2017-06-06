@@ -114,3 +114,8 @@ $(document).ready(function(){
     $(".down-arrow").toggle();
   });
 });
+
+// This is used to load iframes faster.
+$(document).ready(function(){
+      $(".myiframe").attr("href", "pl/ng1/applications1.html");
+});
