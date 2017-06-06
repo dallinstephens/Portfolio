@@ -1,8 +1,27 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
-jQuery(function(){
-  TidbitGreybox("portrait");
-  $("#my-code").hide();
+$(document).ready(function(){
+	$("#targetElement").hide();
+    $("#applications1").mouseover(function(){
+        $("#targetElement").show();
+        TidbitGreybox("portrait");
+        $("#my-code").hide();
+
+        // This is used to initially hide "My Code" and put "My Result" underneath with full width. Then when the orientation button is clicked, "My Code" is put underneath "Primary Code Tidbit" and "My Result" is located on the right each with a smaller width. The symbol is changed back and forth when the orientation button is clicked.
+        $("#right-arrow").hide();
+        $(".orientation-button").click(function(){
+          $("#left-arrow").toggle();
+          $("#right-arrow").toggle();
+        });
+        $(".down-arrow").hide();
+        $(".tidbit-mycode-button").click(function(){
+          $(".up-arrow").toggle();
+          $(".down-arrow").toggle();
+        });
+
+        w3CodeColor();
+    });
 });
+
 // This makes it so the variable is global. Then in each function, I can define the variable type and have it change with each function.
 var type;
 
@@ -102,15 +121,15 @@ function resultBoxAreaAdjust() {
 }
 
 // This is used to initially hide "My Code" and put "My Result" underneath with full width. Then when the orientation button is clicked, "My Code" is put underneath "Primary Code Tidbit" and "My Result" is located on the right each with a smaller width. The symbol is changed back and forth when the orientation button is clicked.
-$(document).ready(function(){
-  $("#right-arrow").hide();
-  $(".orientation-button").click(function(){
-    $("#left-arrow").toggle();
-    $("#right-arrow").toggle();
-  });
-  $(".down-arrow").hide();
-  $(".tidbit-mycode-button").click(function(){
-    $(".up-arrow").toggle();
-    $(".down-arrow").toggle();
-  });
-});
+// $(document).ready(function(){
+//  $("#right-arrow").hide();
+//  $(".orientation-button").click(function(){
+//    $("#left-arrow").toggle();
+//    $("#right-arrow").toggle();
+//  });
+//  $(".down-arrow").hide();
+//  $(".tidbit-mycode-button").click(function(){
+//    $(".up-arrow").toggle();
+//    $(".down-arrow").toggle();
+//  });
+// });

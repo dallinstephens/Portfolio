@@ -17,17 +17,35 @@
 
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
+<script src="js/angular.min.js"></script>
+
 <script>
   function openPanel() {
       $("#myPanel").panel("open");
   }
 </script>
 
+<script>
+$(document).ready(function(){
+  var div = document.createElement('div');
+  div.setAttribute('class', 'someClass');
+  div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
+  document.getElementById('targetElement').appendChild(div);
+});
+</script>
+
+<script>
+// This code only works online. Paste the html files in the head section instead to work offline.
+  $.get('pl/ng1/applications1.html', function(data){
+    $("head").append(data);
+  });
+</script>
+
 </head>
 
 <body onload="openPanel()">
 
-<div data-role="page" id="pageone"  style="overflow-y:hidden !important;">
+<div data-role="page" id="pageone" style="overflow-y:hidden !important;">
 
   <div class="container" data-role="panel" id="myPanel" data-display="overlay" data-dismissible="false" data-position-fixed="true">
     <div>
@@ -38,7 +56,7 @@
           <ul class="panel-position-width">
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Applications</h4>
-                <li><a id="applications1" onmouseover="click();" href="pl/ng1/applications1.html" target="iframe_a">Applications: 1</a></li>
+                <li><a id="applications1">Applications: 1</a></li>
                 <li><a onmouseover="click();" href="pl/ng1/applications2.html" target="iframe_a">Applications: 2</a></li>
             </div>
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
@@ -146,7 +164,8 @@
 
   <div data-role="main" class="ui-content">
     <a style="font-size:75%; position:absolute; z-index:1; left:-5px; top:-5px; padding:0.3% !important; color: rgba(255, 0, 0, 0);" href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-mini transparent" data-swipe-close="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-    <iframe class="parent" style="position:absolute; z-index:0; left:0; top:0; width:100%; height:100%;" src="pl/start.html" name="iframe_a"></iframe>
+    <!-- <iframe class="parent" style="position:absolute; z-index:0; left:0; top:0; width:100%; height:100%;" src="pl/start.html" name="iframe_a"></iframe> -->
+    <div id="targetElement" class="red"></div>
   </div>
 
 </div>
@@ -163,8 +182,25 @@
 
 </script>
 
-</body>
+<script>
+setTimeout(function(){
+  var app = angular.module('myApp', []);
+  app.controller('nameController',
+  function($scope) {
+    $scope.firstName="George";
+    $scope.lastName="Washington";
+    alert("Hello");
+  });
+}, 8000);
+</script>
 
+<br><br><br>
+
+<!-- This script is needed so the code colors will work. -->
+<script src="js/w3codecolor.js"></script>
+<!-- The following code, <script>w3CodeColor();</script>, does not work here. Instead, I inserted the function w3CodeColor()  in pages.js so that the code colors will work.  -->
+
+</body>
 
 <!--
 <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
