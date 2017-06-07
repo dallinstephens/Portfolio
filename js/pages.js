@@ -1,7 +1,7 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
 var w3code;
 $(document).ready(function(){
-	$("#targetElement").show();
+	$("#targetElement").hide();
 
   $("#applications1").mouseover(function(){
     GreyboxPortrait();
