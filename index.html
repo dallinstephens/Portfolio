@@ -26,6 +26,7 @@ function openPanel() {
 </script>
 
 <script>
+// This only works online. It does not work offline.
 $(function(){
   $("#targetElement").load("pl/ng1/applications1.html");
 });
@@ -159,15 +160,6 @@ $(function(){
   </div>
 
 </div>
-
-<script>
-  var app = angular.module('myApp', []);
-  app.controller('nameController',
-  function($scope) {
-    $scope.firstName="George";
-    $scope.lastName="Washington";
-  });
-</script>
 
 <script>
 //var parent = $('.parent');
