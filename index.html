@@ -19,6 +19,8 @@
 
 <script src="js/pages.js"></script>
 
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+
 <script>
 function openPanel() {
     $("#myPanel").panel("open");
@@ -27,10 +29,10 @@ function openPanel() {
 
 <script>
 // This only works online. It does not work offline.
-$(function(){
-  $("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
-  $("#my-code-box").load("pl/ng1/applications1.mycode.html");
-});
+//$(function(){
+//  $("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
+//  $("#my-code-box").load("pl/ng1/applications1.mycode.html");
+//});
 </script>
 
 </head>
@@ -180,7 +182,7 @@ $(function(){
                 <span>&#8690;</span>
               </button>
             </div>
-<pre id="tidbit-box" class="white-box color-left-angularjs htmlHigh">
+<pre id="tidbit-box" class="white-box color-left-angularjs htmlHigh" w3-include-html="pl/ng1/applications1.tidbit.html">
 
 </pre>
           </div>
@@ -194,7 +196,7 @@ $(function(){
                 <span>&#8690;</span>
               </button>
             </div>
-<pre id="my-code-box" class="my-code-box white-box color-left-angularjs htmlHigh">
+<pre id="my-code-box" class="my-code-box white-box color-left-angularjs htmlHigh" w3-include-html="pl/ng1/applications1.mycode.html">
 
 </pre>
           </div>
