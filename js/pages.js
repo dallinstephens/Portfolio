@@ -18,6 +18,9 @@ $(document).ready(function(){
           $(".down-arrow").toggle();
         });
 
+        $("#my-code-box").removeClass("htmlHigh");
+        $("#my-code-box").addClass("htmlHigh");
+        w3CodeColor();
     });
 });
 
