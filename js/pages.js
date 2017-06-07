@@ -14,14 +14,26 @@ $(document).ready(function(){
     $("#right-arrow").hide();
     $("#left-arrow").show();
     $(".orientation-button").click(function(){
-      $("#left-arrow").toggle();
-      $("#right-arrow").toggle();
+      if ($("#left-arrow").is(":visible")) {
+        $("#left-arrow").hide();
+        $("#right-arrow").show();
+      }
+      else if ($("#left-arrow").is(":hidden")) {
+        $("#right-arrow").hide();
+        $("#left-arrow").show();
+      }
     });
     $(".down-arrow").hide();
     $(".up-arrow").show();
     $(".tidbit-mycode-button").click(function(){
-      $(".up-arrow").toggle();
-      $(".down-arrow").toggle();
+      if ($("#up-arrow").is(":visible")) {
+        $("#up-arrow").hide();
+        $("#down-arrow").show();
+      }
+      else if ($("#up-arrow").is(":hidden")) {
+        $("#down-arrow").hide();
+        $("#up-arrow").show();
+      }
     });
 
     if (w3code === undefined) {
