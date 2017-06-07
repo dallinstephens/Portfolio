@@ -224,12 +224,17 @@ $(function(){
 <script>
 $(document).ready(function(){
   document.getElementById('my-result-box').innerHTML = '<p>Try changing the first and last names.</p>' + '<div ng-app="myApp" ng-controller="nameController">' + '<table>' + '<tr>'  +
- '<td>First Name:</td>' + '<td><input type="text" ng-model="firstName"></td>' + '</tr>' + '<tr>' + '<td>Last Name:</td>' + '<td><input type="text" ng-model="lastName"></td>'  + '</tr>' + '</table>' + '<p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>' + '</div>' + '<script>' + 'var app = angular.module("myApp", []);' + 'app.controller("nameController",'  + 'function($scope) {' + '$scope.firstName="George";' + '$scope.lastName="Washington";' + '});' + '</script>';
- $compile( document.getElementById('my-result-box') )($scope);
+ '<td>First Name:</td>' + '<td><input type="text" ng-model="firstName"></td>' + '</tr>' + '<tr>' + '<td>Last Name:</td>' + '<td><input type="text" ng-model="lastName"></td>'  + '</tr>' + '</table>' + '<p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>' + '</div>';
+ $compile( document.getElementById('my-result-box') )(
+   var app = angular.module("myApp", []);
+   app.controller("nameController",
+   function($scope) {
+     $scope.firstName="George";
+     $scope.lastName="Washington";
+   });
+ );
 });
 </script>
-
-<script src ="js/applications1.js"></script>
 
 <script>
 //var parent = $('.parent');
