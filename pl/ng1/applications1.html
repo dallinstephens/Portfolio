@@ -109,14 +109,17 @@
   </div>
 </div>
 
-<div id="angularscript"></div>
+<div id="angularscript" class="htmlHigh">
+  &lt;script&gt;
+    var app = angular.module('myApp', []);
+    app.controller('nameController',
+    function($scope) {
+      $scope.firstName="George";
+      $scope.lastName="Washington";
+    });
+  &lt;/script&gt;
+</div>
 
 </div>
 
-</script>
-
-<script>
-  var scriptString = "var app=angular.module('myApp', []); app.controller('nameController', function($scope) {$scope.firstName='George'; $scope.lastName='Washington';});";
-
-  $(scriptString).appendTo('#angularscript');
 </script>
