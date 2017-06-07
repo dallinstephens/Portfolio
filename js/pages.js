@@ -26,13 +26,13 @@ $(document).ready(function(){
     $(".down-arrow").hide();
     $(".up-arrow").show();
     $(".tidbit-mycode-button").click(function(){
-      if ($("#up-arrow").is(":visible")) {
-        $("#up-arrow").hide();
-        $("#down-arrow").show();
+      if ($(".up-arrow").is(":visible")) {
+        $(".up-arrow").hide();
+        $(".down-arrow").show();
       }
-      else if ($("#up-arrow").is(":hidden")) {
-        $("#down-arrow").hide();
-        $("#up-arrow").show();
+      else if ($(".up-arrow").is(":hidden")) {
+        $(".down-arrow").hide();
+        $(".up-arrow").show();
       }
     });
 
