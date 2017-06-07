@@ -40,11 +40,6 @@ $(document).ready(function(){
   div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
   document.getElementById('targetElement').appendChild(div);
 });
-
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.src = "js/applications1.js";
-$("head").append(s);
 </script>
 
 </head>
@@ -62,7 +57,13 @@ $("head").append(s);
           <ul class="panel-position-width">
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Applications</h4>
-                <li><a id="applications1">Applications: 1</a></li>
+                <li><a id="applications1" onmouseover="function(){
+                  var app = angular.module('myApp', []);         app.controller('nameController',
+                function($scope) {
+                  $scope.firstName="George";
+                  $scope.lastName="Washington";
+                });
+}">Applications: 1</a></li>
                 <li><a onmouseover="click();" href="pl/ng1/applications2.html" target="iframe_a">Applications: 2</a></li>
             </div>
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
