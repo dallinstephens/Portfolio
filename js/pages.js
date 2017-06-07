@@ -2,10 +2,12 @@
 var w3codecolor;
 $(document).ready(function(){
 	$("#body").hide();
+  $("#applications1-myresult").hide();
 
   $("#applications1").mouseover(function(){
     GreyboxPortrait();
     $("#body").show();
+    $("#applications1-myresult").show();
     TidbitGreybox("portrait");
     $("#my-code").hide();
     $("#tidbit").show();
