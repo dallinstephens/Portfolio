@@ -14,8 +14,8 @@ $(document).ready(function(){
     $("#right-arrow").hide();
     $("#left-arrow").show();
     $(".orientation-button").click(function(){
-      $("#left-arrow").hide();
-      $("#right-arrow").show();
+      $("#left-arrow").toggle();
+      $("#right-arrow").toggle();
     });
     $(".down-arrow").hide();
     $(".up-arrow").show();
