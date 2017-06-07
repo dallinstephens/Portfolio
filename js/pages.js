@@ -3,7 +3,8 @@ var w3code;
 $(document).ready(function(){
 	$("#targetElement").hide();
     $("#applications1").mouseover(function(){
-        $("#targetElement").hide();
+        $('#targetElement').removeAttr('id');
+        $('#targetElement').addAttr('id');
         $("#targetElement").show();
         TidbitGreybox("portrait");
         $("#my-code").hide();
