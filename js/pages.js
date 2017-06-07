@@ -10,7 +10,7 @@ $(document).ready(function(){
     $("#applications1-myresult").show();
     TidbitGreybox("portrait");
     $("#my-code").hide();
-    $("#tidbit").show();
+    $("#tidbit").show(); w3codecolor = 3;
 
     if (w3codecolor === undefined) {
       w3codecolor = 1;
@@ -18,6 +18,21 @@ $(document).ready(function(){
     }
   });
 });
+
+// Load scripts
+function loadScript(url) {
+var head = document.getElementsByTagName('head')[0];
+var js = document.createElement("script");
+js.type = "text/javascript";
+js.src = url;
+head.appendChild(js);
+}
+
+var loadscript;
+
+if (loadscript === undefined) {
+	loadScript("js/applications1.js");
+}
 
 // This makes it so the variable is global. Then in each function, I can define the variable type and have it change with each function.
 var type;
