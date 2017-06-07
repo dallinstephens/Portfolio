@@ -1,4 +1,5 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
+var w3code;
 $(document).ready(function(){
 	$("#targetElement").hide();
     $("#applications1").mouseover(function(){
@@ -18,9 +19,10 @@ $(document).ready(function(){
           $(".down-arrow").toggle();
         });
 
-        $("#my-code-box").removeClass("htmlHigh");
-        $("#my-code-box").addClass("htmlHigh");
-        w3CodeColor();
+        if (w3code === undefined) {
+          w3code = 1;
+          w3CodeColor();
+        }
     });
 });
 
