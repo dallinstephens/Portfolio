@@ -30,7 +30,11 @@
 $.get('pl/ng1/applications1.html', function(data){
   $("head").append(data);
 });
-$.getScript("js/applications1.js");
+
+var s = document.createElement("script");
+s.type = "text/javascript";
+s.src = "js/applications1.js";
+$("head").append(s);
 </script>
 
 <script>
