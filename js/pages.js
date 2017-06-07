@@ -14,11 +14,12 @@ $(document).ready(function(){
       w3code = 1;
       w3CodeColor();
     }
+
+    var scriptString = "app.controller('nameController', function($scope) {$scope.firstName='George'; $scope.lastName='Washington';});";
+
+    $(scriptString).appendTo('#angularscript');
   });
 
-  var scriptString = "app.controller('nameController', function($scope) {$scope.firstName="George"; $scope.lastName="Washington";});";
-
-  $(scriptString).appendTo('#angularscript');
 });
 
 // This makes it so the variable is global. Then in each function, I can define the variable type and have it change with each function.
