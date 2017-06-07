@@ -1,11 +1,11 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
 var w3codecolor;
 $(document).ready(function(){
-	$("#targetElement").hide();
+	$("#body").hide();
 
   $("#applications1").mouseover(function(){
     GreyboxPortrait();
-    $("#targetElement").show();
+    $("#body").show();
     TidbitGreybox("portrait");
     $("#my-code").hide();
     $("#tidbit").show();

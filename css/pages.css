@@ -20,14 +20,14 @@ body.css3 {background:#ffe6e6;}
   padding:10px;
 }
 
-.header-angularjs, .color-angularjs {background:#00e6ac;}
+.header-angularjs, .color-angularjs, .ui-btn.color-angularjs {background:#00e6ac;}
 
 .header-css, .color-css {background:#b3b3ff;}
 
 .header-css3, .color-css3 {background:#ff9999;}
 
 /* Color of orientation button on hover and when pressed */
-.color-angularjs:hover {background:#00b386;}
+.color-angularjs:hover, .ui-btn.color-angularjs:hover {background:#00b386;}
 
 /* Color for left border for white-box */
 
@@ -294,9 +294,9 @@ button:focus {outline:none;}
 }
 
 /* Orientation Button and Tidbit/My Code Button */
-.orientation-button, .tidbit-mycode-button {
+.ui-btn.orientation-button, .ui-btn.tidbit-mycode-button {
   position:absolute;
-  top:-8px;
+  top:-18px;
   right:0;
   padding: 1px 0px;
   font-size: 20px;
@@ -312,9 +312,9 @@ button:focus {outline:none;}
   border-color: #e6e6e6;
 }
 
-.orientation-button:hover, .tidbit-mycode-button:hover {color: #fff;}
+.ui-btn.orientation-button:hover, .ui-btn.tidbit-mycode-button:hover {color: #fff;}
 
-.orientation-button:active, .tidbit-mycode-button:active {
+.ui-btn.orientation-button:active, .ui-btn.tidbit-mycode-button:active {
   box-shadow: 0 2px #777;
   transform: translateY(0.5px);
 }
