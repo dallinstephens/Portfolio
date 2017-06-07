@@ -13,7 +13,6 @@ $(document).ready(function(){
     if (w3code === undefined) {
       w3code = 1;
       w3CodeColor();
-      $.getScript("applications1.js");
     }
   });
 });
