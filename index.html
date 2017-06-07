@@ -39,10 +39,6 @@ $(document).ready(function(){
   div.setAttribute('class', 'someClass');
   div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
   document.getElementById('targetElement').appendChild(div);
-
-  var myScript = document.createElement('script');
-  myScript.innerHTML = document.getElementById('blockOfStuff2').innerHTML;
-  document.getElementById('targetElement2').appendChild(myScript);
 });
 </script>
 
@@ -171,10 +167,20 @@ $(document).ready(function(){
     <a style="font-size:75%; position:absolute; z-index:1; left:-5px; top:-5px; padding:0.3% !important; color: rgba(255, 0, 0, 0);" href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-mini transparent" data-swipe-close="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <!-- <iframe class="parent" style="position:absolute; z-index:0; left:0; top:0; width:100%; height:100%;" src="pl/start.html" name="iframe_a"></iframe> -->
     <div id="targetElement"></div>
-    <div id="targetElement2"></div>
   </div>
 
 </div>
+
+<script>
+  function angularScript() {
+    var app = angular.module('myApp', []);
+    app.controller('nameController',
+    function($scope) {
+      $scope.firstName="George";
+      $scope.lastName="Washington";
+    });
+  }
+</script>
 
 <script>
 //var parent = $('.parent');

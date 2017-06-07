@@ -14,6 +14,8 @@ $(document).ready(function(){
       w3code = 1;
       w3CodeColor();
     }
+
+    angularScript();
   });
 });
 
