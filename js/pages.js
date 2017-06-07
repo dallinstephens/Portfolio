@@ -13,7 +13,6 @@ $(document).ready(function(){
     if (w3codecolor === undefined) {
       w3codecolor = 1;
       w3CodeColor();
-      applications1();
     }
   });
 });

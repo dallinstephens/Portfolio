@@ -28,7 +28,9 @@ function openPanel() {
 <script>
 // This only works online. It does not work offline.
 $(function(){
-  $("#targetElement").load("pl/ng1/applications1.tidbit.html");
+  $("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
+  $("#my-code-box").load("pl/ng1/applications1.mycode.html");
+  $("#my-result-box").load("pl/ng1/applications1.myresult.html");
 });
 </script>
 
@@ -156,9 +158,67 @@ $(function(){
   <div data-role="main" class="ui-content">
     <a style="font-size:75%; position:absolute; z-index:1; left:-5px; top:-5px; padding:0.3% !important; color: rgba(255, 0, 0, 0);" href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-mini transparent" data-swipe-close="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <!-- <iframe class="parent" style="position:absolute; z-index:0; left:0; top:0; width:100%; height:100%;" src="pl/start.html" name="iframe_a"></iframe> -->
-    <div id="targetElement"></div>
-  </div>
+    <div id="body" class="angularjs">
 
+    <div class="header-angularjs">
+      <b>Applications: 1</b>
+    </div>
+
+    <div class="w3-style">
+      <p>INSERT HERE</p>
+      <i>Note: The above explanation was retrieved from w3schools.com.</i>
+    </div>
+
+      <div class="grey-box">
+        <div id="tidbit-mycode" class="tidbit-and-mycode">
+          <div id="tidbit">
+            <div class="tidbit-text-position">
+              <b>Primary Code Tidbit</b>
+              <button class="tidbit-mycode-button color-angularjs up-arrow" onclick="MyCodeGreybox();">
+                <span>&#8689;</span>
+              </button>
+              <button class="tidbit-mycode-button color-angularjs down-arrow" onclick="TidbitGreybox();">
+                <span>&#8690;</span>
+              </button>
+            </div>
+<pre id="tidbit-box" class="white-box color-left-angularjs htmlHigh">
+
+</pre>
+          </div>
+          <div id="my-code">
+            <div class="mycode-text-position">
+              <b>My Code</b>
+              <button class="tidbit-mycode-button color-angularjs up-arrow" onclick="MyCodeGreybox();">
+                <span>&#8689;</span>
+              </button>
+              <button class="tidbit-mycode-button color-angularjs down-arrow" onclick="TidbitGreybox();">
+                <span>&#8690;</span>
+              </button>
+            </div>
+<pre id="my-code-box" class="my-code-box white-box color-left-angularjs htmlHigh">
+
+</pre>
+          </div>
+        </div>
+        <div id="my-result" class="my-result">
+          <div class="myresult-text-position">
+            <b>My Result</b>
+            <button class="orientation-button color-angularjs" id="left-arrow" onclick="GreyboxLandscape();">
+              <span>&#8676;</span>
+            </button>
+            <button class="orientation-button color-angularjs" id="right-arrow" onclick="GreyboxPortrait();">
+              <span>&#8677;</span>
+            </button>
+          </div>
+          <div id="my-result-box" class="white-box color-left-angularjs">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </div>
 
 <script src ="js/applications1.js"></script>

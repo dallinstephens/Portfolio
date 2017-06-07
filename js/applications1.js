@@ -1,8 +1,6 @@
-function applications1() {
-  var app = angular.module('myApp', []);
-  app.controller('nameController',
-  function($scope) {
-    $scope.firstName="George";
-    $scope.lastName="Washington";
-  });
-}
+var app = angular.module('myApp', []);
+app.controller('nameController',
+function($scope) {
+  $scope.firstName="George";
+  $scope.lastName="Washington";
+});
