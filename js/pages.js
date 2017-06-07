@@ -5,40 +5,15 @@ $(document).ready(function(){
 
   $("#applications1").mouseover(function(){
     GreyboxPortrait();
-    if (w3code === undefined) {
-      $("#targetElement").show();
-      w3code = 1;
-      w3CodeColor();
-    }
+    $("#targetElement").show();
     TidbitGreybox("portrait");
     $("#my-code").hide();
     $("#tidbit").show();
 
-    // This is used to initially hide "My Code" and put "My Result" underneath with full width. Then when the orientation button is clicked, "My Code" is put underneath "Primary Code Tidbit" and "My Result" is located on the right each with a smaller width. The symbol is changed back and forth when the orientation button is clicked.
-    $("#right-arrow").hide();
-    $("#left-arrow").show();
-    $(".orientation-button").click(function(){
-      if ($("#left-arrow").is(":visible")) {
-        $("#left-arrow").hide();
-        $("#right-arrow").show();
-      }
-      else if ($("#left-arrow").is(":hidden")) {
-        $("#right-arrow").hide();
-        $("#left-arrow").show();
-      }
-    });
-    $(".down-arrow").hide();
-    $(".up-arrow").show();
-    $(".tidbit-mycode-button").click(function(){
-      if ($(".up-arrow").is(":visible")) {
-        $(".up-arrow").hide();
-        $(".down-arrow").show();
-      }
-      else if ($(".up-arrow").is(":hidden")) {
-        $(".down-arrow").hide();
-        $(".up-arrow").show();
-      }
-    });
+    if (w3code === undefined) {
+      w3code = 1;
+      w3CodeColor();
+    }
   });
 });
 
@@ -60,6 +35,8 @@ jQuery(document).ready(function() {
 
 // This function is used to adjust the grey-box height, tidbit-box height, and my-result-box height when "Primary Code Tidbit" and "My Result" are being shown in portrait mode.
 function GreyboxPortrait() {
+  $("#right-arrow").hide();
+  $("#left-arrow").show();
   mode = "portrait";
   $("#tidbit-mycode").removeClass("change-width").addClass("tidbit-and-mycode");
   $("#my-result").removeClass("change-display-and-width").addClass("my-result");
@@ -69,6 +46,8 @@ function GreyboxPortrait() {
 
 // This function is used to adjust the grey-box height when "Primary Code Tidbit" and "My Result" are being shown in landscape mode.
 function GreyboxLandscape() {
+  $("#left-arrow").hide();
+  $("#right-arrow").show();
   mode = "landscape";
   $("#tidbit-mycode").removeClass("tidbit-and-mycode").addClass("change-width");
   $("#my-result").removeClass("my-result").addClass("change-display-and-width");
@@ -78,6 +57,8 @@ function GreyboxLandscape() {
 
 // This function is used to adjust the grey-box height, my-code-box height, and my-result-box height when "My Code" and "My Result" are being shown in portrait mode.
 function TidbitGreybox(m) {
+  $(".down-arrow").hide();
+  $(".up-arrow").show();
   $("#my-code").hide();
   $("#tidbit").show();
 
@@ -105,6 +86,8 @@ function TidbitGreybox(m) {
 
 // This function is used to adjust the grey-box height, my-code-box height, and my-result-box height when "My Code" and "My Result" are being shown in portrait mode.
 function MyCodeGreybox(m) {
+  $(".up-arrow").hide();
+  $(".down-arrow").show();
   $("#tidbit").hide();
   $("#my-code").show();
   type = "mycode";
