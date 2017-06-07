@@ -5,16 +5,18 @@ $(document).ready(function(){
 
   $("#applications1").mouseover(function(){
     GreyboxPortrait();
-    $("#targetElement").show();
+    if (w3code === undefined) {
+      $("#targetElement").show();
+      w3code = 1;
+      w3CodeColor();
+    }
     TidbitGreybox("portrait");
     $("#my-code").hide();
     $("#tidbit").show();
 
     // This is used to initially hide "My Code" and put "My Result" underneath with full width. Then when the orientation button is clicked, "My Code" is put underneath "Primary Code Tidbit" and "My Result" is located on the right each with a smaller width. The symbol is changed back and forth when the orientation button is clicked.
     $("#right-arrow").hide();
-    $("#left-arrow").show(function(){
-      $("#left-arrow").is(":visible");
-    });
+    $("#left-arrow").show();
     $(".orientation-button").click(function(){
       if ($("#left-arrow").is(":visible")) {
         $("#left-arrow").hide();
@@ -26,9 +28,7 @@ $(document).ready(function(){
       }
     });
     $(".down-arrow").hide();
-    $(".up-arrow").show(function(){
-      $(".up-arrow").is(":visible");
-    });
+    $(".up-arrow").show();
     $(".tidbit-mycode-button").click(function(){
       if ($(".up-arrow").is(":visible")) {
         $(".up-arrow").hide();
@@ -39,11 +39,6 @@ $(document).ready(function(){
         $(".up-arrow").show();
       }
     });
-
-    if (w3code === undefined) {
-      w3code = 1;
-      w3CodeColor();
-    }
   });
 });
 
