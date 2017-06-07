@@ -18,7 +18,6 @@ $(document).ready(function(){
           $(".down-arrow").toggle();
         });
 
-        w3CodeColor();
     });
 });
 
