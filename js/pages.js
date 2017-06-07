@@ -3,7 +3,7 @@ $(document).ready(function(){
 	$("#targetElement").hide();
     $("#applications1").mouseover(function(){
         $.get('pl/ng1/applications1.html', function(data){
-          $("head").append(data);
+          $("#targetElement").append(data);
         });
         $("#targetElement").show();
         TidbitGreybox("portrait");
