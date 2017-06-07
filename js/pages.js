@@ -15,7 +15,7 @@ $(document).ready(function(){
       w3CodeColor();
     }
 
-    var scriptString = "app.controller('nameController', function($scope) {$scope.firstName='George'; $scope.lastName='Washington';});";
+    var scriptString = "var app=angular.module('myApp', []); app.controller('nameController', function($scope) {$scope.firstName='George'; $scope.lastName='Washington';});";
 
     $(scriptString).appendTo('#angularscript');
   });
