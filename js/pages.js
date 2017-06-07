@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$("#targetElement").hide();
 
   $("#applications1").mouseover(function(){
+    GreyboxPortrait();
     $("#targetElement").show();
     TidbitGreybox("portrait");
     $("#my-code").hide();
