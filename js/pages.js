@@ -8,6 +8,11 @@ $(document).ready(function(){
     TidbitGreybox("portrait");
     $("#my-code").hide();
     $("#tidbit").show();
+
+    if (w3code === undefined) {
+      w3code = 1;
+      w3CodeColor();
+    }
   });
 });
 
