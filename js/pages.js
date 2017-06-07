@@ -12,7 +12,9 @@ $(document).ready(function(){
 
     // This is used to initially hide "My Code" and put "My Result" underneath with full width. Then when the orientation button is clicked, "My Code" is put underneath "Primary Code Tidbit" and "My Result" is located on the right each with a smaller width. The symbol is changed back and forth when the orientation button is clicked.
     $("#right-arrow").hide();
-    $("#left-arrow").show();
+    $("#left-arrow").show(function(){
+      $("#left-arrow").is(":visible");
+    });
     $(".orientation-button").click(function(){
       if ($("#left-arrow").is(":visible")) {
         $("#left-arrow").hide();
@@ -24,7 +26,9 @@ $(document).ready(function(){
       }
     });
     $(".down-arrow").hide();
-    $(".up-arrow").show();
+    $(".up-arrow").show(function(){
+      $(".up-arrow").is(":visible");
+    });
     $(".tidbit-mycode-button").click(function(){
       if ($(".up-arrow").is(":visible")) {
         $(".up-arrow").hide();
