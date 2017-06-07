@@ -31,10 +31,6 @@ $.get('pl/ng1/applications1.html', function(data){
   $("head").append(data);
 });
 
-var s = document.createElement("script");
-s.type = "text/javascript";
-s.src = "js/applications1.js";
-$("head").append(s);
 </script>
 
 <script>
@@ -43,6 +39,11 @@ $(document).ready(function(){
   div.setAttribute('class', 'someClass');
   div.innerHTML = document.getElementById('blockOfStuff').innerHTML;
   document.getElementById('targetElement').appendChild(div);
+
+  var s = document.createElement("script");
+  s.type = "text/javascript";
+  s.src = "js/applications1.js";
+  $("head").append(s);
 });
 </script>
 
