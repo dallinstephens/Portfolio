@@ -227,11 +227,11 @@ $(document).ready(function(){
  '<div ng-app="myApp" ng-controller="nameController">'  +
  '<table>'  +
  '<tr>'  +
- '<td>First Name:</td>'  + '<td><input type="text" ng-model="firstName"></td>'  + '</tr>'  + '<tr>'  + '<td>Last Name:</td>'  + '<td><input type="text" ng-model="lastName"></td>'  + '</tr>'  + '</table>'  + '<p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>'  + '</div>';);
+ '<td>First Name:</td>'  + '<td><input type="text" ng-model="firstName"></td>'  + '</tr>'  + '<tr>'  + '<td>Last Name:</td>'  + '<td><input type="text" ng-model="lastName"></td>'  + '</tr>'  + '</table>'  + '<p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>'  + '</div>' + '<script>'  + 'var app = angular.module("myApp", []);' + 'app.controller("nameController",'  + 'function($scope) {'  + '$scope.firstName="George";' + '$scope.lastName="Washington";' + '});' + '</script>';);
 });
 </script>
 
-<script src ="js/applications1.js"></script>
+
 
 <script>
 //var parent = $('.parent');
