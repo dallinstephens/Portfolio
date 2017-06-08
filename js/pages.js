@@ -16,7 +16,7 @@ $(document).ready(function(){
 	});
 
   $(".item").mouseover(function(){
-		// There needs to be a ver slight delay after loading the html so the code get styled and the height loads correctly.
+		// There needs to be a very slight delay after loading the html so the code get styled and the height loads correctly.
 		setTimeout(function() {
 			GreyboxPortrait();
 			$("#body").show();
@@ -24,7 +24,7 @@ $(document).ready(function(){
 			$("#my-code").hide();
 			$("#tidbit").show();
 			w3CodeColor();
-		}, 10);
+		}, 50);
 
   });
 });
