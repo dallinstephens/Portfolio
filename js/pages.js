@@ -1,16 +1,14 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
 var w3codecolor;
 $(document).ready(function(){
-	$("#body").hide();
-
 	$("#applications1").mouseover(function(){
-
+		applications1();
 		$("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
 		$("#my-code-box").load("pl/ng1/applications1.mycode.html");
 	});
 
 	$("#applications2").mouseover(function(){
-
+		applications2();
 		$("#tidbit-box").load("pl/ng1/applications2.tidbit.html");
 		$("#my-code-box").load("pl/ng1/applications2.mycode.html");
 	});
@@ -27,7 +25,7 @@ $(document).ready(function(){
 			if (w3codecolor === undefined) {
 				w3CodeColor();
 			}
-		}, 1);
+		}, 200);
 
   });
 });
