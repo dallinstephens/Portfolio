@@ -5,13 +5,18 @@ $(document).ready(function(){
 	$("#applications1").mouseover(function(){
 		$("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
 		$("#my-code-box").load("pl/ng1/applications1.mycode.html");
-		myResult('applications1');
+
+		var s = document.createElement("script");
+		s.type = "text/javascript";
+		s.src = "js/ng1/applications1.myresult.js";
+		// Use any selector
+		$("head").append(s);
 	});
 
 	$("#applications2").mouseover(function(){
 		$("#tidbit-box").load("pl/ng1/applications2.tidbit.html");
 		$("#my-code-box").load("pl/ng1/applications2.mycode.html");
-		myResult('applications2');
+
 	});
 
   $(".item").mouseover(function(){
