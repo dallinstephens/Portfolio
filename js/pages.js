@@ -23,6 +23,9 @@ $(document).ready(function(){
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
+			if (w3codecolor === 'undefined')
+				w3CodeColor();
+			}
 		}, 200);
 
   });
@@ -55,7 +58,6 @@ jQuery(document).ready(function() {
 
 // This function is used to adjust the grey-box height, tidbit-box height, and my-result-box height when "Primary Code Tidbit" and "My Result" are being shown in portrait mode.
 function GreyboxPortrait() {
-	w3CodeColor();
   $("#right-arrow").hide();
   $("#left-arrow").show();
   mode = "portrait";
