@@ -1,4 +1,5 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
+var w3codecolor;
 $(document).ready(function(){
 	$("#body").hide();
 
@@ -22,7 +23,10 @@ $(document).ready(function(){
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
-			w3CodeColor();
+			if (w3codecolor === undefined) {
+	      w3codecolor = 1;
+	      w3CodeColor();
+	    }
 		}, 1);
   });
 });
