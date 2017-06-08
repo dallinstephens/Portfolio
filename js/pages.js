@@ -17,9 +17,9 @@ $(document).ready(function(){
 
   $(".item").mouseover(function(){
 		// There needs to be a very slight delay after loading the html so the code get styled and the height loads correctly.
+		$("#body").show();
 		setTimeout(function() {
 			GreyboxPortrait();
-			$("#body").show();
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
