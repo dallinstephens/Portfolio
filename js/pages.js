@@ -23,11 +23,8 @@ $(document).ready(function(){
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
-		}, 100);
-
-		setTimeout(function() {
 			w3CodeColor();
-		}, 100);
+		}, 1000);
 
   });
 });
