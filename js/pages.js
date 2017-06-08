@@ -23,7 +23,7 @@ $(document).ready(function(){
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
-		}, 100);
+		}, 1);
 
   });
 });
