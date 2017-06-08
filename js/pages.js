@@ -1,21 +1,29 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
-var w3codecolor;
 $(document).ready(function(){
 	$("#body").hide();
-  $("#applications1-myresult").hide();
 
-  $("#applications1").mouseover(function(){
-    GreyboxPortrait();
-    $("#body").show();
-    $("#applications1-myresult").show();
-    TidbitGreybox("portrait");
-    $("#my-code").hide();
-    $("#tidbit").show(); w3codecolor = 3;
+	$("#applications1").mouseover(function(){
+		$("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
+		$("#my-code-box").load("pl/ng1/applications1.mycode.html");
+		myResult('applications1');
+	});
 
-    if (w3codecolor === undefined) {
-      w3codecolor = 1;
-      w3CodeColor();
-    }
+	$("#applications2").mouseover(function(){
+		$("#tidbit-box").load("pl/ng1/applications2.tidbit.html");
+		$("#my-code-box").load("pl/ng1/applications2.mycode.html");
+		myResult('applications2');
+	});
+
+  $(".item").mouseover(function(){
+		// There needs to be a ver slight delay after loading the html so the code get styled and the height loads correctly.
+		setTimeout(function() {
+			GreyboxPortrait();
+			$("#body").show();
+			TidbitGreybox("portrait");
+			$("#my-code").hide();
+			$("#tidbit").show();
+			w3CodeColor();
+		}, 1);
   });
 });
 
@@ -26,12 +34,6 @@ var js = document.createElement("script");
 js.type = "text/javascript";
 js.src = url;
 head.appendChild(js);
-}
-
-var loadscript;
-
-if (loadscript === undefined) {
-	loadScript("js/applications1.js");
 }
 
 // This makes it so the variable is global. Then in each function, I can define the variable type and have it change with each function.
@@ -91,6 +93,7 @@ function TidbitGreybox(m) {
     $(".grey-box").css("height", 185+tidbitboxheight+myresultboxheight+"px");
   }
   else if (mode === "portrait"){
+		$("#tidbit-box").css("height", "");
     tidbitboxheight = $("#tidbit-box").height();
     $("#my-result-box").css("height", "");
     myresultboxheight = $("#my-result-box").height();

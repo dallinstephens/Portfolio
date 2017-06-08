@@ -1,0 +1,14 @@
+<style>
+  ul.disc {margin-left:20px; list-style-type: disc !important;}
+</style>
+
+<div ng-app="myGroceryList" ng-controller="controllerName">
+  <ul class="disc">
+    <li ng-repeat="x in foods">{{x}}<span style="color:red;" ng-click="removeItem($index)">&nbsp;x</span></li>
+  </ul>
+  <div style="width:300px;">
+    <input style="margin-left:20px; width:200px" ng-model="addFood" value="Type food you want to add"><button style="position:relative; margin-top:2px;" ng-click="addItem()" onclick="resultBoxAreaAdjust()">Add Food</button>
+  </div>
+  <p></p>
+  <p>Click the small red x to remove an item from the grocery list.</p>
+</div>
