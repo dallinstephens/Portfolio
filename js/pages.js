@@ -23,12 +23,9 @@ $(document).ready(function(){
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
+			w3CodeColor();
 		}, 1);
 
-		if (w3codecolor === undefined) {
-			w3codecolor = 1;
-			w3CodeColor();
-		}	
   });
 });
 
