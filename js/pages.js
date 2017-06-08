@@ -3,20 +3,15 @@ $(document).ready(function(){
 	$("#body").hide();
 
 	$("#applications1").mouseover(function(){
+		applications1();
 		$("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
 		$("#my-code-box").load("pl/ng1/applications1.mycode.html");
-
-		var s = document.createElement("script");
-		s.type = "text/javascript";
-		s.src = "js/ng1/applications1.myresult.js";
-		// Use any selector
-		$("head").append(s);
 	});
 
 	$("#applications2").mouseover(function(){
+		applications2();
 		$("#tidbit-box").load("pl/ng1/applications2.tidbit.html");
 		$("#my-code-box").load("pl/ng1/applications2.mycode.html");
-
 	});
 
   $(".item").mouseover(function(){
@@ -34,11 +29,11 @@ $(document).ready(function(){
 
 // Load scripts
 function loadScript(url) {
-var head = document.getElementsByTagName('head')[0];
-var js = document.createElement("script");
-js.type = "text/javascript";
-js.src = url;
-head.appendChild(js);
+	document.write('<' + 'script');
+	document.write(' language="javascript"');
+	document.write(' type="text/javascript"');
+	document.write(' src="' + url + '">');
+	document.write('</' + 'script' + '>');
 }
 
 // This makes it so the variable is global. Then in each function, I can define the variable type and have it change with each function.
