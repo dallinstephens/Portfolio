@@ -24,7 +24,7 @@ $(document).ready(function(){
 			$("#my-code").hide();
 			$("#tidbit").show();
 			w3CodeColor();
-		}, 1000);
+		}, 10);
 
   });
 });
