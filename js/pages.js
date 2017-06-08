@@ -4,22 +4,22 @@ $(document).ready(function(){
 	$("#body").hide();
 
 	$("#applications1").mouseover(function(){
-		applications1();
+
 		$("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
 		$("#my-code-box").load("pl/ng1/applications1.mycode.html");
 	});
 
 	$("#applications2").mouseover(function(){
-		applications2();
+
 		$("#tidbit-box").load("pl/ng1/applications2.tidbit.html");
 		$("#my-code-box").load("pl/ng1/applications2.mycode.html");
 	});
 
   $(".item").mouseover(function(){
 		// There needs to be a very slight delay after loading the html so the code get styled and the height loads correctly.
-		$("#body").show();
 		setTimeout(function() {
 			GreyboxPortrait();
+			$("#body").show();
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
