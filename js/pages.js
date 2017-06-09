@@ -1,6 +1,8 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
 var w3codecolor;
 $(document).ready(function(){
+	$("#body").hide();
+
 	// Prevent href from loading when a tag is clicked
 	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault();});
 
@@ -33,7 +35,7 @@ $(document).ready(function(){
 			if (w3codecolor === undefined) {
 				w3CodeColor();
 			}
-		}, 1);
+		}, 100);
 
 	});
 
