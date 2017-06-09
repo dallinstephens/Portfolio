@@ -1,9 +1,5 @@
-<style>
-  ul.disc {margin-left:20px; list-style-type: disc !important;}
-</style>
-
 <div ng-app="MyModuleB" ng-controller="MyControllerB">
-  <ul class="disc">
+  <ul style="margin-left:20px; list-style-type: disc !important;">
     <li ng-repeat="x in foods">{{x}}<span style="color:red;" ng-click="removeItem($index)">&nbsp;x</span></li>
   </ul>
   <div style="width:300px;">

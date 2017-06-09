@@ -38,7 +38,7 @@ $(document).ready(function(){
 
 <div data-role="page" id="pageone" style="overflow-y:hidden !important;">
 
-  <div class="container" data-role="panel" id="myPanel" data-display="overlay" data-dismissible="false" data-position-fixed="true">
+  <div id="myPanel" class="container" data-role="panel" data-display="overlay" data-dismissible="false" data-position-fixed="true">
     <div>
       <h2>Programming Languages</h2>
       <hr style="position: relative; top: -7px;">
@@ -47,8 +47,8 @@ $(document).ready(function(){
           <ul class="panel-position-width">
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Applications</h4>
-                <li><a id="applications1" class="item">Applications: 1</a></li>
-                <li><a id="applications2" class="item">Applications: 2</a></li>
+                <li><a href="pl/ng1/applications1.tidbit.html" class="item">Applications: 1</a></li>
+                <li><a href="pl/ng1/applications2.tidbit.html" class="item">Applications: 2</a></li>
             </div>
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Directives</h4>
@@ -209,8 +209,37 @@ $(document).ready(function(){
             </button>
           </div>
           <div id="my-result-box" class="white-box color-left-angularjs">
-            MY RESULT
-          </div>
+            <main id="my-result-code" ng-app="CombineModule">
+              <section ng-controller="MyControllerA" class="hide-code">
+                <p>Try changing the first and last names.</p>
+                <div ng-app="MyModuleA" ng-controller="MyControllerA">
+                  <table>
+                    <tr>
+                      <td>First Name:</td>
+                      <td><input type="text" ng-model="firstName"></td>
+                    </tr>
+                    <tr>
+                      <td>Last Name:</td>
+                      <td><input type="text" ng-model="lastName"></td>
+                    </tr>
+                  </table>
+                  <p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>
+                </div>
+              </section>
+              <section ng-controller="MyControllerB" class="hide-code">
+                <div ng-app="MyModuleB" ng-controller="MyControllerB">
+                  <ul style="margin-left:20px; list-style-type: disc !important;">
+                    <li ng-repeat="x in foods">{{x}}<span style="color:red;" ng-click="removeItem($index)">&nbsp;x</span></li>
+                  </ul>
+                  <div style="width:300px;">
+                    <input style="margin-left:20px; width:200px" ng-model="addFood" value="Type food you want to add"><button style="position:relative; margin-top:2px;" ng-click="addItem()" onclick="resultBoxAreaAdjust()">Add Food</button>
+                  </div>
+                  <p></p>
+                  <p>Click the small red x to remove an item from the grocery list.</p>
+                </div>
+              </section>
+            </main>
+          </div> <!-- End my-result-box -->
         </div>
       </div>
 
@@ -221,9 +250,9 @@ $(document).ready(function(){
 
 <br><br><br>
 
-<script src="js\angularjs.myresults.js"></script>
-
 <script src="js/pages.js"></script>
+
+<script src="js/angularjs.myresults.js"></script>
 
 <!-- This script is needed so the code colors will work. -->
 <script src="js/w3codecolor.js"></script>

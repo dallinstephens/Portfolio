@@ -2,17 +2,25 @@
 var w3codecolor;
 $(document).ready(function(){
 	$("#body").hide();
-	
-	$("#applications1").mouseover(function(){
-		applications1();
-		$("#tidbit-box").load("pl/ng1/applications1.tidbit.html");
-		$("#my-code-box").load("pl/ng1/applications1.mycode.html");
-	});
 
-	$("#applications2").mouseover(function(){
-		applications2();
-		$("#tidbit-box").load("pl/ng1/applications2.tidbit.html");
-		$("#my-code-box").load("pl/ng1/applications2.mycode.html");
+	// Used for loading my external hrefs upon mouseover
+	$('#myPanel').on('mouseover', 'a', function(event) {
+		// FOR TESTING PURPOSES: alert($(this).parent('li').index('li')+1);
+		event.preventDefault(); // This prevents loading the default href.
+		var href = $(this).attr('href'); // Stores href from a tag
+		var href_length_minus_12 = href.length-12; // href length minus .tidbit.html
+    var path = href.substr(0, href_length_minus_12); // href minus .tidbit.html
+		var tidbit_html = ".tidbit.html";
+		var tidbit_url = path.concat(tidbit_html); // Concatenates: path.tidbit.html
+		$("#tidbit-box").load(tidbit_url); // loads path.tidbit.html
+		var mycode_html = ".mycode.html";
+		var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
+		$("#my-code-box").load(mycode_url); // loads path.mycode.html
+
+		// In conjunction with class="hide-code" in angularjs.myresults.js
+		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
+			$(".hide-code").hide(); // This hides all result code.
+			$("#my-result-code section").eq($(this).parent('li').index('li')).show(); // This shows the current result code. Observe the tag 'section'.
 	});
 
   $(".item").mouseover(function(){

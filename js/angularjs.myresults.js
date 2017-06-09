@@ -19,14 +19,5 @@ function($scope) {
 
 angular.module("CombineModule", ["MyModuleA", "MyModuleB"]);
 
-document.getElementById("my-result-box").innerHTML = '<div ng-app="CombineModule"><div id="MyControllerA" ng-controller="MyControllerA"  ng-include="\'pl/ng1/applications1.myresult.html\'"></div><div id="MyControllerB" ng-controller="MyControllerB"  ng-include="\'pl/ng1/applications2.myresult.html\'"></div></div>';
-
-function applications1() {
-  $('#MyControllerB').hide();
-  $('#MyControllerA').show();
-}
-
-function applications2() {
-  $('#MyControllerA').hide();
-  $('#MyControllerB').show();
-}
+// The class="hide-code" is added to each result code so that all can be hidden except the current result code. This is in conjuction with javascript in pages.js.
+// document.getElementById("my-result-box").innerHTML = '<div id="my-result-code" ng-app="CombineModule"><div ng-controller="MyControllerA"  ng-include="\'pl/ng1/applications1.myresult.html\'" class="hide-code"></div><div ng-controller="MyControllerB"  ng-include="\'pl/ng1/applications2.myresult.html\'" class="hide-code"></div></div>';
