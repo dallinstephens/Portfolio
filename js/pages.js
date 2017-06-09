@@ -38,7 +38,6 @@ $(document).ready(function(){
 		}, 140);
 
 	});
-
 });
 
 // Load scripts
