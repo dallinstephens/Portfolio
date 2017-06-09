@@ -16,16 +16,18 @@ $(document).ready(function(){
 		var mycode_html = ".mycode.html";
 		var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
 		$("#my-code-box").load(mycode_url); // loads path.mycode.html
-
-		// In conjunction with class="hide-code" in angularjs.myresults.js
-		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
-			$(".hide-code").hide(); // This hides all result code.
-			$("#my-result-code section").eq($(this).parent('li').index('li')).show(); // This shows the current result code. Observe the tag 'section'.
 	});
 
-  $(".item").mouseover(function(){
-		// There needs to be a very slight delay after loading the html so the code gets styled and the height loads correctly.
+	// This is to prevent loading the href when clicking any a tag.
+	$('#myPanel').on('click', 'a', function(event) {event.preventDefault();});
 
+	$('#myPanel').on('mouseover', 'li', function() {
+		// In conjunction with class="hide-code" in angularjs.myresults.js
+		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
+		$(".hide-code").hide(); // This hides all result code.
+		$("#my-result-code section").eq($(this).parent('li').index('li')).show(); // This shows the current result code. Observe the tag 'section'.
+
+		// There needs to be a very slight delay after loading the html so the code gets styled and the height loads correctly.
 		setTimeout(function() {
 			GreyboxPortrait();
 			$("#body").show();
@@ -36,8 +38,8 @@ $(document).ready(function(){
 				w3CodeColor();
 			}
 		}, 200);
+	});
 
-  });
 });
 
 // Load scripts
