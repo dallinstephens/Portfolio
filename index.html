@@ -250,28 +250,7 @@ $(document).ready(function(){
 
 <br><br><br>
 
-<script>
-var moduleA = angular.module("MyModuleA", []);
-moduleA.controller("MyControllerA",
-function($scope) {
-  $scope.firstName="George";
-  $scope.lastName="Washington";
-});
-
-var moduleB = angular.module('MyModuleB', []);
-moduleB.controller('MyControllerB',
-function($scope) {
-  $scope.foods=["Egg Whites", "Greek Yogurt", "Clementites", "Boneless Chicken Breast"];
-  $scope.addItem = function () {
-    $scope.foods.push($scope.addFood);
-  };
-  $scope.removeItem = function (x) {
-    $scope.foods.splice(x, 1);
-  };
-});
-
-angular.module("CombineModule", ["MyModuleA", "MyModuleB"]);
-</script>
+<script src="js/angularjs.myresults.js"></script>
 
 <!-- This script is needed so the code colors will work. -->
 <script src="js/w3codecolor.js"></script>
