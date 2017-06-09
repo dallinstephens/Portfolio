@@ -35,7 +35,7 @@ $(document).ready(function(){
 			if (w3codecolor === undefined) {
 				w3CodeColor();
 			}
-		}, 150);
+		}, 130);
 
 	});
 
