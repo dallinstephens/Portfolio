@@ -17,7 +17,7 @@
 
 <script src="js/angular.min.js"></script>
 
-
+<script src="js/pages.js"></script>
 
 <script>
 function openPanel() {
@@ -250,8 +250,6 @@ $(document).ready(function(){
 
 <br><br><br>
 
-<script src="js/pages.js"></script>
-
 <script>
 var moduleA = angular.module("MyModuleA", []);
 moduleA.controller("MyControllerA",
@@ -275,11 +273,9 @@ function($scope) {
 angular.module("CombineModule", ["MyModuleA", "MyModuleB"]);
 </script>
 
-
-
 <!-- This script is needed so the code colors will work. -->
 <script src="js/w3codecolor.js"></script>
 <!-- The following code, <script>w3CodeColor();</script>, does not work here. Instead, I inserted the function w3CodeColor()  in pages.js so that the code styling colors will work.  -->
-<script>w3CodeColor();</script>
+
 </body>
 </html>
