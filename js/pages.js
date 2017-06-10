@@ -33,9 +33,9 @@ $(document).ready(function(){
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
-			if (w3codecolor === undefined) {
+
 				w3CodeColor();
-			}
+
 		}, 140);
 
 	});
