@@ -1,14 +1,13 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
 var w3codecolor;
 $(document).ready(function(){
-	$("#body").hide();
-
 	// Prevent href from loading when a tag is clicked
 	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault();});
 
 	// Used for loading my external hrefs upon mouseover
 	$('#myPanel').on('mouseover', 'li a', function(event) {
 		$(".parent").hide(); // Hides start.html in iframe
+		$("#body").show();
 		// Testing: use alert($(this).index('li a'));
 		var href = $(this).attr('href'); // Stores href from a tag
 		event.preventDefault(href); // This prevents loading the default href.
@@ -29,7 +28,6 @@ $(document).ready(function(){
 		// There needs to be a very slight delay after loading the html so the code gets styled and the height loads correctly.
 		setTimeout(function() {
 			GreyboxPortrait();
-			$("#body").show();
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
