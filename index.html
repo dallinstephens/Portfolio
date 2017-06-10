@@ -15,17 +15,6 @@
 
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
-<script>
-// This does not work offline on Chrome. However, it does work offline on Firefox.
-$(document).ready(function(){
-  $("#myPanel").panel("open");
-  setTimeout(function() {
-      $("#my-result-box").load("angularjs.myresults.html");
-      $('#body').hide();
-  }, 50);
-});
-</script>
-
 </head>
 
 <body>
@@ -215,6 +204,17 @@ $(document).ready(function(){
 </div>
 
 <br><br><br>
+
+<script>
+// This does not work offline on Chrome. However, it does work offline on Firefox.
+$(document).ready(function(){
+  $("#myPanel").panel("open");
+  setTimeout(function() {
+      $("#my-result-box").load("angularjs.myresults.html");
+      $('#body').hide();
+  }, 50);
+});
+</script>
 
 </body>
 </html>
