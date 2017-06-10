@@ -25,8 +25,9 @@ function openPanel() {
 // This does not work offline on Chrome. However, it does work offline on Firefox.
 $(document).ready(function(){
   setTimeout(function() {
-    $("#my-result-box").load("angularjs.myresults.html");
-  }, 1);
+      $("#my-result-box").load("angularjs.myresults.html");
+      $('#body').hide();
+  }, 100);
 });
 </script>
 
@@ -153,7 +154,7 @@ $(document).ready(function(){
 
   <div data-role="main" class="ui-content">
     <a style="font-size:75%; position:absolute; z-index:1; left:-5px; top:-5px; padding:0.3% !important; color: rgba(255, 0, 0, 0);" href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-mini transparent" data-swipe-close="true">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-    <!-- <iframe class="parent" style="position:absolute; z-index:0; left:0; top:0; width:100%; height:100%;" src="pl/start.html" name="iframe_a"></iframe> -->
+    <iframe class="parent" style="position:absolute; z-index:0; left:0; top:0; width:100%; height:100%;" src="start.html" name="iframe_a"></iframe>
     <div id="body" class="angularjs">
 
     <div class="header-angularjs">

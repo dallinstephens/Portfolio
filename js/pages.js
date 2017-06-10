@@ -8,6 +8,7 @@ $(document).ready(function(){
 
 	// Used for loading my external hrefs upon mouseover
 	$('#myPanel').on('mouseover', 'li a', function(event) {
+		$(".parent").hide();
 		// Testing: use alert($(this).index('li a'));
 		event.preventDefault(); // This prevents loading the default href.
 		var href = $(this).attr('href'); // Stores href from a tag
