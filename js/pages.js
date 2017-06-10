@@ -15,8 +15,15 @@ $(document).ready(function(){
 		var tidbit_html = ".tidbit.html";
 		var tidbit_url = path.concat(tidbit_html); // Concatenates: path.tidbit.html
 		$("#tidbit-box").load(tidbit_url, function() {
+			// There needs to be a very slight delay after loading the html so the height loads correctly.
+			GreyboxPortrait();
+			$("#body").show();
+			TidbitGreybox("portrait");
+			$("#my-code").hide();
+			$("#tidbit").show();
+			// loads path.tidbit.html and runs w3CodeColor after loading
 			w3CodeColor();
-		}); // loads path.tidbit.html and runs w3CodeColor after loading
+		});
 		var mycode_html = ".mycode.html";
 		var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
 		$("#my-code-box").load(mycode_url); // loads path.mycode.html
@@ -25,15 +32,6 @@ $(document).ready(function(){
 		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
 		$(".hide-code").hide(); // This hides all result code.
 		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
-
-		// There needs to be a very slight delay after loading the html so the code gets styled and the height loads correctly.
-		setTimeout(function() {
-			GreyboxPortrait();
-			$("#body").show();
-			TidbitGreybox("portrait");
-			$("#my-code").hide();
-			$("#tidbit").show();
-		}, 140);
 	});
 });
 
