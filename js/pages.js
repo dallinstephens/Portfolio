@@ -8,10 +8,10 @@ $(document).ready(function(){
 
 	// Used for loading my external hrefs upon mouseover
 	$('#myPanel').on('mouseover', 'li a', function(event) {
-		$(".parent").hide();
+		$(".parent").hide(); // Hides start.html in iframe
 		// Testing: use alert($(this).index('li a'));
-		event.preventDefault(); // This prevents loading the default href.
 		var href = $(this).attr('href'); // Stores href from a tag
+		event.preventDefault(href); // This prevents loading the default href.
 		var href_length_minus_12 = href.length-12; // href length minus .tidbit.html
     var path = href.substr(0, href_length_minus_12); // href minus .tidbit.html
 		var tidbit_html = ".tidbit.html";
