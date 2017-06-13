@@ -1,6 +1,3 @@
-// This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
-var w3codecolor;
-
 $(document).ready(function(){
 	// Prevent href from loading when a tag is clicked
 	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault();});
@@ -11,23 +8,44 @@ $(document).ready(function(){
 		// Testing: use alert($(this).index('li a'));
 		var href = $(this).attr('href'); // Stores href from a tag
 		event.preventDefault(href); // This prevents loading the default href.
-		var href_length_minus_12 = href.length-12; // href length minus .tidbit.html
-    var path = href.substr(0, href_length_minus_12); // href minus .tidbit.html
-		var tidbit_html = ".tidbit.html";
-		var tidbit_url = path.concat(tidbit_html); // Concatenates: path.tidbit.html
-		$("#tidbit-box").load(tidbit_url, function() {
-			// There needs to be a very slight delay after loading the html so the height loads correctly.
+
+		$("#topic-html").load(href);
+		setTimeout(function() {
+			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
+			var href_length_minus_12 = href.length-5-7; // href length minus the beginning part pl/ng1/ (7 characters) and minus the ending .html (4 characters)
+	    var topic = href.substr(7, href_length_minus_12); // href minus the beginning part pl/ng1/ (starts at character 7) and minus the ending .html
+
+			var topic_explanation = topic + ".explanation"; // Concatenates topic.explanation
+			var div_explanation = document.createElement('div');
+			div_explanation.innerHTML = document.getElementById(topic_explanation).innerHTML;
+			document.getElementById('explanation').innerHTML = "";
+			document.getElementById('explanation').appendChild(div_explanation);
+
+			var topic_tidbit = topic + ".tidbit"; // Concatenates topic.tidbit
+			var div_tidbit = document.createElement('div');
+			div_tidbit.innerHTML = document.getElementById(topic_tidbit).innerHTML;
+			document.getElementById('tidbit-box').innerHTML = "";
+			document.getElementById('tidbit-box').appendChild(div_tidbit);
+
+			var topic_mycode = topic + ".mycode"; // Concatenates topic.mycode
+			var div_mycode = document.createElement('div');
+			div_mycode.innerHTML = document.getElementById(topic_mycode).innerHTML;
+			document.getElementById('my-code-box').innerHTML = "";
+			document.getElementById('my-code-box').appendChild(div_mycode);
+
 			GreyboxPortrait();
 			$("#body").show();
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
+
 			// loads path.tidbit.html and runs w3CodeColor after loading
 			w3CodeColor();
-		});
-		var mycode_html = ".mycode.html";
-		var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
-		$("#my-code-box").load(mycode_url); // loads path.mycode.html
+		}, 1);
+		//});
+		//var mycode_html = ".mycode.html";
+		//var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
+		//$("#my-code-box").load(mycode_url); // loads path.mycode.html
 
 		// In conjunction with class="hide-code" in angularjs.myresults.js
 		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.

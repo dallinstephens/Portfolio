@@ -30,8 +30,8 @@
           <ul class="panel-position-width">
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Applications</h4>
-                <li><a href="pl/ng1/applications1.tidbit.html">Applications: 1</a></li>
-                <li><a href="pl/ng1/applications2.tidbit.html">Applications: 2</a></li>
+                <li><a href="pl/ng1/applications1.html">Applications: 1</a></li>
+                <li><a href="pl/ng1/applications2.html">Applications: 2</a></li>
             </div>
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Directives</h4>
@@ -135,6 +135,7 @@
     </div>
     <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close Menu</a>
     <br><br><br>
+    <div id="check"></div>
   </div>
 
   <div data-role="main" class="ui-content">
@@ -143,11 +144,11 @@
     <div id="body" class="angularjs" style="display:none;">
 
     <div class="header-angularjs">
-      <b>Applications: 1</b>
+      <b id="header">TOPIC</b>
     </div>
 
     <div class="w3-style">
-      <p>INSERT HERE</p>
+      <p id="explanation">EXPLANATION</p>
       <i>Note: The above explanation was retrieved from w3schools.com.</i>
     </div>
 
@@ -216,7 +217,11 @@ $(document).ready(function(){
 });
 </script>
 
+<div id="topic-html"></div>
+
 <script src="js/pages.js"></script>
 
+<script src="js/w3codecolor.js"></script>
+<script>w3CodeColor();</script>
 </body>
 </html>

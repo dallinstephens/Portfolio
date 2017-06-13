@@ -1,39 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script src="../../js/angular.min.js"></script>
-<link rel="stylesheet" href="../../css/pages.css">
-<script src="../../js/jquery-1.11.3.min.js"></script>
-<script src="../../js/pages.js"></script>
-<style>
-  ul.disc {margin-left:20px; list-style-type: disc !important;}
-</style>
-</head>
-<body class="angularjs">
+<!-- TOPIC -->
+<script>document.getElementById("header").innerHTML =
+"Applications: 2"
+</script>
 
-<div class="header-angularjs">
-  <b>Applications: 2</b>
-</div>
+<!-- EXPLANATION -->
+<script id="applications2.explanation" language="text">
+Make a Grocery List
+</script>
 
-<div class="w3-style">
-  <p>Make a Grocery List</p>
-  <i>Note: The above explanation was retrieved from w3schools.com.</i>
-</div>
-
-<div class="grey-box">
-  <div id="tidbit-mycode" class="tidbit-and-mycode">
-    <div id="tidbit">
-      <div class="tidbit-text-position">
-        <b>Primary Code Tidbit</b>
-        <button class="tidbit-mycode-button color-angularjs up-arrow" onclick="MyCodeGreybox();">
-          <span>&#8689;</span>
-        </button>
-        <button class="tidbit-mycode-button color-angularjs down-arrow" onclick="TidbitGreybox();">
-          <span>&#8690;</span>
-        </button>
-      </div>
-<pre id="tidbit-box" class="white-box color-left-angularjs htmlHigh">
-&lt;div ng-app=&quot;myGroceryList&quot; ng-controller=&quot;controllerName&quot;&gt;
+<!-- TIDBIT -->
+<script id="applications2.tidbit" language="text"
+>&lt;div ng-app=&quot;myGroceryList&quot; ng-controller=&quot;controllerName&quot;&gt;
   &lt;ul&gt;
     &lt;li ng-repeat=&quot;x in foods&quot;&gt;{{x}}&lt;span ng-click=&quot;removeItem($index)&quot;&gt;&amp;nbsp;x&lt;/span&gt;&lt;/li&gt;
   &lt;/ul&gt;
@@ -59,20 +36,40 @@
     }
   });
 &lt;/script&gt;
-</pre>
-    </div>
-    <div id="my-code">
-      <div class="mycode-text-position">
-        <b>My Code</b>
-        <button class="tidbit-mycode-button color-angularjs up-arrow" onclick="MyCodeGreybox();">
-          <span>&#8689;</span>
-        </button>
-        <button class="tidbit-mycode-button color-angularjs down-arrow" onclick="TidbitGreybox();">
-          <span>&#8690;</span>
-        </button>
-      </div>
-<pre id="my-code-box" class="my-code-box white-box color-left-angularjs htmlHigh">
-&lt;div ng-app=&quot;myGroceryList&quot; ng-controller=&quot;controllerName&quot;&gt;
+</script>
+
+<!-- TIDBIT: Unescaped String
+<div ng-app="myGroceryList" ng-controller="controllerName">
+  <ul>
+    <li ng-repeat="x in foods">{{x}}<span ng-click="removeItem($index)">&nbsp;x</span></li>
+  </ul>
+
+  <div>
+    <input ng-model="addFood" value="Type food you want to add">
+    <button ng-click="addItem()" onclick="resultBoxAreaAdjust()">Add Food</button>
+  </div>
+
+  <p>Click the small red x to remove an item from the grocery list.</p>
+</div>
+
+<script>
+  var app = angular.module('myGroceryList', []);
+  app.controller('controllerName',
+  function($scope) {
+    $scope.foods=["Egg Whites", "Greek Yogurt", "Clementites", "Boneless Chicken Breast"];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+</script>
+-->
+
+<!-- MY CODE -->
+<script id="applications2.mycode" language="text"
+>&lt;div ng-app=&quot;myGroceryList&quot; ng-controller=&quot;controllerName&quot;&gt;
 
   &lt;ul class=&quot;disc&quot;&gt;
     &lt;li ng-repeat=&quot;x in foods&quot;&gt;{{x}}&lt;span style=&quot;color:red;&quot; ng-click=&quot;removeItem($index)&quot;&gt;&amp;nbsp;x&lt;/span&gt;&lt;/li&gt;
@@ -97,35 +94,20 @@
     }
   });
 &lt;/script&gt;
-</pre>
-    </div>
-  </div>
-  <div id="my-result" class="my-result">
-    <div class="myresult-text-position">
-      <b>My Result</b>
-      <button class="orientation-button color-angularjs" id="left-arrow" onclick="GreyboxLandscape();">
-        <span>&#8676;</span>
-      </button>
-      <button class="orientation-button color-angularjs" id="right-arrow" onclick="GreyboxPortrait();">
-        <span>&#8677;</span>
-      </button>
-    </div>
-    <div id="my-result-box" class="white-box color-left-angularjs">
-      <div ng-app="myGroceryList" ng-controller="controllerName">
-        <ul class="disc">
-          <li ng-repeat="x in foods">{{x}}<span style="color:red;" ng-click="removeItem($index)">&nbsp;x</span></li>
-        </ul>
-        <div style="width:300px;">
-          <input style="margin-left:20px; width:200px" ng-model="addFood" value="Type food you want to add"><button style="position:relative; margin-top:2px;" ng-click="addItem()" onclick="resultBoxAreaAdjust()">Add Food</button>
-        </div>
-        <p></p>
-        <p>Click the small red x to remove an item from the grocery list.</p>
-      </div>
-    </div>
-  </div>
-</div>
+</script>
 
-<br><br><br>
+<!-- MY CODE: Unescaped String
+<div ng-app="myGroceryList" ng-controller="controllerName">
+
+  <ul class="disc">
+    <li ng-repeat="x in foods">{{x}}<span style="color:red;" ng-click="removeItem($index)">&nbsp;x</span></li>
+  </ul>
+
+  <input style="margin-left:20px; width: 200px" ng-model="addFood" value="Type food you want to add"><button ng-click="addItem()">Add Food</button>
+
+  <p>Click the small red x to remove an item from the grocery list.</p>
+
+</div>
 
 <script>
   var app = angular.module('myGroceryList', []);
@@ -140,8 +122,4 @@
     }
   });
 </script>
-
-<script src="../../js/w3codecolor.js"></script>
-<script>w3CodeColor();</script>
-</body>
-</html>
+-->
