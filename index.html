@@ -217,28 +217,28 @@
 // This does not work offline on Chrome. However, it does work offline on Firefox.
 $(document).ready(function(){
   $('.parent').load("start.html");
+
   $("#myPanel").panel("open");
   setTimeout(function() {
     $("#my-result-box").load("angularjs.myresults.html");
   }, 1000);
+
+  // Used for loading my external hrefs upon mouseover
+  $('#myPanel').on('mouseover', 'li a', function(event) {
+    $(".parent").hide(); // Hides start.html in iframe
+    var href = $(this).attr('href'); // Stores href from a tag
+    event.preventDefault(href); // This prevents loading the default href.
+
+    // This works online but does not work offline
+    $.get(href, function(data){
+      $("head").append(data);
+    });
+  });
+
 });
 </script>
 
 <div id="topic-html"></div>
-
-<script>
-// Used for loading my external hrefs upon mouseover
-$('#myPanel').on('mouseover', 'li a', function(event) {
-  $(".parent").hide(); // Hides start.html in iframe
-  var href = $(this).attr('href'); // Stores href from a tag
-  event.preventDefault(href); // This prevents loading the default href.
-
-  // This works online but does not work offline
-  $.get(href, function(data){
-    $("head").append(data);
-  });
-});
-</script>
 
 <script src="js/pages.js"></script>
 
