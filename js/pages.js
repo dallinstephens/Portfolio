@@ -16,7 +16,7 @@ $(document).ready(function(){
 			$("head").append(data);
 		});
 
-$("#body").show(function() {
+$("#body").show(function(href) {
 
 		//setTimeout(function() {
 			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
