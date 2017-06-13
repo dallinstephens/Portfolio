@@ -142,7 +142,7 @@
     </div>
     <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close Menu</a>
     <br><br><br>
-    <div id="check"></div>
+    <div id="checking"></div>
   </div>
 
   <div data-role="main" class="ui-content">
@@ -223,17 +223,18 @@ $(document).ready(function(){
     $("#my-result-box").load("angularjs.myresults.html");
   }, 1000);
 
-  // Used for loading my external hrefs upon mouseover
-  $('#myPanel').on('mouseover', 'li a', function(event) {
-    $(".parent").hide(); // Hides start.html in iframe
-    var href = $(this).attr('href'); // Stores href from a tag
-    event.preventDefault(href); // This prevents loading the default href.
+// Used for loading my external href: This works online but does not work offline. I use $("#topic-html").load(href); in pages.js to have html load offline in Firefox.
 
-    // This works online but does not work offline
-    $.get(href, function(data){
+  // This counts the number of a (or li) tags in index.html.
+  var aCount = document.getElementsByTagName('li').length;
+  var k;
+  for (k = 0; k < aCount; k++) {
+    myhref = $("#myPanel li a").eq(k).attr("href");
+
+    $.get(myhref, function(data){
       $("head").append(data);
     });
-  });
+  }
 
 });
 </script>
