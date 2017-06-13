@@ -50,6 +50,7 @@ $("#body").show(function(href) {
 			// loads path.tidbit.html and runs w3CodeColor after loading
 			w3CodeColor();
 		//}, 1);
+});		
 		//});
 		//var mycode_html = ".mycode.html";
 		//var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
@@ -61,7 +62,6 @@ $("#body").show(function(href) {
 		$(".hide-code").hide(); // This hides all result code.
 		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
 //}, 1);
-});
 	});
 });
 
