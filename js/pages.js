@@ -43,7 +43,7 @@ $(document).ready(function(){
 
 			// loads path.tidbit.html and runs w3CodeColor after loading
 			w3CodeColor();
-		}, 1);
+		}, 100);
 		//});
 		//var mycode_html = ".mycode.html";
 		//var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
@@ -51,9 +51,10 @@ $(document).ready(function(){
 
 		// In conjunction with class="hide-code" in angularjs.myresults.js
 		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
-
+setTimeout(function() {
 		$(".hide-code").hide(); // This hides all result code.
 		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+}, 1000);
 	});
 });
 
