@@ -9,16 +9,15 @@ $(document).ready(function(){
 		var href = $(this).attr('href'); // Stores href from a tag
 		event.preventDefault(href); // This prevents loading the default href.
 
-		$("#body").show();
+		// This works online but does not work offline
+		//$.get(href, function(data){
+			//$("head").append(data);
+		//});
 
 		// This works offline on Firefox but does not work online. I use $.get in the head section of index.html to get the load to work online.
-		$("#topic-html").load(href);
-
-		$.get(href, function(data){
-			$("head").append(data);
+		$("#topic-html").load(href, function(href) {
+			$("head").append(href);
 		});
-
-
 
 		setTimeout(function() {
 			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
@@ -42,7 +41,9 @@ $(document).ready(function(){
 			div_mycode.innerHTML = document.getElementById(topic_mycode).innerHTML;
 			document.getElementById('my-code-box').innerHTML = "";
 			document.getElementById('my-code-box').appendChild(div_mycode);
+
 			GreyboxPortrait();
+			$("#body").show();
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
@@ -50,7 +51,6 @@ $(document).ready(function(){
 			// loads path.tidbit.html and runs w3CodeColor after loading
 			w3CodeColor();
 		}, 1);
-
 		//});
 		//var mycode_html = ".mycode.html";
 		//var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
@@ -58,10 +58,9 @@ $(document).ready(function(){
 
 		// In conjunction with class="hide-code" in angularjs.myresults.js
 		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
-//setTimeout(function() {
+
 		$(".hide-code").hide(); // This hides all result code.
 		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
-//}, 1);
 	});
 });
 
