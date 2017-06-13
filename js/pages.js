@@ -38,17 +38,16 @@ $(document).ready(function(){
 			div_mycode.innerHTML = document.getElementById(topic_mycode).innerHTML;
 			document.getElementById('my-code-box').innerHTML = "";
 			document.getElementById('my-code-box').appendChild(div_mycode);
-
+setTimeout(function() {
 			GreyboxPortrait();
-		$("#body").show(function(href) {
+			$("#body").show();
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
 
 			// loads path.tidbit.html and runs w3CodeColor after loading
 			w3CodeColor();
-		//}, 1);
-	});
+		}, 1);
 });
 		//});
 		//var mycode_html = ".mycode.html";
