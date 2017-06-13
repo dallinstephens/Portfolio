@@ -16,8 +16,9 @@ $(document).ready(function(){
 			$("head").append(data);
 		});
 
+		$("#body").show();
+
 		setTimeout(function() {
-			$("#body").show();
 			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
 			var href_length_minus_12 = href.length-5-7; // href length minus the beginning part pl/ng1/ (7 characters) and minus the ending .html (4 characters)
 	    var topic = href.substr(7, href_length_minus_12); // href minus the beginning part pl/ng1/ (starts at character 7) and minus the ending .html
