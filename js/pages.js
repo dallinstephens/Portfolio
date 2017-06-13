@@ -16,8 +16,6 @@ $(document).ready(function(){
 			$("head").append(data);
 		});
 
-$("#body").show(function(href) {
-
 		//setTimeout(function() {
 			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
 			var href_length_minus_12 = href.length-5-7; // href length minus the beginning part pl/ng1/ (7 characters) and minus the ending .html (4 characters)
@@ -42,7 +40,7 @@ $("#body").show(function(href) {
 			document.getElementById('my-code-box').appendChild(div_mycode);
 
 			GreyboxPortrait();
-			//$("#body").show();
+		$("#body").show(function(href) {
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
@@ -50,7 +48,8 @@ $("#body").show(function(href) {
 			// loads path.tidbit.html and runs w3CodeColor after loading
 			w3CodeColor();
 		//}, 1);
-});		
+	});
+});
 		//});
 		//var mycode_html = ".mycode.html";
 		//var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
