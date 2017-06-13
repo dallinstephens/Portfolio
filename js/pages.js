@@ -1,5 +1,6 @@
 // This script runs the function the page loads. Initially, the "Primary Code Tidbit" is showing and the mode is in "portrait".
 var w3codecolor;
+
 $(document).ready(function(){
 	// Prevent href from loading when a tag is clicked
 	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault();});
@@ -30,19 +31,11 @@ $(document).ready(function(){
 
 		// In conjunction with class="hide-code" in angularjs.myresults.js
 		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
+
 		$(".hide-code").hide(); // This hides all result code.
 		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
 	});
 });
-
-// Load scripts
-function loadScript(url) {
-	document.write('<' + 'script');
-	document.write(' language="javascript"');
-	document.write(' type="text/javascript"');
-	document.write(' src="' + url + '">');
-	document.write('</' + 'script' + '>');
-}
 
 // This makes it so the variable is global. Then in each function, I can define the variable type and have it change with each function.
 var type;

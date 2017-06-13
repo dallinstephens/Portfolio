@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/pages.css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/angular.min.js"></script> <!-- Do not include this script in index.html or it will get messed up. -->
+</head>
+<body>
+
 <p>Try changing the first and last names.</p>
 <div ng-app="MyModuleA" ng-controller="MyControllerA">
   <table>
@@ -12,3 +21,14 @@
   </table>
   <p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>
 </div>
+
+<script src="js/pl/ng1/applications1.myresult.js"></script>
+
+<script src="js/pages.js"></script>
+
+<!-- This script is needed so the code colors will work. -->
+<script src="js/w3codecolor.js"></script>
+<script>w3CodeColor();</script>
+
+</body>
+</html>

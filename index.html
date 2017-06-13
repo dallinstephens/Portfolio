@@ -30,12 +30,12 @@
           <ul class="panel-position-width">
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Applications</h4>
-                <li><a href="pl/ng1/applications1.tidbit.html" class="item">Applications: 1</a></li>
-                <li><a href="pl/ng1/applications2.tidbit.html" class="item">Applications: 2</a></li>
+                <li><a href="pl/ng1/applications1.tidbit.html">Applications: 1</a></li>
+                <li><a href="pl/ng1/applications2.tidbit.html">Applications: 2</a></li>
             </div>
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Directives</h4>
-                <li><a onmouseover="click();" href="pl/ng1/directives1.html" target="iframe_a">Directives: 1</a></li>
+                <li><a href="pl/ng1/directives1.tidbit.html">Directives: 1</a></li>
                 <li><a onmouseover="click();" href="pl/ng1/directives2.html" target="iframe_a">Directives: 2</a></li>
                 <li><a onmouseover="click();" href="pl/ng1/directives3.html" target="iframe_a">Directives: 3</a></li>
                 <li><a onmouseover="click();" href="pl/ng1/directives4.html" target="iframe_a">Directives: 4</a></li>
@@ -194,7 +194,7 @@
           </div>
           <div id="my-result-box" class="white-box color-left-angularjs">
             MY RESULT
-          </div> <!-- End my-result-box -->
+          </div>
         </div>
       </div>
 
@@ -211,10 +211,12 @@ $(document).ready(function(){
   $('.parent').load("start.html");
   $("#myPanel").panel("open");
   setTimeout(function() {
-      $("#my-result-box").load("angularjs.myresults.html");
+    $("#my-result-box").load("angularjs.myresults.html");
   }, 1000);
 });
 </script>
+
+<script src="js/pages.js"></script>
 
 </body>
 </html>

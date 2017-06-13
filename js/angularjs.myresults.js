@@ -1,12 +1,12 @@
-var moduleA = angular.module("MyModuleA", []);
-moduleA.controller("MyControllerA",
+var module0 = angular.module("MyModule0", []);
+module0.controller("MyController0",
 function($scope) {
   $scope.firstName="George";
   $scope.lastName="Washington";
 });
 
-var moduleB = angular.module('MyModuleB', []);
-moduleB.controller('MyControllerB',
+var module1 = angular.module('MyModule1', []);
+module1.controller('MyController1',
 function($scope) {
   $scope.foods=["Egg Whites", "Greek Yogurt", "Clementites", "Boneless Chicken Breast"];
   $scope.addItem = function () {
@@ -17,7 +17,33 @@ function($scope) {
   };
 });
 
-angular.module("CombineModule", ["MyModuleA", "MyModuleB"]);
+var module2 = angular.module("MyModule2", []);
+module2.controller("MyController2",
+function() {
+  // No Controller Here
+});
 
-// The class="hide-code" is added to each result code so that all can be hidden except the current result code. This is in conjuction with javascript in pages.js.
-// document.getElementById("my-result-box").innerHTML = '<div id="my-result-code" ng-app="CombineModule"><div ng-controller="MyControllerA"  ng-include="\'pl/ng1/applications1.myresult.html\'" class="hide-code"></div><div ng-controller="MyControllerB"  ng-include="\'pl/ng1/applications2.myresult.html\'" class="hide-code"></div></div>';
+var module3 = angular.module('MyModule3', []);
+module3.controller('MyController3',
+function($scope) {
+  $scope.foods=["Egg Whites", "Greek Yogurt", "Clementites", "Boneless Chicken Breast"];
+  $scope.addItem = function () {
+    $scope.foods.push($scope.addFood);
+  };
+  $scope.removeItem = function (x) {
+    $scope.foods.splice(x, 1);
+  };
+});
+
+// This counts the number of section tags in angularjs.myresults.html.
+var sectionCount = document.getElementsByTagName('section').length;
+
+// For testing purposes: document.getElementById("righthere").innerHTML = sectionCount;
+
+// Creates angular.module("CombineModule", ["MyModule0", "MyModule1", "MyModule2", ...])
+MyModule = [];
+for (i = 0; i < sectionCount; i++) {
+    MyModule[i] = 'MyModule' + i;
+}
+
+angular.module("CombineModule", MyModule);
