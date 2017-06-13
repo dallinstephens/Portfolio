@@ -226,17 +226,17 @@ $(document).ready(function(){
 // Used for loading my external href: This works online but does not work offline. I use $("#topic-html").load(href); in pages.js to have html load offline in Firefox.
 
   // This counts the number of a (or li) tags in index.html.
-  var aCount = document.getElementsByTagName('li').length;
-  var k;
-  for (k = 0; k < aCount; k++) {
-    myhref = $("#myPanel li a").eq(k).attr("href");
+  //var aCount = document.getElementsByTagName('li').length;
+  //var k;
+  //for (k = 0; k < aCount; k++) {
+    //myhref = $("#myPanel li a").eq(k).attr("href");
 
-    $.get(myhref, function(data){
-      $("head").append(data);
-    });
-  }
+    //$.get(myhref, function(data){
+      //$("head").append(data);
+    //});
+  //}
 
-});
+//});
 </script>
 
 <div id="topic-html"></div>
