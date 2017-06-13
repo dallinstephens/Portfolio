@@ -50,7 +50,7 @@ $(document).ready(function(){
 			// loads path.tidbit.html and runs w3CodeColor after loading
 			w3CodeColor();
 		}, 1);
-});
+
 		//});
 		//var mycode_html = ".mycode.html";
 		//var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
