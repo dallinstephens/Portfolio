@@ -36,7 +36,7 @@ $(document).ready(function(){
 			document.getElementById('my-code-box').appendChild(div_mycode);
 
 			GreyboxPortrait();
-			$("#body").show();
+			//$("#body").show();
 			TidbitGreybox("portrait");
 			$("#my-code").hide();
 			$("#tidbit").show();
