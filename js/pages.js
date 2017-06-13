@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	// Used for loading my external hrefs upon mouseover
 	$('#myPanel').on('mouseover click', 'li a', function(event) {
-		$(this).trigger('click');
+		$(this).click();
 		$(".parent").hide(); // Hides start.html in iframe
 		// Testing: use alert($(this).index('li a'));
 		var href = $(this).attr('href'); // Stores href from a tag
