@@ -37,7 +37,7 @@
           <ul class="panel-position-width">
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
               <h4>Applications</h4>
-                <li><a href="pl/ng1/applications1.html">Applications: 1</a></li>
+                <li><a href="pl/ng1/applications1.html" onmouseover="loadhref('pl/ng1/applications1.html');">Applications: 1</a></li>
                 <li><a href="pl/ng1/applications2.html">Applications: 2</a></li>
             </div>
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
@@ -237,6 +237,15 @@ $(document).ready(function(){
   //}
 
 });
+</script>
+
+<script>
+// Used for loading my external href: This works online but does not work offline. I use $("#topic-html").load(href); in pages.js to have html load offline in Firefox.
+function loadhref(href) {
+  $.get(href, function(data){
+    $("head").append(data);
+  });
+}
 </script>
 
 <div id="topic-html"></div>

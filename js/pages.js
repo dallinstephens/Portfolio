@@ -9,14 +9,6 @@ $(document).ready(function(){
 		var href = $(this).attr('href'); // Stores href from a tag
 		event.preventDefault(href); // This prevents loading the default href.
 
-		// This works online but does not work offline
-		$.get(href, function(data){
-			$("head").append(data);
-		});
-		$.get(href, function(data){
-			$("head").append(data);
-		});
-
 		// This works offline on Firefox but does not work online. I use $.get in the head section of index.html to get the load to work online.
 		$("#topic-html").load(href);
 
