@@ -13,7 +13,7 @@ $(document).ready(function(){
 		$("#topic-html").load(href);
 		// This works online but does not work offline
 		$.get(href, function(data){
-			$("#topic-html").append(data);
+			$("head").append(data);
 		});
 		setTimeout(function() {
 			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
