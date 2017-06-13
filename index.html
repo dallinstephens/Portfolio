@@ -226,6 +226,20 @@ $(document).ready(function(){
 
 <div id="topic-html"></div>
 
+<script>
+// Used for loading my external hrefs upon mouseover
+$('#myPanel').on('mouseover', 'li a', function(event) {
+  $(".parent").hide(); // Hides start.html in iframe
+  var href = $(this).attr('href'); // Stores href from a tag
+  event.preventDefault(href); // This prevents loading the default href.
+
+  // This works online but does not work offline
+  $.get(href, function(data){
+    $("head").append(data);
+  });
+});
+</script>
+
 <script src="js/pages.js"></script>
 
 <script src="js/w3codecolor.js"></script>
