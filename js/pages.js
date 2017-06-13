@@ -9,12 +9,14 @@ $(document).ready(function(){
 		var href = $(this).attr('href'); // Stores href from a tag
 		event.preventDefault(href); // This prevents loading the default href.
 
-		// This works offline on Firefox but does not work online
-		$("#topic-html").load(href);
 		// This works online but does not work offline
 		$.get(href, function(data){
 			$("head").append(data);
 		});
+
+		// This works offline on Firefox but does not work online
+		$("#topic-html").load(href);
+
 		setTimeout(function() {
 			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
 			var href_length_minus_12 = href.length-5-7; // href length minus the beginning part pl/ng1/ (7 characters) and minus the ending .html (4 characters)
