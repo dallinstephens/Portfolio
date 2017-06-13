@@ -242,6 +242,7 @@ $(document).ready(function(){
 <script>
 // Used for loading my external href: This works online but does not work offline. I use $("#topic-html").load(href); in pages.js to have html load offline in Firefox.
 function loadhref(href) {
+  $("#body").show();
   $.get(href, function(data){
     $("head").append(data);
   });
