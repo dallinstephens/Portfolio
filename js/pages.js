@@ -17,8 +17,9 @@ $(document).ready(function(){
 		// This works offline on Firefox but does not work online. I use $.get in the head section of index.html to get the load to work online.
 		$("#topic-html").load(href);
 		$("head").append(href);
-		createHTML(href);
-
+		setTimeout(function() {
+			createHTML(href);
+		}, 1);
 		//});
 		//var mycode_html = ".mycode.html";
 		//var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
@@ -55,8 +56,9 @@ function createHTML(href) {
 	document.getElementById('my-code-box').innerHTML = "";
 	document.getElementById('my-code-box').appendChild(div_mycode);
 
-	GreyboxPortrait();
 	$("#body").show();
+
+	GreyboxPortrait();
 	TidbitGreybox("portrait");
 	$("#my-code").hide();
 	$("#tidbit").show();
