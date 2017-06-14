@@ -1,3 +1,10 @@
+// This variable is used to retain portait or landscape mode and tidbit or mycode depending on what the user selects.
+var keepstate;
+
+// This makes it so each variable is global. Then in each function, I can define the variable type and have it change with each function.
+var mode;
+var type;
+
 $(document).ready(function(){
 	// Prevent href from loading when a tag is clicked
 	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault();});
@@ -41,31 +48,43 @@ function createHTML(href) {
 	document.getElementById('my-code-box').innerHTML = "";
 	document.getElementById('my-code-box').appendChild(div_mycode);
 
-	GreyboxPortrait();
 	$("#body").show();
-	TidbitGreybox("portrait");
-	$("#my-code").hide();
-	$("#tidbit").show();
 
+	// These if statements are used only to retain user selection of portait or landscape mode and tidbit or mycode.
+	if (mode == "portrait" && type == "tidbit") {
+		TidbitGreybox("portrait");
+		$("#my-code").hide();
+		$("#tidbit").show();
+	}
+
+	else if (mode == "portrait" && type == "mycode") {
+		MyCodeGreybox("portrait");
+		$("#tidbit").hide();
+		$("#my-code").show();
+	}
+
+	else if (mode == "landscape" && type == "tidbit") {
+		TidbitGreybox("landscape");
+		$("#my-code").hide();
+		$("#tidbit").show();
+	}
+
+	else if (mode == "landscape" && type == "mycode") {
+		MyCodeGreybox("landscape");
+		$("#tidbit").hide();
+		$("#my-code").show();
+	}
+
+	else if (keepstate === undefined) {
+		GreyboxPortrait();
+		TidbitGreybox("portrait");
+		$("#my-code").hide();
+		$("#tidbit").show();
+		keepstate = 1;
+	}
 	// Runs w3CodeColor after loading
 	w3CodeColor();
 }
-
-// This makes it so the variable is global. Then in each function, I can define the variable type and have it change with each function.
-var type;
-
-// Sample on how to make two divs the same height. This code is not used, but is here for reference.
-
-jQuery(document).ready(function() {
-    var divone = jQuery("#sidebar").height();
-    var divtwo = jQuery("#gridview").height();
-
-    var maxdiv = Math.max(divone, divtwo);
-
-    jQuery("#sidebar").height(maxdiv);
-    jQuery("#gridview").height(maxdiv);
-
-});
 
 // This function is used to adjust the grey-box height, tidbit-box height, and my-result-box height when "Primary Code Tidbit" and "My Result" are being shown in portrait mode.
 function GreyboxPortrait() {
@@ -137,6 +156,7 @@ function MyCodeGreybox(m) {
     $(".grey-box").css("height", 185+mycodeboxheight+myresultboxheight+"px");
   }
   else if (mode === "portrait") {
+		$("#my-code-box").css("height", "");
     mycodeboxheight = $("#my-code-box").height();
     $("#my-result-box").css("height", "");
     myresultboxheight = $("#my-result-box").height();
@@ -158,16 +178,13 @@ function resultBoxAreaAdjust() {
   p.style.height = (-20+p.scrollHeight)+"px";
 }
 
-// This is used to initially hide "My Code" and put "My Result" underneath with full width. Then when the orientation button is clicked, "My Code" is put underneath "Primary Code Tidbit" and "My Result" is located on the right each with a smaller width. The symbol is changed back and forth when the orientation button is clicked.
-// $(document).ready(function(){
-//  $("#right-arrow").hide();
-//  $(".orientation-button").click(function(){
-//    $("#left-arrow").toggle();
-//    $("#right-arrow").toggle();
-//  });
-//  $(".down-arrow").hide();
-//  $(".tidbit-mycode-button").click(function(){
-//    $(".up-arrow").toggle();
-//    $(".down-arrow").toggle();
-//  });
-// });
+// Sample on how to make two divs the same height. This code is not used, but is here for reference.
+jQuery(document).ready(function() {
+    var divone = jQuery("#sidebar").height();
+    var divtwo = jQuery("#gridview").height();
+
+    var maxdiv = Math.max(divone, divtwo);
+
+    jQuery("#sidebar").height(maxdiv);
+    jQuery("#gridview").height(maxdiv);
+});
