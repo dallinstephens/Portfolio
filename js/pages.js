@@ -12,8 +12,8 @@ $(document).ready(function(){
 	// AngularJS V1: Used for loading my external hrefs upon mouseover
 	$('#ng1').on('mouseover', 'li a', function(event) {
 			// Add background color for specific programming language
-			$("#main").removeClass("ng2 css css3 html js");
-			$("#main").addClass("ng1");
+			$("#body").removeClass("ng2 css css3 html js");
+			$("#body").addClass("ng1");
 
 			// Left border color for white boxes
 			$(".white-box").removeClass("color-left-ng2 color-left-css color-left-css3 color-left-html color-left-js");
@@ -43,8 +43,8 @@ $(document).ready(function(){
 	// AngularJS V2: Used for loading my external hrefs upon mouseover
 	$('#ng2').on('mouseover', 'li a', function(event) {
 			// Add background color for specific programming language
-			$("#main").removeClass("ng1 css css3 html js");
-			$("#main").addClass("ng2");
+			$("#body").removeClass("ng1 css css3 html js");
+			$("#body").addClass("ng2");
 
 			// Left border color for white boxes
 			$(".white-box").removeClass("color-left-ng1 color-left-css color-left-css3 color-left-html color-left-js");
@@ -74,8 +74,8 @@ $(document).ready(function(){
 	// CSS: Used for loading my external hrefs upon mouseover
 	$('#css').on('mouseover', 'li a', function(event) {
 			// Add background page color for specific programming language
-			$("#main").removeClass("ng1 ng2 css3 html js");
-			$("#main").addClass("css");
+			$("#body").removeClass("ng1 ng2 css3 html js");
+			$("#body").addClass("css");
 
 			// Left border color for white boxes
 			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css3 color-left-html color-left-js");
@@ -105,8 +105,8 @@ $(document).ready(function(){
 	// CSS3: Used for loading my external hrefs upon mouseover
 	$('#css3').on('mouseover', 'li a', function(event) {
 			// Add background color for specific programming language
-			$("#main").removeClass("ng1 ng2 css html js");
-			$("#main").addClass("css3");
+			$("#body").removeClass("ng1 ng2 css html js");
+			$("#body").addClass("css3");
 
 			// Left border color for white boxes
 			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-html color-left-js");
@@ -136,8 +136,8 @@ $(document).ready(function(){
 	// HTML: Used for loading my external hrefs upon mouseover
 	$('#html').on('mouseover', 'li a', function(event) {
 			// Add background color for specific programming language
-			$("#main").removeClass("ng1 ng2 css css3 js");
-			$("#main").addClass("html");
+			$("#body").removeClass("ng1 ng2 css css3 js");
+			$("#body").addClass("html");
 
 			// Left border color for white boxes
 			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-css3 color-left-js");
@@ -167,8 +167,8 @@ $(document).ready(function(){
 	// JavaScript: Used for loading my external hrefs upon mouseover
 	$('#js').on('mouseover', 'li a', function(event) {
 			// Add background color for specific programming language
-			$("#main").removeClass("ng1 ng2 css css3 html");
-			$("#main").addClass("js");
+			$("#body").removeClass("ng1 ng2 css css3 html");
+			$("#body").addClass("js");
 
 			// Left border color for white boxes
 			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-css3 color-left-html");
