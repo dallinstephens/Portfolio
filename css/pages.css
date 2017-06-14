@@ -1,15 +1,14 @@
 /* body */
-.angularjs, body.css, body.css3 {position:relative; margin-left:290px; overflow-x:hidden;}
+.main {font-size:100%; position:absolute; padding-left:312px; top:0; width:100%; height:100%; overflow-x:hidden;}
 
-body.angularjs {background:#e6fff9;}
+.ng1 {background:#e6fff9;}
 
-body.css {background:#e6e6ff;}
+.css {background:#e6e6ff;}
 
-body.css3 {background:#ffe6e6;}
+.css3 {background:#ffe6e6;}
 
 /* Headers */
-
-.header-angularjs, .header-css, .header-css3 {
+.header {
   position:relative;
   top:0;
   margin:3px;
@@ -20,18 +19,17 @@ body.css3 {background:#ffe6e6;}
   padding:10px;
 }
 
-.header-angularjs, .color-angularjs, .ui-btn.color-angularjs {background:#00e6ac;}
+.header-ng1, .color-ng1, .ui-btn.color-ng1 {background:#00e6ac;}
 
 .header-css, .color-css {background:#b3b3ff;}
 
 .header-css3, .color-css3 {background:#ff9999;}
 
 /* Color of orientation button on hover and when pressed */
-.color-angularjs:hover, .ui-btn.color-angularjs:hover {background:#00b386;}
+.color-ng1:hover, .ui-btn.color-ng1:hover {background:#00b386;}
 
 /* Color for left border for white-box */
-
-.color-left-angularjs {border-left:7px solid #00e6ac;}
+.color-left-ng1 {border-left:7px solid #00e6ac;}
 
 .color-left-css {border-left:7px solid #b3b3ff;}
 
@@ -223,7 +221,7 @@ pre {
   padding-bottom:20px;
   width:1000px;
   font-family: Consolas,monospace;
-  font-size:80%;
+  font-size:90%;
 }
 
 /* Adjust Height of the Buttons */

@@ -17,13 +17,6 @@
 
 <script src="js/pages.js"></script>
 
-<script>
-// This code only works online. Paste the html files in the head section instead to work offline.
-//  $.get('pl/ng1/applications1.html', function(data){
-///   $("head").append(data);
-//  });
-</script>
-
 </head>
 
 <body>
@@ -34,7 +27,7 @@
     <div>
       <h2>Programming Languages</h2>
       <hr style="position: relative; top: -7px;">
-      <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
+      <div id="ng1" data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
         <h3>AngularJS V1</h3>
           <ul class="panel-position-width">
             <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b1">
@@ -81,7 +74,7 @@
             </div>
           </ul>
       </div>
-      <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
+      <div id="ng2" data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
        <h3>AngularJS V2</h3>
          <ul class="panel-position-width">
            <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b2">
@@ -90,7 +83,7 @@
            </div>
          </ul>
       </div>
-      <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
+      <div id="css" data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
        <h3>CSS</h3>
          <ul class="panel-position-width">
            <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b3">
@@ -105,7 +98,7 @@
            </div>
          </ul>
       </div>
-      <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
+      <div id="css3" data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
        <h3>CSS3</h3>
          <ul class="panel-position-width">
            <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b4">
@@ -123,7 +116,7 @@
            </div>
          </ul>
       </div>
-      <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
+      <div id="html" data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
        <h3>HTML</h3>
          <ul class="panel-position-width">
            <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b5">
@@ -132,7 +125,7 @@
            </div>
          </ul>
       </div>
-      <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
+      <div id="js" data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-a">
        <h3>JavaScript</h3>
          <ul class="panel-position-width">
            <div data-role="collapsible" data-collapsed-icon="true" data-expanded-icon="check" class="color-b b6">
@@ -147,12 +140,12 @@
     <div id="checking"></div>
   </div>
 
-  <div data-role="main" class="ui-content">
+  <div id="main" data-role="main" class="ui-content main">
     <a style="font-size:75%; position:absolute; z-index:1; left:2px; top:2px; padding:0.3% 0.5% !important; color:#000;" href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-mini transparent" data-swipe-close="true">+ Menu</a>
-    <div class="parent" style="font-size:90%; position:absolute; left:312px; top:0; width:100%; height:100%;" src=""></div>
-    <div id="body" class="angularjs" style="display:none;">
+    <div class="start" style="font-size:90%; position:absolute; left:312px; top:0; width:100%; height:100%;" src=""></div>
+    <div id="body" style="display:none;">
 
-    <div class="header-angularjs">
+    <div class="header header-ng1">
       <b id="header">TOPIC</b>
     </div>
 
@@ -166,28 +159,28 @@
           <div id="tidbit">
             <div class="tidbit-text-position">
               <b>Primary Code Tidbit</b>
-              <button class="tidbit-mycode-button color-angularjs up-arrow" onclick="MyCodeGreybox();">
+              <button class="tidbit-mycode-button color-ng1 up-arrow" onclick="MyCodeGreybox();">
                 <span>&#8689;</span>
               </button>
-              <button class="tidbit-mycode-button color-angularjs down-arrow" onclick="TidbitGreybox();">
+              <button class="tidbit-mycode-button color-ng1 down-arrow" onclick="TidbitGreybox();">
                 <span>&#8690;</span>
               </button>
             </div>
-            <pre id="tidbit-box" class="white-box color-left-angularjs htmlHigh">
+            <pre id="tidbit-box" class="white-box htmlHigh">
             PRIMARY CODE TIDBIT
             </pre>
           </div>
           <div id="my-code">
             <div class="mycode-text-position">
               <b>My Code</b>
-              <button class="tidbit-mycode-button color-angularjs up-arrow" onclick="MyCodeGreybox();">
+              <button class="tidbit-mycode-button color-ng1 up-arrow" onclick="MyCodeGreybox();">
                 <span>&#8689;</span>
               </button>
-              <button class="tidbit-mycode-button color-angularjs down-arrow" onclick="TidbitGreybox();">
+              <button class="tidbit-mycode-button color-ng1 down-arrow" onclick="TidbitGreybox();">
                 <span>&#8690;</span>
               </button>
             </div>
-            <pre id="my-code-box" class="my-code-box white-box color-left-angularjs htmlHigh">
+            <pre id="my-code-box" class="my-code-box white-box htmlHigh">
             MY CODE
             </pre>
           </div>
@@ -195,25 +188,22 @@
         <div id="my-result" class="my-result">
           <div class="myresult-text-position">
             <b>My Result</b>
-            <button class="orientation-button color-angularjs" id="left-arrow" onclick="GreyboxLandscape();">
+            <button class="orientation-button color-ng1" id="left-arrow" onclick="GreyboxLandscape();">
               <span>&#8676;</span>
             </button>
-            <button class="orientation-button color-angularjs" id="right-arrow" onclick="GreyboxPortrait();">
+            <button class="orientation-button color-ng1" id="right-arrow" onclick="GreyboxPortrait();">
               <span>&#8677;</span>
             </button>
           </div>
-          <div id="my-result-box" class="white-box color-left-angularjs">
+          <div id="my-result-box" class="white-box">
             MY RESULT
           </div>
         </div>
-      </div>
+      </div> <!-- End Grey Box -->
 
     </div>
-
-  </div>
+  </div> <!-- End Main Content -->
 </div>
-
-<br><br><br>
 
 <script>
 // This does not work offline on Chrome. However, it does work offline on Firefox.
@@ -222,8 +212,8 @@ $(document).ready(function(){
 
   $("#myPanel").panel("open");
   setTimeout(function() {
-    $("#blocks-html").load("angularjs.blocks.html");
-    $("#my-result-box").load("angularjs.myresults.html");
+    $("#blocks-html").load("pl/ng1/angularjs.blocks.html");
+    $("#my-result-box").load("pl/ng1/angularjs.myresults.html");
   }, 1000);
 
 });

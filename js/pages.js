@@ -9,20 +9,144 @@ $(document).ready(function(){
 	// Prevent href from loading when a tag is clicked
 	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault();});
 
-	// Used for loading my external hrefs upon mouseover
-	$('#myPanel').on('mouseover', 'li a', function(event) {
-		$(".parent").hide(); // Hides start.html in iframe
-		// Testing: use alert($(this).index('li a'));
-		var href = $(this).attr('href'); // Stores href from a tag
-		event.preventDefault(href); // This prevents loading the default href.
+	// AngularJS V1: Used for loading my external hrefs upon mouseover
+	$('#ng1').on('mouseover', 'li a', function(event) {
+			// Add background color for specific programming language
+			$("#main").removeClass("ng2 css css3 html js");
+			$("#main").addClass("ng1");
 
-		// In conjunction with class="hide-code" in angularjs.myresults.js
-		$(".hide-code").hide(); // This hides all result code.
-		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+			// Left border color for white boxes
+			$(".white-box").removeClass("color-left-ng2 color-left-css color-left-css3 color-left-html color-left-js");
+			$(".white-box").addClass("color-left-ng1");
 
-		createHTML(href);
+			// Testing: use alert($(this).index('li a'));
+			var href = $(this).attr('href'); // Stores href from a tag
+			event.preventDefault(href); // This prevents loading the default href.
 
+			$(".start").hide(); // Hides start.html
+
+			// In conjunction with class="hide-code" in angularjs.myresults.js
+			$(".hide-code").hide(); // This hides all result code.
+			$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+
+			createHTML(href);
 	});
+
+	// AngularJS V2: Used for loading my external hrefs upon mouseover
+	$('#ng2').on('mouseover', 'li a', function(event) {
+			// Add background color for specific programming language
+			$("#main").removeClass("ng1 css css3 html js");
+			$("#main").addClass("ng2");
+
+			// Left border color for white boxes
+			$(".white-box").removeClass("color-left-ng1 color-left-css color-left-css3 color-left-html color-left-js");
+			$(".white-box").addClass("color-left-ng2");
+
+			// Testing: use alert($(this).index('li a'));
+			var href = $(this).attr('href'); // Stores href from a tag
+			event.preventDefault(href); // This prevents loading the default href.
+
+			$(".start").hide(); // Hides start.html
+
+			// In conjunction with class="hide-code" in angularjs.myresults.js
+			$(".hide-code").hide(); // This hides all result code.
+			$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+
+			createHTML(href);
+	});
+
+	// CSS: Used for loading my external hrefs upon mouseover
+	$('#css').on('mouseover', 'li a', function(event) {
+			// Add background page color for specific programming language
+			$("#main").removeClass("ng1 ng2 css3 html js");
+			$("#main").addClass("css");
+
+			// Left border color for white boxes
+			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css3 color-left-html color-left-js");
+			$(".white-box").addClass("color-left-css");
+
+			// Testing: use alert($(this).index('li a'));
+			var href = $(this).attr('href'); // Stores href from a tag
+			event.preventDefault(href); // This prevents loading the default href.
+
+			$(".start").hide(); // Hides start.html
+
+			// In conjunction with class="hide-code" in angularjs.myresults.js
+			$(".hide-code").hide(); // This hides all result code.
+			$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+
+			createHTML(href);
+	});
+
+	// CSS3: Used for loading my external hrefs upon mouseover
+	$('#css3').on('mouseover', 'li a', function(event) {
+			// Add background color for specific programming language
+			$("#main").removeClass("ng1 ng2 css html js");
+			$("#main").addClass("css3");
+
+			// Left border color for white boxes
+			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-html color-left-js");
+			$(".white-box").addClass("color-left-css3");
+
+			// Testing: use alert($(this).index('li a'));
+			var href = $(this).attr('href'); // Stores href from a tag
+			event.preventDefault(href); // This prevents loading the default href.
+
+			$(".start").hide(); // Hides start.html
+
+			// In conjunction with class="hide-code" in angularjs.myresults.js
+			$(".hide-code").hide(); // This hides all result code.
+			$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+
+			createHTML(href);
+	});
+
+	// HTML: Used for loading my external hrefs upon mouseover
+	$('#html').on('mouseover', 'li a', function(event) {
+			// Add background color for specific programming language
+			$("#main").removeClass("ng1 ng2 css css3 js");
+			$("#main").addClass("html");
+
+			// Left border color for white boxes
+			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-css color-left-js");
+			$(".white-box").addClass("color-left-html");
+
+			// Testing: use alert($(this).index('li a'));
+			var href = $(this).attr('href'); // Stores href from a tag
+			event.preventDefault(href); // This prevents loading the default href.
+
+			$(".start").hide(); // Hides start.html
+
+			// In conjunction with class="hide-code" in angularjs.myresults.js
+			$(".hide-code").hide(); // This hides all result code.
+			$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+
+			createHTML(href);
+	});
+
+	// JavaScript: Used for loading my external hrefs upon mouseover
+	$('#js').on('mouseover', 'li a', function(event) {
+			// Add background color for specific programming language
+			$("#main").removeClass("ng1 ng2 css css3 html");
+			$("#main").addClass("js");
+
+			// Left border color for white boxes
+			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-css color-left-html");
+			$(".white-box").addClass("color-left-js");
+
+			// Testing: use alert($(this).index('li a'));
+			var href = $(this).attr('href'); // Stores href from a tag
+			event.preventDefault(href); // This prevents loading the default href.
+
+			$(".start").hide(); // Hides start.html
+
+			// In conjunction with class="hide-code" in angularjs.myresults.js
+			$(".hide-code").hide(); // This hides all result code.
+			$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+
+			createHTML(href);
+	});
+
 });
 
 function createHTML(href) {
