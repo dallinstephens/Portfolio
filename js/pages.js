@@ -30,6 +30,7 @@ $(document).ready(function(){
 
 		$(".hide-code").hide(); // This hides all result code.
 		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+		return false;
 	});
 });
 
