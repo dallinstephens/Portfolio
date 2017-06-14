@@ -15,11 +15,9 @@ $(document).ready(function(){
 		//});
 
 		// This works offline on Firefox but does not work online. I use $.get in the head section of index.html to get the load to work online.
-		$("#topic-html").load(href, function(href) {
-			$("head").append(href);
-		});
+		$("#topic-html").load(href);
 
-		setTimeout(function() {
+		setTimeout(function(href) {
 			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
 			var href_length_minus_12 = href.length-5-7; // href length minus the beginning part pl/ng1/ (7 characters) and minus the ending .html (4 characters)
 	    var topic = href.substr(7, href_length_minus_12); // href minus the beginning part pl/ng1/ (starts at character 7) and minus the ending .html
