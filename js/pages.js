@@ -9,28 +9,11 @@ $(document).ready(function(){
 		var href = $(this).attr('href'); // Stores href from a tag
 		event.preventDefault(href); // This prevents loading the default href.
 
-		// This works online but does not work offline
-		//$.get(href, function(data){
-			//$("head").append(data);
-		//});
-
+		// In conjunction with class="hide-code" in angularjs.myresults.js
 		$(".hide-code").hide(); // This hides all result code.
 		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
 
-		// This works offline on Firefox but does not work online. I use $.get in the head section of index.html to get the load to work online.
-		$("#topic-html").load(href);
-		$("head").append(href);
-		setTimeout(function() {
-			createHTML(href);
-		}, 1);
-		//});
-		//var mycode_html = ".mycode.html";
-		//var mycode_url = path.concat(mycode_html); // Concatenates: path.mycode.html
-		//$("#my-code-box").load(mycode_url); // loads path.mycode.html
-
-		// In conjunction with class="hide-code" in angularjs.myresults.js
-		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
-
+		createHTML(href);
 
 	});
 });
@@ -58,9 +41,8 @@ function createHTML(href) {
 	document.getElementById('my-code-box').innerHTML = "";
 	document.getElementById('my-code-box').appendChild(div_mycode);
 
-	$("#body").show();
-
 	GreyboxPortrait();
+	$("#body").show();
 	TidbitGreybox("portrait");
 	$("#my-code").hide();
 	$("#tidbit").show();

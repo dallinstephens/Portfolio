@@ -1,0 +1,235 @@
+<!-- ----------------------- APPLICATIONS: 1 ------------------------------ -->
+
+<!-- TOPIC -->
+<script>document.getElementById("header").innerHTML =
+"Applications: 1"
+</script>
+
+<!-- EXPLANATION -->
+<script id="applications1.explanation" language="text">
+This is about...
+</script>
+
+<!-- TIDBIT -->
+<script id="applications1.tidbit" language="text"
+>&lt;div ng-app="myApp" ng-controller="nameController"&gt;
+  &lt;input type="text" ng-model="firstName"&gt;
+  &lt;input type="text" ng-model="lastName"&gt;
+  &lt;p&gt;Example Sentence:
+  &lt;span style="color:red;"&gt;
+  {{"My name is " + firstName + " " + lastName + "."}}
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module('myApp', []);
+  app.controller('nameController',
+  function($scope) {
+    $scope.firstName="George";
+    $scope.lastName="Washington";
+  });
+&lt;/script&gt;
+</script>
+
+<!-- TIDBIT: Unescaped String
+<div ng-app="myApp" ng-controller="nameController">
+  <input type="text" ng-model="firstName">
+  <input type="text" ng-model="lastName">
+  <p>Example Sentence:
+  <span style="color:red;">
+  {{"My name is " + firstName + " " + lastName + "."}}
+  </span>
+  </p>
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('nameController',
+  function($scope) {
+    $scope.firstName="George";
+    $scope.lastName="Washington";
+  });
+</script>
+-->
+
+<!-- MY CODE -->
+<script id="applications1.mycode" language="text"
+>&lt;p&gt;Try changing the first and last names.&lt;/p&gt;
+&lt;div ng-app=&quot;myApp&quot; ng-controller=&quot;nameController&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;First Name:&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Last Name:&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;p&gt;Example Sentence: &lt;span style=&quot;color:red;&quot;&gt;{{&quot;My name is &quot; + firstName + &quot; &quot; + lastName + &quot;.&quot;}}&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module(&apos;myApp&apos;, []);
+  app.controller(&apos;nameController&apos;,
+  function($scope) {
+    $scope.firstName=&quot;George&quot;;
+    $scope.lastName=&quot;Washington&quot;;
+  });
+&lt;/script&gt;
+</script>
+
+<!-- MY CODE: Unescaped String
+<p>Try changing the first and last names.</p>
+<div ng-app="myApp" ng-controller="nameController">
+  <table>
+    <tr>
+      <td>First Name:</td>
+      <td><input type="text" ng-model="firstName"></td>
+    </tr>
+    <tr>
+      <td>Last Name:</td>
+      <td><input type="text" ng-model="lastName"></td>
+    </tr>
+  </table>
+  <p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('nameController',
+  function($scope) {
+    $scope.firstName="George";
+    $scope.lastName="Washington";
+  });
+</script>
+-->
+
+<!-- ----------------------- APPLICATIONS: 2 ------------------------------ -->
+
+<!-- TOPIC -->
+<script>document.getElementById("header").innerHTML =
+"Applications: 2"
+</script>
+
+<!-- EXPLANATION -->
+<script id="applications2.explanation" language="text">
+Make a Grocery List
+</script>
+
+<!-- TIDBIT -->
+<script id="applications2.tidbit" language="text"
+>&lt;div ng-app=&quot;myGroceryList&quot; ng-controller=&quot;controllerName&quot;&gt;
+  &lt;ul&gt;
+    &lt;li ng-repeat=&quot;x in foods&quot;&gt;{{x}}&lt;span ng-click=&quot;removeItem($index)&quot;&gt;&amp;nbsp;x&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div&gt;
+    &lt;input ng-model=&quot;addFood&quot; value=&quot;Type food you want to add&quot;&gt;
+    &lt;button ng-click=&quot;addItem()&quot; onclick=&quot;resultBoxAreaAdjust()&quot;&gt;Add Food&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;p&gt;Click the small red x to remove an item from the grocery list.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module(&apos;myGroceryList&apos;, []);
+  app.controller(&apos;controllerName&apos;,
+  function($scope) {
+    $scope.foods=[&quot;Egg Whites&quot;, &quot;Greek Yogurt&quot;, &quot;Clementites&quot;, &quot;Boneless Chicken Breast&quot;];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+&lt;/script&gt;
+</script>
+
+<!-- TIDBIT: Unescaped String
+<div ng-app="myGroceryList" ng-controller="controllerName">
+  <ul>
+    <li ng-repeat="x in foods">{{x}}<span ng-click="removeItem($index)">&nbsp;x</span></li>
+  </ul>
+
+  <div>
+    <input ng-model="addFood" value="Type food you want to add">
+    <button ng-click="addItem()" onclick="resultBoxAreaAdjust()">Add Food</button>
+  </div>
+
+  <p>Click the small red x to remove an item from the grocery list.</p>
+</div>
+
+<script>
+  var app = angular.module('myGroceryList', []);
+  app.controller('controllerName',
+  function($scope) {
+    $scope.foods=["Egg Whites", "Greek Yogurt", "Clementites", "Boneless Chicken Breast"];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+</script>
+-->
+
+<!-- MY CODE -->
+<script id="applications2.mycode" language="text"
+>&lt;div ng-app=&quot;myGroceryList&quot; ng-controller=&quot;controllerName&quot;&gt;
+
+  &lt;ul class=&quot;disc&quot;&gt;
+    &lt;li ng-repeat=&quot;x in foods&quot;&gt;{{x}}&lt;span style=&quot;color:red;&quot; ng-click=&quot;removeItem($index)&quot;&gt;&amp;nbsp;x&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;input style=&quot;margin-left:20px; width: 200px&quot; ng-model=&quot;addFood&quot; value=&quot;Type food you want to add&quot;&gt;&lt;button ng-click=&quot;addItem()&quot;&gt;Add Food&lt;/button&gt;
+
+  &lt;p&gt;Click the small red x to remove an item from the grocery list.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module(&apos;myGroceryList&apos;, []);
+  app.controller(&apos;controllerName&apos;,
+  function($scope) {
+    $scope.foods=[&quot;Egg Whites&quot;, &quot;Greek Yogurt&quot;, &quot;Clementites&quot;, &quot;Boneless Chicken Breast&quot;];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+&lt;/script&gt;
+</script>
+
+<!-- MY CODE: Unescaped String
+<div ng-app="myGroceryList" ng-controller="controllerName">
+
+  <ul class="disc">
+    <li ng-repeat="x in foods">{{x}}<span style="color:red;" ng-click="removeItem($index)">&nbsp;x</span></li>
+  </ul>
+
+  <input style="margin-left:20px; width: 200px" ng-model="addFood" value="Type food you want to add"><button ng-click="addItem()">Add Food</button>
+
+  <p>Click the small red x to remove an item from the grocery list.</p>
+
+</div>
+
+<script>
+  var app = angular.module('myGroceryList', []);
+  app.controller('controllerName',
+  function($scope) {
+    $scope.foods=["Egg Whites", "Greek Yogurt", "Clementites", "Boneless Chicken Breast"];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+</script>
+-->
