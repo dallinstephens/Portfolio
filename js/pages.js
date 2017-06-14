@@ -16,6 +16,7 @@ $(document).ready(function(){
 
 		// This works offline on Firefox but does not work online. I use $.get in the head section of index.html to get the load to work online.
 		$("#topic-html").load(href);
+		$("head").append(href);
 
 		setTimeout(function() {
 			// There needs to be a very slight delay after loading the html so the height and w3 color loads correctly.
