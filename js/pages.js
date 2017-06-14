@@ -14,6 +14,9 @@ $(document).ready(function(){
 			//$("head").append(data);
 		//});
 
+		$(".hide-code").hide(); // This hides all result code.
+		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
+
 		// This works offline on Firefox but does not work online. I use $.get in the head section of index.html to get the load to work online.
 		$("#topic-html").load(href);
 		$("head").append(href);
@@ -28,9 +31,7 @@ $(document).ready(function(){
 		// In conjunction with class="hide-code" in angularjs.myresults.js
 		// There needs to be a delay so that document.getElementById("my-result-box").innerHTML can get loaded before applying this code.
 
-		$(".hide-code").hide(); // This hides all result code.
-		$("#my-result-code section").eq($(this).index('li a')).show(); // This shows the current result code. Observe the tag 'section'.
-		return false;
+
 	});
 });
 
