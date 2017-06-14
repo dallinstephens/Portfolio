@@ -19,6 +19,14 @@ $(document).ready(function(){
 			$(".white-box").removeClass("color-left-ng2 color-left-css color-left-css3 color-left-html color-left-js");
 			$(".white-box").addClass("color-left-ng1");
 
+			// Header Color
+			$(".header").removeClass("header-ng2 header-css header-css3 header-html header-js");
+			$(".header").addClass("header-ng1");
+
+			// Button Color
+			$(".button-status").removeClass("color-ng2 color-css color-css3 color-html color-js");
+			$(".button-status").addClass("color-ng1");
+
 			// Testing: use alert($(this).index('li a'));
 			var href = $(this).attr('href'); // Stores href from a tag
 			event.preventDefault(href); // This prevents loading the default href.
@@ -41,6 +49,14 @@ $(document).ready(function(){
 			// Left border color for white boxes
 			$(".white-box").removeClass("color-left-ng1 color-left-css color-left-css3 color-left-html color-left-js");
 			$(".white-box").addClass("color-left-ng2");
+
+			// Header Color
+			$(".header").removeClass("header-ng1 header-css header-css3 header-html header-js");
+			$(".header").addClass("header-ng2");
+
+			// Button Color
+			$(".button-status").removeClass("color-ng1 color-css color-css3 color-html color-js");
+			$(".button-status").addClass("color-ng2");
 
 			// Testing: use alert($(this).index('li a'));
 			var href = $(this).attr('href'); // Stores href from a tag
@@ -65,6 +81,14 @@ $(document).ready(function(){
 			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css3 color-left-html color-left-js");
 			$(".white-box").addClass("color-left-css");
 
+			// Header Color
+			$(".header").removeClass("header-ng1 header-ng2 header-css3 header-html header-js");
+			$(".header").addClass("header-css");
+
+			// Button Color
+			$(".button-status").removeClass("color-ng1 color-ng2 color-css3 color-html color-js");
+			$(".button-status").addClass("color-css");
+
 			// Testing: use alert($(this).index('li a'));
 			var href = $(this).attr('href'); // Stores href from a tag
 			event.preventDefault(href); // This prevents loading the default href.
@@ -88,6 +112,14 @@ $(document).ready(function(){
 			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-html color-left-js");
 			$(".white-box").addClass("color-left-css3");
 
+			// Header Color
+			$(".header").removeClass("header-ng1 header-ng2 header-css header-html header-js");
+			$(".header").addClass("header-css3");
+
+			// Button Color
+			$(".button-status").removeClass("color-ng1 color-ng2 color-css color-html color-js");
+			$(".button-status").addClass("color-css3");
+
 			// Testing: use alert($(this).index('li a'));
 			var href = $(this).attr('href'); // Stores href from a tag
 			event.preventDefault(href); // This prevents loading the default href.
@@ -108,8 +140,16 @@ $(document).ready(function(){
 			$("#main").addClass("html");
 
 			// Left border color for white boxes
-			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-css color-left-js");
+			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-css3 color-left-js");
 			$(".white-box").addClass("color-left-html");
+
+			// Header Color
+			$(".header").removeClass("header-ng1 header-ng2 header-css header-css3 header-js");
+			$(".header").addClass("header-html");
+
+			// Button Color
+			$(".button-status").removeClass("color-ng1 color-ng2 color-css color-css3 color-js");
+			$(".button-status").addClass("color-html");
 
 			// Testing: use alert($(this).index('li a'));
 			var href = $(this).attr('href'); // Stores href from a tag
@@ -131,8 +171,16 @@ $(document).ready(function(){
 			$("#main").addClass("js");
 
 			// Left border color for white boxes
-			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-css color-left-html");
+			$(".white-box").removeClass("color-left-ng1 color-left-ng2 color-left-css color-left-css3 color-left-html");
 			$(".white-box").addClass("color-left-js");
+
+			// Header Color
+			$(".header").removeClass("header-ng1 header-ng2 header-css header-css3 header-html");
+			$(".header").addClass("header-js");
+
+			// Button Color
+			$(".button-status").removeClass("color-ng1 color-ng2 color-css color-css3 color-html");
+			$(".button-status").addClass("color-js");
 
 			// Testing: use alert($(this).index('li a'));
 			var href = $(this).attr('href'); // Stores href from a tag
