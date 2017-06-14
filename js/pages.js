@@ -202,6 +202,12 @@ function createHTML(href) {
 	var href_length_minus_12 = href.length-5-7; // href length minus the beginning part pl/ng1/ (7 characters) and minus the ending .html (4 characters)
 	var topic = href.substr(7, href_length_minus_12); // href minus the beginning part pl/ng1/ (starts at character 7) and minus the ending .html
 
+	var topic_header = topic + ".header"; // Concatenates topic.header
+	var div_header = document.createElement('div');
+	div_header.innerHTML = document.getElementById(topic_header).innerHTML;
+	document.getElementById('header').innerHTML = "";
+	document.getElementById('header').appendChild(div_header);
+
 	var topic_explanation = topic + ".explanation"; // Concatenates topic.explanation
 	var div_explanation = document.createElement('div');
 	div_explanation.innerHTML = document.getElementById(topic_explanation).innerHTML;
