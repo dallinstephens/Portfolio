@@ -1,0 +1,943 @@
+<!-- ----------------------- APPLICATIONS: 1 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="applications1.header" language="text">
+Applications: 1
+</script>
+
+<!-- EXPLANATION -->
+<script id="applications1.explanation" language="text">
+This is about...
+</script>
+
+<!-- TIDBIT -->
+<script id="applications1.tidbit" language="text"
+>&lt;div ng-app="myApp" ng-controller="nameController"&gt;
+  &lt;input type="text" ng-model="firstName"&gt;
+  &lt;input type="text" ng-model="lastName"&gt;
+  &lt;p&gt;Example Sentence:
+  &lt;span style="color:red;"&gt;
+  {{"My name is " + firstName + " " + lastName + "."}}
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module('myApp', []);
+  app.controller('nameController',
+  function($scope) {
+    $scope.firstName="George";
+    $scope.lastName="Washington";
+  });
+&lt;/script&gt;
+</script>
+
+<!-- TIDBIT: Unescaped String
+<div ng-app="myApp" ng-controller="nameController">
+  <input type="text" ng-model="firstName">
+  <input type="text" ng-model="lastName">
+  <p>Example Sentence:
+  <span style="color:red;">
+  {{"My name is " + firstName + " " + lastName + "."}}
+  </span>
+  </p>
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('nameController',
+  function($scope) {
+    $scope.firstName="George";
+    $scope.lastName="Washington";
+  });
+</script>
+-->
+
+<!-- MY CODE -->
+<script id="applications1.mycode" language="text"
+>&lt;p&gt;Try changing the first and last names.&lt;/p&gt;
+&lt;div ng-app=&quot;myApp&quot; ng-controller=&quot;nameController&quot;&gt;
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;First Name:&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Last Name:&lt;/td&gt;
+      &lt;td&gt;&lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  &lt;p&gt;Example Sentence: &lt;span style=&quot;color:red;&quot;&gt;{{&quot;My name is &quot; + firstName + &quot; &quot; + lastName + &quot;.&quot;}}&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module(&apos;myApp&apos;, []);
+  app.controller(&apos;nameController&apos;,
+  function($scope) {
+    $scope.firstName=&quot;George&quot;;
+    $scope.lastName=&quot;Washington&quot;;
+  });
+&lt;/script&gt;
+</script>
+
+<!-- MY CODE: Unescaped String
+<p>Try changing the first and last names.</p>
+<div ng-app="myApp" ng-controller="nameController">
+  <table>
+    <tr>
+      <td>First Name:</td>
+      <td><input type="text" ng-model="firstName"></td>
+    </tr>
+    <tr>
+      <td>Last Name:</td>
+      <td><input type="text" ng-model="lastName"></td>
+    </tr>
+  </table>
+  <p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>
+</div>
+
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('nameController',
+  function($scope) {
+    $scope.firstName="George";
+    $scope.lastName="Washington";
+  });
+</script>
+-->
+
+<!-- ----------------------- APPLICATIONS: 2 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="applications2.header" language="text">
+Applications: 2
+</script>
+
+<!-- EXPLANATION -->
+<script id="applications2.explanation" language="text">
+Make a Grocery List
+</script>
+
+<!-- TIDBIT -->
+<script id="applications2.tidbit" language="text"
+>&lt;div ng-app=&quot;myGroceryList&quot; ng-controller=&quot;controllerName&quot;&gt;
+  &lt;ul&gt;
+    &lt;li ng-repeat=&quot;x in foods&quot;&gt;{{x}}&lt;span ng-click=&quot;removeItem($index)&quot;&gt;&amp;nbsp;x&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;div&gt;
+    &lt;input ng-model=&quot;addFood&quot; value=&quot;Type food you want to add&quot;&gt;
+    &lt;button ng-click=&quot;addItem()&quot; onclick=&quot;resultBoxAreaAdjust()&quot;&gt;Add Food&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;p&gt;Click the small red x to remove an item from the grocery list.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module(&apos;myGroceryList&apos;, []);
+  app.controller(&apos;controllerName&apos;,
+  function($scope) {
+    $scope.foods=[&quot;Egg Whites&quot;, &quot;Greek Yogurt&quot;, &quot;Clementites&quot;, &quot;Boneless Chicken Breast&quot;];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+&lt;/script&gt;
+</script>
+
+<!-- TIDBIT: Unescaped String
+<div ng-app="myGroceryList" ng-controller="controllerName">
+  <ul>
+    <li ng-repeat="x in foods">{{x}}<span ng-click="removeItem($index)">&nbsp;x</span></li>
+  </ul>
+
+  <div>
+    <input ng-model="addFood" value="Type food you want to add">
+    <button ng-click="addItem()" onclick="resultBoxAreaAdjust()">Add Food</button>
+  </div>
+
+  <p>Click the small red x to remove an item from the grocery list.</p>
+</div>
+
+<script>
+  var app = angular.module('myGroceryList', []);
+  app.controller('controllerName',
+  function($scope) {
+    $scope.foods=["Egg Whites", "Greek Yogurt", "Clementites", "Boneless Chicken Breast"];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+</script>
+-->
+
+<!-- MY CODE -->
+<script id="applications2.mycode" language="text"
+>&lt;div ng-app=&quot;myGroceryList&quot; ng-controller=&quot;controllerName&quot;&gt;
+
+  &lt;ul class=&quot;disc&quot;&gt;
+    &lt;li ng-repeat=&quot;x in foods&quot;&gt;{{x}}&lt;span style=&quot;color:red;&quot; ng-click=&quot;removeItem($index)&quot;&gt;&amp;nbsp;x&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;input style=&quot;margin-left:20px; width: 200px&quot; ng-model=&quot;addFood&quot; value=&quot;Type food you want to add&quot;&gt;&lt;button ng-click=&quot;addItem()&quot;&gt;Add Food&lt;/button&gt;
+
+  &lt;p&gt;Click the small red x to remove an item from the grocery list.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+  var app = angular.module(&apos;myGroceryList&apos;, []);
+  app.controller(&apos;controllerName&apos;,
+  function($scope) {
+    $scope.foods=[&quot;Egg Whites&quot;, &quot;Greek Yogurt&quot;, &quot;Clementites&quot;, &quot;Boneless Chicken Breast&quot;];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+&lt;/script&gt;
+</script>
+
+<!-- MY CODE: Unescaped String
+<div ng-app="myGroceryList" ng-controller="controllerName">
+
+  <ul class="disc">
+    <li ng-repeat="x in foods">{{x}}<span style="color:red;" ng-click="removeItem($index)">&nbsp;x</span></li>
+  </ul>
+
+  <input style="margin-left:20px; width: 200px" ng-model="addFood" value="Type food you want to add"><button ng-click="addItem()">Add Food</button>
+
+  <p>Click the small red x to remove an item from the grocery list.</p>
+
+</div>
+
+<script>
+  var app = angular.module('myGroceryList', []);
+  app.controller('controllerName',
+  function($scope) {
+    $scope.foods=["Egg Whites", "Greek Yogurt", "Clementites", "Boneless Chicken Breast"];
+    $scope.addItem = function () {
+      $scope.foods.push($scope.addFood);
+    }
+    $scope.removeItem = function (x) {
+      $scope.foods.splice(x, 1);
+    }
+  });
+</script>
+-->
+
+<!-- ----------------------- DIRECTIVES: 1 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="directives1.header" language="text">
+Directives: 1
+</script>
+
+<!-- EXPLANATION -->
+<script id="directives1.explanation" language="text">
+Explanation
+</script>
+
+<!-- TIDBIT -->
+<script id="directives1.tidbit" language="text"
+>&lt;div ng-app=&quot;&quot; ng-init=&quot;first.name=&apos;Dallin&apos;&quot;&gt;
+
+  &lt;p&gt;My name is &lt;span ng-bind=&quot;first.name&quot;&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="" ng-init="first.name='Dallin'">
+
+  <p>My name is <span ng-bind="first.name"></span>.</p>
+
+</div>
+-->
+
+<!-- MY CODE -->
+<script id="directives1.mycode" language="text"
+>&lt;div ng-app=&quot;&quot; ng-init=&quot;first.name=&apos;Dallin&apos;&quot;&gt;
+
+  &lt;p&gt;My name is &lt;span ng-bind=&quot;first.name&quot;&gt;&lt;/span&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="" ng-init="first.name='Dallin'">
+
+  <p>My name is <span ng-bind="first.name"></span>.</p>
+
+</div>
+-->
+
+<!-- ----------------------- DIRECTIVES: 2 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="directives2.header" language="text">
+Directives: 2
+</script>
+
+<!-- EXPLANATION -->
+<script id="directives2.explanation" language="text">
+  <p>Directives start with the prefix ng-. The following three are directives:<br>
+  (1) ng-app - initializes an AngularJS application,<br>
+  (2) ng-init - initiates application data, and<br>
+  (3) ng-model - binds the value of HTML controls (such as input, select, and textarea) to application data.</p>
+</script>
+
+<!-- TIDBIT -->
+<script id="directives2.tidbit" language="text"
+>&lt;div ng-app=&quot;&quot; ng-init=&quot;vegetableName=&apos;asparagus&apos;&quot;&gt;
+
+  &lt;p&gt;&lt;b&gt;Try changing the name of the vegetable in the input box.&lt;/b&gt;&lt;/p&gt;
+
+  &lt;p&gt;Vegetable: &lt;input type=&quot;text&quot; ng-model=&quot;vegetableName&quot;&gt;&lt;/p&gt;
+
+  &lt;p style=&quot;color:red;&quot;&gt;The vegetable is {{vegetableName}}.&lt;/p&gt;
+
+&lt;/div&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="" ng-init="vegetableName='asparagus'">
+
+  <p><b>Try changing the name of the vegetable in the input box.</b></p>
+
+  <p>Vegetable: <input type="text" ng-model="vegetableName"></p>
+
+  <p style="color:red;">The vegetable is {{vegetableName}}.</p>
+
+</div>
+-->
+
+<!-- MY CODE -->
+<script id="directives2.mycode" language="text"
+>&lt;div ng-app=&quot;&quot; ng-init=&quot;vegetableName=&apos;asparagus&apos;&quot;&gt;
+
+  &lt;p&gt;&lt;b&gt;Try changing the name of the vegetable in the input box.&lt;/b&gt;&lt;/p&gt;
+
+  &lt;p&gt;Vegetable: &lt;input type=&quot;text&quot; ng-model=&quot;vegetableName&quot;&gt;&lt;/p&gt;
+
+  &lt;p style=&quot;color:red;&quot;&gt;The vegetable is {{vegetableName}}.&lt;/p&gt;
+
+&lt;/div&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="" ng-init="vegetableName='asparagus'">
+
+  <p><b>Try changing the name of the vegetable in the input box.</b></p>
+
+  <p>Vegetable: <input type="text" ng-model="vegetableName"></p>
+
+  <p style="color:red;">The vegetable is {{vegetableName}}.</p>
+
+</div>
+-->
+
+<!-- ----------------------- DIRECTIVES: 3 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="directives3.header" language="text">
+Directives: 3 (Data Binding)
+</script>
+
+<!-- EXPLANATION -->
+<script id="directives3.explanation" language="text">
+  <p>Two text fields are bound together with two ng-model directives.</p>
+</script>
+
+<!-- TIDBIT -->
+<script id="directives3.tidbit" language="text"
+>&lt;div ng-app=&quot;MyModule4&quot; ng-init=&quot;numberofproteinbars=15; pricefor1proteinbar=2&quot;&gt;
+
+  &lt;h2&gt;Cost Calculator&lt;/h2&gt;
+
+    Number of Protein Bars: &lt;input type=&quot;number&quot; ng-model=&quot;numberofproteinbars&quot;&gt;
+
+    Price Per Protein Bar: &lt;input type=&quot;number&quot; ng-model=&quot;pricefor1proteinbar&quot;&gt;
+
+    Total Price (in dollars): {{&quot;$&quot; + numberofproteinbars*pricefor1proteinbar}}
+
+&lt;/div&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="MyModule4" ng-init="numberofproteinbars=15; pricefor1proteinbar=2">
+
+  <h2>Cost Calculator</h2>
+
+    Number of Protein Bars: <input type="number" ng-model="numberofproteinbars">
+
+    Price Per Protein Bar: <input type="number" ng-model="pricefor1proteinbar">
+
+    Total Price (in dollars): {{"$" + numberofproteinbars*pricefor1proteinbar}}
+
+</div>
+-->
+
+<!-- MY CODE -->
+<script id="directives3.mycode" language="text"
+>&lt;div ng-app=&quot;MyModule4&quot; ng-init=&quot;numberofproteinbars=15; pricefor1proteinbar=2&quot;&gt;
+  &lt;h2 style=&quot;margin-top:0;&quot;&gt;Cost Calculator&lt;/h2&gt;
+  &lt;i&gt;Try changing the inputs.&lt;/i&gt;
+  &lt;table style=&quot;padding-top:10px&quot;&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Number of Protein Bars:&lt;/td&gt;
+      &lt;td&gt;&lt;input style=&quot;width:50px;&quot; type=&quot;number&quot; ng-model=&quot;numberofproteinbars&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Price Per Protein Bar:&lt;/td&gt;
+      &lt;td&gt;&lt;input style=&quot;width:50px;&quot; type=&quot;number&quot; ng-model=&quot;pricefor1proteinbar&quot;&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td colspan=&quot;2&quot;&gt;&lt;hr&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Total Price (in dollars):&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;{{&quot;$&quot; + numberofproteinbars*pricefor1proteinbar}}&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="MyModule4" ng-init="numberofproteinbars=15; pricefor1proteinbar=2">
+  <h2 style="margin-top:0;">Cost Calculator</h2>
+  <i>Try changing the inputs.</i>
+  <table style="padding-top:10px">
+    <tr>
+      <td>Number of Protein Bars:</td>
+      <td><input style="width:50px;" type="number" ng-model="numberofproteinbars"></td>
+    </tr>
+    <tr>
+      <td>Price Per Protein Bar:</td>
+      <td><input style="width:50px;" type="number" ng-model="pricefor1proteinbar"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><hr></td>
+    </tr>
+    <tr>
+      <td><b>Total Price (in dollars):</b></td>
+      <td>{{"$" + numberofproteinbars*pricefor1proteinbar}}</td>
+    </tr>
+  </table>
+</div>
+-->
+
+<!-- ----------------------- DIRECTIVES: 4 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="directives4.header" language="text">
+Directives: 4
+</script>
+
+<!-- EXPLANATION -->
+<script id="directives4.explanation" language="text">
+Repeating HTML Elements
+</script>
+
+<!-- TIDBIT -->
+<script id="directives4.tidbit" language="text"
+>&lt;div ng-app=&quot;MyModule5&quot; ng-init=&quot;fruits=[&apos;apples&apos;,&apos;oranges&apos;,&apos;grapefruits&apos;,&apos;pears&apos;,&apos;grapes&apos;, &apos;tangerines&apos;, &apos;peaches&apos;, &apos;pineapples&apos;]&quot;&gt;
+  &lt;p&gt;The directive ng-repeat is used for looping.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li ng-repeat=&quot;x in fruits&quot;&gt;
+      {{x}}
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="MyModule5" ng-init="fruits=['apples','oranges','grapefruits','pears','grapes', 'tangerines', 'peaches', 'pineapples']">
+  <p>The directive ng-repeat is used for looping.</p>
+  <ul>
+    <li ng-repeat="x in fruits">
+      {{x}}
+    </li>
+  </ul>
+</div>
+-->
+
+<!-- MY CODE -->
+<script id="directives4.mycode" language="text"
+>&lt;div ng-app=&quot;MyModule5&quot; ng-init=&quot;fruits=[&apos;apples&apos;,&apos;oranges&apos;,&apos;grapefruits&apos;,&apos;pears&apos;,&apos;grapes&apos;, &apos;tangerines&apos;, &apos;peaches&apos;, &apos;pineapples&apos;]&quot;&gt;
+  &lt;p&gt;The directive ng-repeat is used for looping.&lt;/p&gt;
+  &lt;ul style=&quot;margin-left:17px; list-style-type: circle&quot;&gt;
+    &lt;li ng-repeat=&quot;x in fruits&quot;&gt;
+      {{x}}
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="MyModule5" ng-init="fruits=['apples','oranges','grapefruits','pears','grapes', 'tangerines', 'peaches', 'pineapples']">
+  <p>The directive ng-repeat is used for looping.</p>
+  <ul style="margin-left:17px; list-style-type: circle">
+    <li ng-repeat="x in fruits">
+      {{x}}
+    </li>
+  </ul>
+</div>
+-->
+
+<!-- ----------------------- DIRECTIVES: 5 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="directives5.header" language="text">
+Directives: 5
+</script>
+
+<!-- EXPLANATION -->
+<script id="directives5.explanation" language="text">
+Array of Objects
+</script>
+
+<!-- TIDBIT -->
+<script id="directives5.tidbit" language="text"
+>&lt;div ng-app=&quot;MyModule6&quot; ng-init=&quot;people=[
+    {name:&apos;Henry&apos;,age:&apos;59&apos;},
+    {name:&apos;Susan&apos;,age:&apos;53&apos;},
+    {name:&apos;Jenny&apos;,age:&apos;29&apos;},
+    {name:&apos;Tommy&apos;,age:&apos;21&apos;}
+  ]&quot;&gt;
+  &lt;p&gt;This is an example of looping with objects:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li ng-repeat=&quot;x in people&quot;&gt;
+      {{x.name + &apos;, &apos; + x.age}}
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="MyModule6" ng-init="people=[
+    {name:'Henry',age:'59'},
+    {name:'Susan',age:'53'},
+    {name:'Jenny',age:'29'},
+    {name:'Tommy',age:'21'}
+  ]">
+  <p>This is an example of looping with objects:</p>
+  <ul>
+    <li ng-repeat="x in people">
+      {{x.name + ', ' + x.age}}
+    </li>
+  </ul>
+</div>
+-->
+
+<!-- MY CODE -->
+<script id="directives5.mycode" language="text"
+>&lt;div ng-app=&quot;MyModule6&quot; ng-init=&quot;people=[
+    {name:&apos;Henry&apos;,age:&apos;59&apos;},
+    {name:&apos;Susan&apos;,age:&apos;53&apos;},
+    {name:&apos;Jenny&apos;,age:&apos;29&apos;},
+    {name:&apos;Tommy&apos;,age:&apos;21&apos;}
+  ]&quot;&gt;
+  &lt;p&gt;This is an example of looping with objects:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li ng-repeat=&quot;x in people&quot;&gt;
+      {{x.name + &apos;, &apos; + x.age}}
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="MyModule6" ng-init="people=[
+    {name:'Henry',age:'59'},
+    {name:'Susan',age:'53'},
+    {name:'Jenny',age:'29'},
+    {name:'Tommy',age:'21'}
+  ]">
+  <p>This is an example of looping with objects:</p>
+  <ul>
+    <li ng-repeat="x in people">
+      {{x.name + ', ' + x.age}}
+    </li>
+  </ul>
+</div>
+-->
+
+<!-- ----------------------- DIRECTIVES: 6 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="directives6.header" language="text">
+Directives: 6
+</script>
+
+<!-- EXPLANATION -->
+<script id="directives6.explanation" language="text">
+Create New Directives
+</script>
+
+<!-- TIDBIT -->
+<script id="directives6.tidbit" language="text"
+>&lt;div ng-app=&quot;MyModule7&quot;&gt;
+  &lt;directive-created-by-dallin&gt;&lt;/directive-created-by-dallin&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var module7 = angular.module(&apos;MyModule7&apos;, []);
+  module7.directive(&quot;directiveCreatedByDallin&quot;,
+    function() {
+      return{
+        template: &quot;&lt;h1&gt;I Dallin made this directive.&lt;/h1&gt;&quot;
+      };
+    }
+  );
+&lt;/script&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="MyModule7">
+  <directive-created-by-dallin></directive-created-by-dallin>
+</div>
+
+<script>
+  var module7 = angular.module('MyModule7', []);
+  module7.directive("directiveCreatedByDallin",
+    function() {
+      return{
+        template: "<h1>I Dallin made this directive.</h1>"
+      };
+    }
+  );
+</script>
+-->
+
+<!-- MY CODE -->
+<script id="directives6.mycode" language="text"
+>&lt;div ng-app=&quot;MyModule7&quot;&gt;
+  &lt;directive-created-by-dallin&gt;&lt;/directive-created-by-dallin&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var module7 = angular.module(&apos;MyModule7&apos;, []);
+  module7.directive(&quot;directiveCreatedByDallin&quot;,
+    function() {
+      return{
+        template: &quot;&lt;h1&gt;I Dallin made this directive.&lt;/h1&gt;&quot;
+      };
+    }
+  );
+&lt;/script&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="MyModule7">
+  <directive-created-by-dallin></directive-created-by-dallin>
+</div>
+
+<script>
+  var module7 = angular.module('MyModule7', []);
+  module7.directive("directiveCreatedByDallin",
+    function() {
+      return{
+        template: "<h1>I Dallin made this directive.</h1>"
+      };
+    }
+  );
+</script>
+-->
+
+<!-- ----------------------- DIRECTIVES: 7 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="directives7.header" language="text">
+Directives: 7
+</script>
+
+<!-- EXPLANATION -->
+<script id="directives7.explanation" language="text">
+  <p>Four ways to invoke a directive:<br>
+  <table>
+    <tr>
+      <td><b>1) Element name:</b></td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+      <td>&lt;my-directive&gt;&lt;/my-directive&gt;</td>
+    </tr>
+    <tr>
+      <td><b>2) Attribute:</b></td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+      <td>&lt;div my-directive&gt;&lt;/div&gt;</td>
+    </tr>
+    <tr>
+      <td><b>3) Class:</b></td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+      <td>&lt;div class=&quot;my-directive&quot;&gt;&lt;/div&gt;</td>
+    </tr>
+    <tr>
+      <td><b>4) Comment:</b></td>
+      <td>&nbsp;&nbsp;&nbsp;</td>
+      <td>&lt;!-- directive: my-directive --&gt;</td>
+    </tr>
+  </table>
+  <p style="color:red">Attention: For the comment to work as a directive, 'restrict: &quot;M&quot;,' and 'replace: true,' are needed.</p>
+</script>
+
+<!-- TIDBIT -->
+<script id="directives7.tidbit" language="text"
+>&lt;div ng-app=&quot;MyModule8&quot;&gt;
+  &lt;!-- directive: my-directive --&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var module8 = angular.module(&apos;MyModule8&apos;, []);
+  module8.directive(&quot;myDirective&quot;,
+    function() {
+      return {
+        restrict: &quot;M&quot;,
+        replace: true,
+        template: &quot;&lt;p&gt;This statement was created using a comment.&lt;/p&gt;&quot;
+      };
+    }
+  );
+&lt;/script&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="MyModule8"> -->
+  <!-- directive: my-directive --> <!--
+</div>
+
+<script>
+  var module8 = angular.module('MyModule8', []);
+  module8.directive("myDirective",
+    function() {
+      return {
+        restrict: "M",
+        replace: true,
+        template: "<p>This statement was created using a comment.</p>"
+      };
+    }
+  );
+</script>
+-->
+
+<!-- MY CODE -->
+<script id="directives7.mycode" language="text"
+>&lt;div ng-app=&quot;MyModule8&quot;&gt;
+  &lt;!-- directive: my-directive --&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var module8 = angular.module(&apos;MyModule8&apos;, []);
+  module8.directive(&quot;myDirective&quot;,
+    function() {
+      return {
+        restrict: &quot;M&quot;,
+        replace: true,
+        template: &quot;&lt;p&gt;This statement was created using a comment.&lt;/p&gt;&quot;
+      };
+    }
+  );
+&lt;/script&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="MyModule8"> -->
+  <!-- directive: my-directive --> <!--
+</div>
+
+<script>
+  var module8 = angular.module('MyModule8', []);
+  module8.directive("myDirective",
+    function() {
+      return {
+        restrict: "M",
+        replace: true,
+        template: "<p>This statement was created using a comment.</p>"
+      };
+    }
+  );
+</script>
+-->
+
+<!-- ----------------------- DIRECTIVES: 8 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="directives8.header" language="text">
+Directives: 8 (Restrictions)
+</script>
+
+<!-- EXPLANATION -->
+<script id="directives8.explanation" language="text">
+  <p>By adding a restrict property with the value "C", the directive can only be invoked by a class.</p>
+
+  <p>Restrict Values:</p>
+  <ul style="margin-left:17px; list-style-type: circle; background:transparent">
+    <li><span style="color:red;">E</span> for Element name</li>
+    <li><span style="color:red;">A</span> for Attribute</li>
+    <li><span style="color:red;">C</span> for Class</li>
+    <li><span style="color:red;">M</span> for Comment</li>
+  </ul>
+
+  <p>To invoke element, attribute, class, and comment, the value would be <span style="color:red;">EACM</span> with "replace: true," for the M. In this case, only the class was invoked.</p>
+</script>
+
+<!-- TIDBIT -->
+<script id="directives8.tidbit" language="text"
+>&lt;div ng-app=&quot;MyModule9&quot;&gt;
+  &lt;my-directive-2&gt;&lt;/my-directive-2&gt;
+  &lt;div my-directive-2&gt;&lt;/div&gt;
+  &lt;div class=&quot;my-directive-2&quot; style=&quot;color:red;&quot;&gt;&lt;/div&gt;
+  &lt;!-- directive: my-directive-2 --&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var module9 = angular.module(&apos;MyModule9&apos;, []);
+  module9.directive(&quot;myDirective2&quot;,
+    function() {
+      return {
+        restrict: &quot;C&quot;,
+        template: &quot;&lt;b&gt;The class name invoked the directive for this case.&lt;/b&gt;&quot;
+      };
+    }
+  );
+&lt;/script&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="MyModule9">
+  <my-directive-2></my-directive-2>
+  <div my-directive-2></div>
+  <div class="my-directive-2" style="color:red;"></div> -->
+  <!-- directive: my-directive-2 --> <!--
+</div>
+
+<script>
+  var module9 = angular.module('MyModule9', []);
+  module9.directive("myDirective2",
+    function() {
+      return {
+        restrict: "C",
+        template: "<b>The class name invoked the directive for this case.</b>"
+      };
+    }
+  );
+</script>
+-->
+
+<!-- MY CODE -->
+<script id="directives8.mycode" language="text"
+>&lt;div ng-app=&quot;MyModule9&quot;&gt;
+  &lt;my-directive-2&gt;&lt;/my-directive-2&gt;
+  &lt;div my-directive-2&gt;&lt;/div&gt;
+  &lt;div class=&quot;my-directive-2&quot; style=&quot;color:red;&quot;&gt;&lt;/div&gt;
+  &lt;!-- directive: my-directive-2 --&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  var module9 = angular.module(&apos;MyModule9&apos;, []);
+  module9.directive(&quot;myDirective2&quot;,
+    function() {
+      return {
+        restrict: &quot;C&quot;,
+        template: &quot;&lt;b&gt;The class name invoked the directive for this case.&lt;/b&gt;&quot;
+      };
+    }
+  );
+&lt;/script&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="MyModule9">
+  <my-directive-2></my-directive-2>
+  <div my-directive-2></div>
+  <div class="my-directive-2" style="color:red;"></div> -->
+  <!-- directive: my-directive-2 --> <!--
+</div>
+
+<script>
+  var module9 = angular.module('MyModule9', []);
+  module9.directive("myDirective2",
+    function() {
+      return {
+        restrict: "C",
+        template: "<b>The class name invoked the directive for this case.</b>"
+      };
+    }
+  );
+</script>
+-->
+
+<!-- ----------------------- EXPRESSIONS: 1 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="expressions1.header" language="text">
+Expressions: 1
+</script>
+
+<!-- EXPLANATION -->
+<script id="expressions1.explanation" language="text">
+Explanation
+</script>
+
+<!-- TIDBIT -->
+<script id="expressions1.tidbit" language="text"
+>&lt;div ng-app=&quot;MyModule10&quot;&gt;
+  &lt;p&gt;Math is computed in this expression: {{ 5*2 + 3 }}&lt;/p&gt;
+&lt;/div&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<div ng-app="MyModule10">
+  <p>Math is computed in this expression: {{ 5*2 + 3 }}</p>
+</div>
+-->
+
+<!-- MY CODE -->
+<script id="expressions1.mycode" language="text"
+>&lt;div ng-app=&quot;MyModule10&quot;&gt;
+  &lt;p&gt;Math is computed in this expression: {{ 5*2 + 3 }}&lt;/p&gt;
+&lt;/div&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<div ng-app="MyModule10">
+  <p>Math is computed in this expression: {{ 5*2 + 3 }}</p>
+</div>
+-->
+
+<!-- ----------------------- TOPIC: # ------------------------------ -->
+
+<!-- HEADER -->
+<script id="topic#.header" language="text">
+Topic: #
+</script>
+
+<!-- EXPLANATION -->
+<script id="topic#.explanation" language="text">
+Explanation
+</script>
+
+<!-- TIDBIT -->
+<script id="topic#.tidbit" language="text"
+>Tidbit (Escaped)
+</script>
+
+<!-- TIDBIT: Unescaped
+
+-->
+
+<!-- MY CODE -->
+<script id="topic#.mycode" language="text"
+>My Code (Escaped)
+</script>
+
+<!-- MY CODE: Unescaped
+
+-->

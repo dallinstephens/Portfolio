@@ -156,7 +156,6 @@
 h2 {padding-top:5px;}
 
 /* link styling */
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -198,7 +197,7 @@ h3 {padding:5px;}
 }
 
 /* Text Position */
-.tidbit-text-position, .mycode-text-position, .myresult-text-position {
+.tidbit-text-position, .mycode-text-position {
   position:relative;
   margin-top:8px;
   margin-bottom:12px;
@@ -249,21 +248,10 @@ pre {
 }
 
 /* Adjust Height of the Buttons */
-
 /*.ui-btn {
     padding-top: 0.2em;
     padding-bottom: 0.2em;
 } */
-
-/* Styling for Expand/Collapse Button */
-button {
-  border:none;
-  border-radius:2px;
-  box-shadow: 0px 0px 3px #888888;
-  float:right;
-}
-button:hover {background:#00e6ac;}
-button:focus {outline:none;}
 
 /* Remove horizontal scrollbar and having vertical scrollbar appear when needed from jquery mobile panel */
 .ui-panel.ui-panel-open {

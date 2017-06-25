@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/index/pages.css">
+<script src="js/libraries/jquery-1.11.3.min.js"></script>
+<script src="js/libraries/angular.min.js"></script>  <!-- Do not include this script in index.html or it will get messed up. -->
+</head>
+<body>
+
+<!-- Note: The class="hide-code" is added to each result code section so that all can be hidden except the current result code. This is in conjuction with javascript in pages.js. -->
+
+<main id="my-result-code" ng-app="CombineModule">
+<!-- applications1 -->
+  <section id="applications1" ng-controller="MyController0">
+    <p>Try changing the first and last names.</p>
+    <div ng-app="MyModule0" ng-controller="MyController0">
+      <table>
+        <tr>
+          <div id="righthere"></div>
+          <td>First Name:</td>
+          <td><input type="text" ng-model="firstName"></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td><input type="text" ng-model="lastName"></td>
+        </tr>
+      </table>
+      <p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>
+    </div>
+  </section>
+<!-- applications2 -->
+  <section id="applications2" ng-controller="MyController1">
+    <div ng-app="MyModule1" ng-controller="MyController1">
+      <ul style="margin-left:20px; list-style-type: disc !important;">
+        <li ng-repeat="x in foods">{{x}}<span style="color:red;" ng-click="removeItem($index)">&nbsp;x</span></li>
+      </ul>
+      <div style="width:300px;">
+        <input style="margin-left:20px; width:200px" ng-model="addFood" value="Type food you want to add"><button style="position:relative; margin-top:2px;" ng-click="addItem()" onclick="resultBoxAreaAdjust()">Add Food</button>
+      </div>
+      <p></p>
+      <p>Click the small red x to remove an item from the grocery list.</p>
+    </div>
+  </section>
+<!-- directives1 -->
+  <section id="directives1" ng-controller="MyController2">
+    <div ng-app="MyModule2" ng-init="first.name='Dallin'">
+
+      <p>My name is <span ng-bind="first.name"></span>.</p>
+
+    </div>
+  </section>
+<!-- directives2 -->
+  <section id="directives2" ng-controller="MyController3">
+    <div ng-app="MyModule3" ng-init="vegetableName='asparagus'">
+
+      <p><b>Try changing the name of the vegetable in the input box.</b></p>
+
+      <p>Vegetable: <input type="text" ng-model="vegetableName"></p>
+
+      <p style="color:red;">The vegetable is {{vegetableName}}.</p>
+
+    </div>
+  </section>
+<!-- directives3 -->
+  <section id="directives3" ng-controller="MyController4">
+    <div ng-app="MyModule4" ng-init="numberofproteinbars=15; pricefor1proteinbar=2">
+      <h2 style="margin-top:0;">Cost Calculator</h2>
+      <i>Try changing the inputs.</i>
+      <table style="padding-top:10px">
+        <tr>
+          <td>Number of Protein Bars:</td>
+          <td><input style="width:50px;" type="number" ng-model="numberofproteinbars"></td>
+        </tr>
+        <tr>
+          <td>Price Per Protein Bar:</td>
+          <td><input style="width:50px;" type="number" ng-model="pricefor1proteinbar"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><hr></td>
+        </tr>
+        <tr>
+          <td><b>Total Price (in dollars):</b></td>
+          <td>{{"$" + numberofproteinbars*pricefor1proteinbar}}</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+<!-- directives4 -->
+  <section id="directives4" ng-controller="MyController5">
+    <div ng-app="MyModule5" ng-init="fruits=['apples','oranges','grapefruits','pears','grapes', 'tangerines', 'peaches', 'pineapples']">
+      <p>The directive ng-repeat is used for looping.</p>
+      <ul style="margin-left:17px; list-style-type: circle">
+        <li ng-repeat="x in fruits">
+          {{x}}
+        </li>
+      </ul>
+    </div>
+  </section>
+<!-- directives5 -->
+  <section id="directives5" ng-controller="MyController6">
+    <div ng-app="MyModule6" ng-init="people=[
+        {name:'Henry',age:'59'},
+        {name:'Susan',age:'53'},
+        {name:'Jenny',age:'29'},
+        {name:'Tommy',age:'21'}
+      ]">
+      <p>This is an example of looping with objects:</p>
+      <ul>
+        <li ng-repeat="x in people">
+          {{x.name + ', ' + x.age}}
+        </li>
+      </ul>
+    </div>
+  </section>
+<!-- directives6 -->
+  <section id="directives6" ng-controller="MyController7">
+    <div ng-app="MyModule7">
+      <directive-created-by-dallin></directive-created-by-dallin>
+    </div>
+  </section>
+<!-- directives7 -->
+  <section id="directives7" ng-controller="MyController8">
+    <div ng-app="MyModule8">
+      <!-- directive: my-directive -->
+    </div>
+  </section>
+<!-- directives8 -->
+  <section id="directives8" ng-controller="MyController9">
+    <div ng-app="MyModule9">
+      <my-directive-2></my-directive-2>
+      <div my-directive-2></div>
+      <div class="my-directive-2" style="color:red;"></div>
+      <!-- directive: my-directive-2 -->
+    </div>
+  </section>
+<!-- expressions1 -->
+  <section id="expressions1" ng-controller="MyController10">
+    <div ng-app="MyModule10">
+      <p>Math is computed in this expression: {{ 5*2 + 3 }}</p>
+    </div>
+  </section>
+<!-- topic# --> <!--
+  <section id="topic#" ng-controller="MyController#PREV+1">
+    <div ng-app="MyModule#PREV+1">
+      INPUT HERE
+    </div>
+  </section> -->
+</main>
+
+<script src="js/pl/ng1/angularjs.myresults.js"></script>
+
+</body>
+</html>
