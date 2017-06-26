@@ -139,6 +139,28 @@
       <p>Math is computed in this expression: {{ 5*2 + 3 }}</p>
     </div>
   </section>
+<!-- expressions2 -->
+  <section id="expressions2" ng-controller="MyController11">
+    <div ng-app="MyModule11">
+      <p>Expressions are written inside double curly braces.</p>
+
+      <p>Input a name of a fruit:</p>
+
+      <p>Name of Fruit: <input type="text" ng-model="fruit"></p>
+
+      <p><b style="color:red;">{{fruit}}</b></p><br>
+    </div>
+  </section>
+<!-- expressions3 -->
+  <section id="expressions3" ng-controller="MyController12">
+    <div ng-app="MyModule12" ng-init="myColor='pink'">
+
+      <p>Change the color of the input box by changing the value of the input field.</p>
+
+      <input style="background-color:{{myColor}}" ng-model="myColor" value="{{myColor}}">
+
+    </div>
+  </section>
 <!-- topic# --> <!--
   <section id="topic#" ng-controller="MyController#PREV+1">
     <div ng-app="MyModule#PREV+1">

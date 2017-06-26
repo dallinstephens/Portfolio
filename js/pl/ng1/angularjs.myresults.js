@@ -117,6 +117,22 @@ module10.controller('MyController10',
   }
 );
 
+// expressions2
+var module11 = angular.module('MyModule11', []);
+module11.controller('MyController11',
+  function() {
+    // No Controller Here
+  }
+);
+
+// expressions3
+var module12 = angular.module('MyModule12', []);
+module12.controller('MyController12',
+  function() {
+    // No Controller Here
+  }
+);
+
 // topic#
 //var module#PREV+1 = angular.module('MyModule#PREV+1', []);
 //module#PREV+1.controller('MyController#PREV+1',
