@@ -142,8 +142,7 @@ module12.controller('MyController12',
 //);
 
 // This counts the number of section tags in angularjs.myresults.html.
-var sectionCount = document.getElementsByTagName('section').length;
-
+var sectionCount = document.getElementById("my-result-code-ng1").getElementsByTagName("section").length;
 // For testing purposes: document.getElementById("righthere").innerHTML = sectionCount;
 
 // Creates angular.module("CombineModule", ["MyModule0", "MyModule1", "MyModule2", ...])

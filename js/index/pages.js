@@ -10,32 +10,8 @@ $(document).ready(function(){
 	// Prevent href from loading when a tag is clicked
 	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault();});
 
-	$('#myPanel-rcl').find('summary > a').mouseover(function(event) {
-			event.preventDefault(href); // This prevents loading the default href.
-
-			// Add background color for specific programming language
-			$("#body").removeClass("ng2 css css3 html js");
-			$("#body").addClass("ng1");
-
-			// Left border color for white boxes
-			$(".white-box").removeClass("color-left-ng2 color-left-css color-left-css3 color-left-html color-left-js");
-			$(".white-box").addClass("color-left-ng1");
-
-			// Header Color
-			$(".header").removeClass("header-ng2 header-css header-css3 header-html header-js");
-			$(".header").addClass("header-ng1");
-
-			// Button Color
-			$(".button-status").removeClass("color-ng2 color-css color-css3 color-html color-js");
-			$(".button-status").addClass("color-ng1");
-
-			var href = $(this).attr('href'); // Stores href from a tag
-
-			createHTML(href);
-	});
-
 	// AngularJS V1: Used for loading my external hrefs upon mouseover
-	$('#ng1').find('li > a').mouseover(function(event) {
+	$('#ng1').find('li > a').add('.ng1-rcl a').mouseover(function(event) {
 			event.preventDefault(href); // This prevents loading the default href.
 
 			// Add background color for specific programming language
@@ -54,13 +30,23 @@ $(document).ready(function(){
 			$(".button-status").removeClass("color-ng2 color-css color-css3 color-html color-js");
 			$(".button-status").addClass("color-ng1");
 
-			href = $(this).attr('href'); // Stores href from a tag
+			topic = $(this).attr('href'); // Stores href in topic from a tag
 
-			createHTML(href);
+			$(".start").hide(); // Hides start.html
+			$("#myiframe").hide(); // Hides iframe in reference code library index.html
+
+			$("#mrb-ng1").show(); // Shows my-result-box for selected language
+			$("#mrb-ng2, #mrb-css, #mrb-css3, #mrb-html, #mrb-js").hide(); // Hides my-result-box for other languages
+
+			//  Observe the tag 'section' in angular.myresults.html, etc.
+			$("#my-result-code-ng1").children().show(); // Shows all my result code for selected language
+			$("#"+topic).siblings().hide(); // Hides all result code for selected language except selected topic
+
+			createHTML(topic);
 	});
 
 	// AngularJS V2: Used for loading my external hrefs upon mouseover
-	$('#ng2').find('li > a').mouseover(function(event) {
+	$('#ng2').find('li > a').add('.ng2-rcl a').mouseover(function(event) {
 			event.preventDefault(href); // This prevents loading the default href.
 
 			// Add background color for specific programming language
@@ -79,9 +65,19 @@ $(document).ready(function(){
 			$(".button-status").removeClass("color-ng1 color-css color-css3 color-html color-js");
 			$(".button-status").addClass("color-ng2");
 
-			href = $(this).attr('href'); // Stores href from a tag
+			topic = $(this).attr('href'); // Stores href in topic from a tag
 
-			createHTML(href);
+			$(".start").hide(); // Hides start.html
+			$("#myiframe").hide(); // Hides iframe in reference code library index.html
+
+			$("#mrb-ng2").show(); // Shows my-result-box for selected language
+			$("#mrb-css3, #mrb-css, #mrb-ng1, #mrb-html, #mrb-js").hide(); // Hides my-result-box for other languages
+
+			//  Observe the tag 'section' in angular.myresults.html, etc.
+			$("#my-result-code-ng2").children().show(); // Shows all my result code for selected language
+			$("#"+topic).siblings().hide(); // Hides all result code for selected language except selected topic
+
+			createHTML(topic);
 	});
 
 	// CSS: Used for loading my external hrefs upon mouseover
@@ -104,9 +100,19 @@ $(document).ready(function(){
 			$(".button-status").removeClass("color-ng1 color-ng2 color-css3 color-html color-js");
 			$(".button-status").addClass("color-css");
 
-			href = $(this).attr('href'); // Stores href from a tag
+			topic = $(this).attr('href'); // Stores href in topic from a tag
 
-			createHTML(href);
+			$(".start").hide(); // Hides start.html
+			$("#myiframe").hide(); // Hides iframe in reference code library index.html
+
+			$("#mrb-css").show(); // Shows my-result-box for selected language
+			$("#mrb-ng2, #mrb-css3, #mrb-ng1, #mrb-html, #mrb-js").hide(); // Hides my-result-box for other languages
+
+			//  Observe the tag 'section' in angular.myresults.html, etc.
+			$("#my-result-code-css").children().show(); // Shows all my result code for selected language
+			$("#"+topic).siblings().hide(); // Hides all result code for selected language except selected topic
+
+			createHTML(topic);
 	});
 
 	// CSS3: Used for loading my external hrefs upon mouseover
@@ -129,9 +135,19 @@ $(document).ready(function(){
 			$(".button-status").removeClass("color-ng1 color-ng2 color-css color-html color-js");
 			$(".button-status").addClass("color-css3");
 
-			href = $(this).attr('href'); // Stores href from a tag
+			topic = $(this).attr('href'); // Stores href in topic from a tag
 
-			createHTML(href);
+			$(".start").hide(); // Hides start.html
+			$("#myiframe").hide(); // Hides iframe in reference code library index.html
+
+			$("#mrb-css3").show(); // Shows my-result-box for selected language
+			$("#mrb-ng2, #mrb-css, #mrb-ng1, #mrb-html, #mrb-js").hide(); // Hides my-result-box for other languages
+
+			//  Observe the tag 'section' in angular.myresults.html, etc.
+			$("#my-result-code-css3").children().show(); // Shows all my result code for selected language
+			$("#"+topic).siblings().hide(); // Hides all result code for selected language except selected topic
+
+			createHTML(topic);
 	});
 
 	// HTML: Used for loading my external hrefs upon mouseover
@@ -154,9 +170,19 @@ $(document).ready(function(){
 			$(".button-status").removeClass("color-ng1 color-ng2 color-css color-css3 color-js");
 			$(".button-status").addClass("color-html");
 
-			href = $(this).attr('href'); // Stores href from a tag
+			topic = $(this).attr('href'); // Stores href in topic from a tag
 
-			createHTML(href);
+			$(".start").hide(); // Hides start.html
+			$("#myiframe").hide(); // Hides iframe in reference code library index.html
+
+			$("#mrb-html").show(); // Shows my-result-box for selected language
+			$("#mrb-ng2, #mrb-css, #mrb-ng1, #mrb-css3, #mrb-js").hide(); // Hides my-result-box for other languages
+
+			//  Observe the tag 'section' in angular.myresults.html, etc.
+			$("#my-result-code-html").children().show(); // Shows all my result code for selected language
+			$("#"+topic).siblings().hide(); // Hides all result code for selected language except selected topic
+
+			createHTML(topic);
 	});
 
 	// JavaScript: Used for loading my external hrefs upon mouseover
@@ -179,24 +205,24 @@ $(document).ready(function(){
 			$(".button-status").removeClass("color-ng1 color-ng2 color-css color-css3 color-html");
 			$(".button-status").addClass("color-js");
 
-			href = $(this).attr('href'); // Stores href from a tag
+			topic = $(this).attr('href'); // Stores href in topic from a tag
 
-			createHTML(href);
+			$(".start").hide(); // Hides start.html
+			$("#myiframe").hide(); // Hides iframe in reference code library index.html
+
+			$("#mrb-js").show(); // Shows my-result-box for selected language
+			$("#mrb-ng2, #mrb-css, #mrb-ng1, #mrb-html, #mrb-css3").hide(); // Hides my-result-box for other languages
+
+			//  Observe the tag 'section' in angular.myresults.html, etc.
+			$("#my-result-code-js").children().show(); // Shows all my result code for selected language
+			$("#"+topic).siblings().hide(); // Hides all result code for selected language except selected topic
+
+			createHTML(topic);
 	});
 
 });
 
-function createHTML(href) {
-	var href_length_minus_17 = href.length-12-5; // href length minus the beginning part html/pl/ng1/ (12 characters) and minus the ending .html (5 characters)
-	var topic = href.substr(12, href_length_minus_17); // href minus the beginning part html/pl/ng1/ (starts at character 12) and minus the ending .html
-
-	$(".start").hide(); // Hides start.html
-	//$("#myiframe").hide(); // Hides iframe in reference code library index.html
-
-	//  Observe the tag 'section' in angular.myresults.html, etc.
-	$("#my-result-code").children().show(); // Shows all my result code
-	$("#"+topic).siblings().hide(); // Hides all result code except current topic
-
+function createHTML(topic) {
 	var topic_header = topic + ".header"; // Concatenates topic.header
 	var div_header = document.createElement('div');
 	div_header.innerHTML = document.getElementById(topic_header).innerHTML;

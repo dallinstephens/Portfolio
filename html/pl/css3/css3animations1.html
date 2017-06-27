@@ -125,30 +125,30 @@ INSERT HERE
 <script src="../../js/pages.js"></script>
 
 <style>
-div#ChangeSquareColor {
-  width: 500px;
-  height: 500px;
-  background-color: blue;
-  animation-name: exampleChangeColorAndBack;
-  animation-duration: 7s;
+  /* CSS3 Animations: 1 */
+  div#ChangeSquareColor {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    animation-name: exampleChangeColorAndBack;
+    animation-duration: 7s;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: exampleChangeColorAndBack;
+    -webkit-animation-duration: 7s;
+  }
+
+  /* Standard syntax */
+  @keyframes exampleChangeColorAndBack {
+    from {background-color: blue;}
+    to {background-color: orange;}
+  }
 
   /* Safari 4.0 - 8.0 */
-  -webkit-animation-name: exampleChangeColorAndBack;
-  -webkit-animation-duration: 7s;
-}
-
-/* Standard syntax */
-@keyframes exampleChangeColorAndBack {
-  from {background-color: blue;}
-  to {background-color: orange;}
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes exampleChangeColorAndBack {
-  from {background-color: blue;}
-  to {background-color: orange;}
-}
-
+  @-webkit-keyframes exampleChangeColorAndBack {
+    from {background-color: blue;}
+    to {background-color: orange;}
+  }
 </style>
 
 </head>

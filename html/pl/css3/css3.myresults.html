@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/index/pages.css">
+<script src="js/libraries/jquery-1.11.3.min.js"></script>
+</head>
+
+<style>
+  /* CSS3 Animations: 1 */
+  div.anim {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    animation-name: exampleChangeColorAndBack;
+    animation-duration: 7s;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: exampleChangeColorAndBack;
+    -webkit-animation-duration: 7s;
+  }
+
+  /* Standard syntax */
+  @keyframes exampleChangeColorAndBack {
+    from {background-color: blue;}
+    to {background-color: orange;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes exampleChangeColorAndBack {
+    from {background-color: blue;}
+    to {background-color: orange;}
+  }
+</style>
+
+<body>
+
+<main id="my-result-code-css3">
+<!-- css3animations1 -->
+  <section id="css3animations1">
+    <h3 style="text-transform: uppercase; margin-top:0; padding-top:0; margin-left:0; padding-left:0">The @keyframes Rule: Gradually change the background-color</h3>
+
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <button id="see-again">RE-SEE ANIMATION</button><br><br>
+
+    <div id="change-square-color" class="anim"></div>
+  </section>
+<!-- topic# --> <!--
+  <section id="topic#" ng-controller="MyController#PREV+1">
+    <div ng-app="MyModule#PREV+1">
+      INPUT HERE
+    </div>
+  </section> -->
+</main>
+
+<script>
+$(document).ready(function(){
+    $("#see-again").click(function(){
+    	$('#change-square-color').removeClass('anim').animate({'nothing':null}, 1,
+        function () {
+				      $(this).addClass('anim');
+			  }
+      );
+    });
+});
+</script>
+
+</body>
+</html>
