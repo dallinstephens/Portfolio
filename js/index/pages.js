@@ -81,7 +81,7 @@ $(document).ready(function(){
 	});
 
 	// CSS: Used for loading my external hrefs upon mouseover
-	$('#css').on('mouseover', 'li a', function(event) {
+	$('#css').find('li > a').add('.css-rcl a').mouseover(function(event) {
 			event.preventDefault(href); // This prevents loading the default href.
 
 			// Add background page color for specific programming language
@@ -116,7 +116,7 @@ $(document).ready(function(){
 	});
 
 	// CSS3: Used for loading my external hrefs upon mouseover
-	$('#css3').on('mouseover', 'li a', function(event) {
+	$('#css3').find('li > a').add('.css3-rcl a').mouseover(function(event) {
 			event.preventDefault(href); // This prevents loading the default href.
 
 			// Add background color for specific programming language
@@ -151,7 +151,7 @@ $(document).ready(function(){
 	});
 
 	// HTML: Used for loading my external hrefs upon mouseover
-	$('#html').on('mouseover', 'li a', function(event) {
+	$('#html').find('li > a').add('.html-rcl a').mouseover(function(event) {
 			event.preventDefault(href); // This prevents loading the default href.
 
 			// Add background color for specific programming language
@@ -186,7 +186,7 @@ $(document).ready(function(){
 	});
 
 	// JavaScript: Used for loading my external hrefs upon mouseover
-	$('#js').on('mouseover', 'li a', function(event) {
+	$('#js').find('li > a').add('.js-rcl a').mouseover(function(event) {
 			event.preventDefault(href); // This prevents loading the default href.
 
 			// Add background color for specific programming language
