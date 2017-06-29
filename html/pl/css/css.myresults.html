@@ -5,8 +5,8 @@
 <script src="js/libraries/jquery-1.11.3.min.js"></script>
 
 <style>
-  /* CSS Borders: 1 */
-  div.thispage {height:20px;}
+/* CSS BORDERS: 1 */
+  div.thispage {height:20px; margin-top:-15px;}
 
   .dotted {border-style: dotted;}
   .dashed {border-style: dashed;}
@@ -19,13 +19,137 @@
   .none {border-style: none;}
   .hidden {border-style: hidden;}
   .mix {border-style: dotted dashed solid double;}
+
+/* CSS BORDERS: 2 */
+  div.thispage2 {height:20px; margin-top:-15px;}
+
+  .dotted2 {
+    border-style: dotted;
+    border-width: thin;
+  }
+  .dashed2 {
+    border-style: dashed;
+    border-width: medium;
+  }
+  .solid2 {
+    border-style: solid;
+    border-width: thick;
+  }
+  .double2 {
+    border-style: double;
+    border-width: 1px;
+  }
+  .groove2 {
+    border-style: groove;
+    border-width: 2px;
+  }
+  .ridge2 {
+    border-style: ridge;
+    border-width: 4px;
+  }
+  .inset2 {
+    border-style: inset;
+    border-width: 8px;
+  }
+  .outset2 {
+    border-style: outset;
+    border-width: 16px;
+  }
+  .none2 {
+    border-style: none;
+  }
+  .hidden2 {
+    border-style: hidden;
+  }
+  .mix2 {
+    border-style: dotted dashed solid double;
+    border-width: 2px 10px 4px 20px;
+  }
+
+/* CSS BORDERS: 3 */
+  .first {
+    border-style: solid;
+    border-color: blue;
+  }
+  .second {
+    border-style: solid;
+    border-color: red;
+  }
+  .third {
+    border-style: solid;
+    border-color: green red purple yellow;
+  }
+
+/* CSS BORDERS: 4 */
+  #individual-sides {
+    border-top-style: solid;
+    border-right-style: dotted;
+    border-bottom-style: dashed;
+    border-left-style: double;
+  }
+
+/* CSS BORDERS: 5 */
+  #border-shorthand-property {
+    border: 15px solid orange;
+  }
+
+/* CSS BORDERS: 6 */
+  #individual-border-properties {
+    border-left: 25px solid orange;
+    background-color: lightgrey;
+  }
+
+/* CSS BORDERS: 7 */
+  #normal {
+    border: 5px solid red;
+  }
+  #round-example-1 {
+    border: 5px solid red;
+    border-radius: 5px;
+  }
+  #round-example-2 {
+    border: 5px solid red;
+    border-radius: 25px;
+  }
+  #round-example-3 {
+    border: 5px solid red;
+    border-radius: 50px;
+  }
+
+/* CSS OUTLINE PROPERTIES: 1 */
+  div.thispage8 {
+    height:20px;
+    border: 1px solid black;
+    outline-color: red;
+    outline-width: 3px;
+    margin-top:-15px;
+  }
+
+  .dotted8 {outline-style: dotted;}
+  .dashed8 {outline-style: dashed;}
+  .solid8 {outline-style: solid;}
+  .double8 {outline-style: double;}
+  .groove8 {outline-style: groove;}
+  .ridge8 {outline-style: ridge;}
+  .inset8 {outline-style: inset;}
+  .outset8 {outline-style: outset;}
+  .none8 {outline-style: none;}
+  .hidden8 {outline-style: hidden;}
+
+/* CSS OUTLINE PROPERTIES: 2 */
+  div.thispage9 {
+    border: 1px solid black;
+    outline-style: double;
+    outline-color: red;
+    outline-width: 3px;
+  }
 </style>
 
 </head>
 <body>
 
 <main id="my-result-code-css">
-<!-- css3animations1 -->
+<!-- CSS BORDERS: 1 -->
   <section id="cssborders1">
     <p><b>Border Styles</b></p>
 
@@ -62,11 +186,196 @@
     <h4><span style="color: red">Mix</span> - Defines a combination of borders</h4>
     <div class="mix thispage"></div>
   </section>
-<!-- topic# --> <!--
-  <section id="topic#" ng-controller="MyController#PREV+1">
-    <div ng-app="MyModule#PREV+1">
-      INPUT HERE
+<!-- CSS BORDERS: 2 -->
+  <section id="cssborders2">
+    <p><b>Border Width</b></p>
+
+    <h4><span style="color: red">Dotted (border-width: thin;)</span> - Defines a dotted border</h4>
+    <div class="dotted2 thispage2"></div>
+
+    <h4><span style="color: red">Dashed (border-width: medium;)</span> - Defines a dashed border</h4>
+    <div class="dashed2 thispage2"></div>
+
+    <h4><span style="color: red">Solid (border-width: thick;)</span> - Defines a solid border</h4>
+    <div class="solid2 thispage2"></div>
+
+    <h4><span style="color: red">Double (border-width: 1px;)</span> - Defines a double border</h4>
+    <div class="double2 thispage2"></div>
+
+    <h4><span style="color: red">Groove (border-width: 2px;)</span> - Defines a 3D grooved border. The effect depends on the border-color value</h4>
+    <div class="groove2 thispage2"></div>
+
+    <h4><span style="color: red">Ridge (border-width: 4px;)</span> - Defines a 3D ridged border. The effect depends on the border-color value</h4>
+    <div class="ridge2 thispage2"></div>
+
+    <h4><span style="color: red">Inset (border-width: 8px;)</span> - Defines a 3D inset border. The effect depends on the border-color value </h4>
+    <div class="inset2 thispage2"></div>
+
+    <h4><span style="color: red">Outset (border-width: 16px;)</span> - Defines a 3D outset border. The effect depends on the border-color value</h4>
+    <div class="outset2 thispage2"></div>
+
+    <h4><span style="color: red">None</span> - Defines no border</h4>
+    <div class="none2 thispage2"></div>
+
+    <h4><span style="color: red">Hidden</span> - Defines a hidden border</h4>
+    <div class="hidden2 thispage2"></div>
+
+    <h4><span style="color: red">Mix (border-width: 2px[top] 10px[right] 4px[bottom] 20px[left];)</span> - Defines a combination of borders</h4>
+    <div class="mix2 thispage2"></div>
+  </section>
+<!-- CSS BORDERS: 3 -->
+  <section id="cssborders3">
+    <p><b>Border Color</b></p>
+
+    <div class="first">
+      <pre>
+        .first {
+          border-style: solid;
+          border-color: blue;
+        }
+      </pre>
+    </div><br>
+
+    <div class="second">
+      <pre>
+        .second {
+          border-style: solid;
+          border-color: red;
+        }
+      </pre>
+    </div><br>
+
+    <div class="third">
+      <pre>
+        .third {
+          border-style: solid;
+          border-color: green red purple yellow;
+        }
+      </pre>
     </div>
+  </section>
+<!-- CSS BORDERS: 4 -->
+  <section id="cssborders4">
+    <p><b>Border - Individual Sides</b></p>
+
+    <div id="individual-sides">
+      <pre>
+        #individual-sides {
+          border-top-style: solid;
+          border-right-style: dotted;
+          border-bottom-style: dashed;
+          border-left-style: double;
+        }
+      </pre>
+    </div>
+  </section>
+<!-- CSS BORDERS: 5 -->
+  <section id="cssborders5">
+    <p><b>Border - Shorthand Property</b></p>
+
+    <div id="border-shorthand-property">
+      <pre>
+        #border-shorthand-property {
+          border: 15px solid orange;
+        }
+      </pre>
+    </div>
+  </section>
+<!-- CSS BORDERS: 6 -->
+  <section id="cssborders6">
+    <p><b>Individual Border Properties</b></p>
+
+    <div id="individual-border-properties">
+      <pre>
+        #individual-border-properties {
+          border-left: 25px solid orange;
+          background-color: lightgrey;
+        }
+      </pre>
+    </div>
+  </section>
+<!-- CSS BORDERS: 7 -->
+  <section id="cssborders7">
+    <p><b>Rounded Borders</b></p>
+
+    <div id="normal">
+      <pre>
+        #normal {
+          border: 5px solid red;
+        }
+      </pre>
+    </div>
+    <br>
+    <div id="round-example-1">
+      <pre>
+        #round-example-1 {
+          border: 5px solid red;
+          border-radius: 5px;
+        }
+      </pre>
+    </div>
+    <br>
+    <div id="round-example-2">
+      <pre>
+        #round-example-2 {
+          border: 5px solid red;
+          border-radius: 25px;
+        }
+      </pre>
+    </div>
+    <br>
+    <div id="round-example-3">
+      <pre>
+        #round-example-3 {
+          border: 5px solid red;
+          border-radius: 50px;
+        }
+      </pre>
+    </div>
+  </section>
+<!-- CSS OUTLINE PROPERTIES: 1 -->
+  <section id="cssoutlineproperties1">
+    <p><b>Outline Style</b></p>
+
+    <h4><span style="color: red">Dotted</span> - Defines a dotted outline</h4>
+    <div class="dotted8 thispage8"></div>
+
+    <h4><span style="color: red">Dashed</span> - Defines a dashed outline</h4>
+    <div class="dashed8 thispage8"></div>
+
+    <h4><span style="color: red">Solid</span> - Defines a solid outline</h4>
+    <div class="solid8 thispage8"></div>
+
+    <h4><span style="color: red">Double</span> - Defines a double outline</h4>
+    <div class="double8 thispage8"></div>
+
+    <h4><span style="color: red">Groove</span> - Defines a 3D grooved outline. The effect depends on the outline-color value</h4>
+    <div class="groove8 thispage8"></div>
+
+    <h4><span style="color: red">Ridge</span> - Defines a 3D ridged outline. The effect depends on the outline-color value</h4>
+    <div class="ridge8 thispage8"></div>
+
+    <h4><span style="color: red">Inset</span> - Defines a 3D inset outline. The effect depends on the outline-color value </h4>
+    <div class="inset8 thispage8"></div>
+
+    <h4><span style="color: red">Outset</span> - Defines a 3D outset outline. The effect depends on the outline-color value</h4>
+    <div class="outset8 thispage8"></div>
+
+    <h4><span style="color: red">None</span> - Defines no outline</h4>
+    <div class="none8 thispage8"></div>
+
+    <h4><span style="color: red">Hidden</span> - Defines a hidden outline</h4>
+    <div class="hidden8 thispage8"></div>
+  </section>
+<!-- CSS OUTLINE PROPERTIES: 2 -->
+  <section id="cssoutlineproperties2">
+    <p><b>The Outline-Color Property</b></p>
+
+    <div class="thispage9"><b>Note:</b> IE8 supports the outline properties only if a !DOCTYPE is specified.</div>
+  </section>
+<!-- topic# --> <!--
+  <section id="topic#">
+    INPUT HERE
   </section> -->
 </main>
 
