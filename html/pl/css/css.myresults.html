@@ -143,6 +143,58 @@
     outline-color: red;
     outline-width: 3px;
   }
+
+/* CSS OUTLINE PROPERTIES: 3 */
+  div.example-1 {
+    border: 1px solid black;
+    outline-style: double;
+    outline-color: red;
+    outline-width: 15px;
+    margin:15px;
+  }
+  div.example-2 {
+    border: 1px solid black;
+    outline-style: double;
+    outline-color: green;
+    outline-width: thick;
+    margin:5px;
+  }
+
+/* CSS OUTLINE PROPERTIES: 4 */
+  div.thispage11 {margin: 5px; padding:10px;}
+
+  div.longhand {
+    border: 1px solid black;
+    outline-width: 5px;
+    outline-style: dotted;
+    outline-color: red;
+  }
+
+  div.shorthand {
+    border: 1px solid black;
+    outline: 5px dotted red;
+  }
+
+/* GRID-VIEW: 1 */
+  .thispage12 {word-wrap: break-word;}
+
+  .first-column, .third-column {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    border: 1px solid green;
+    box-sizing: border-box;
+    height: 400px;
+  }
+
+  .second-column {
+    width: 50%;
+    float: left;
+    padding: 10px;
+    border: 1px solid green;
+    box-sizing: border-box;
+    height: 400px;
+  }
 </style>
 
 </head>
@@ -372,6 +424,93 @@
     <p><b>The Outline-Color Property</b></p>
 
     <div class="thispage9"><b>Note:</b> IE8 supports the outline properties only if a !DOCTYPE is specified.</div>
+  </section>
+<!-- CSS OUTLINE PROPERTIES: 3 -->
+  <section id="cssoutlineproperties3">
+    <p><b>Outline Width</b></p>
+
+    <div class="example-1">
+      <pre>
+        div.example-1 {
+          border: 1px solid black;
+          outline-style: double;
+          outline-color: red;
+          outline-width: 15px;
+        }
+      </pre>
+    </div>
+    <br>
+    <div class="example-2">
+      <pre>
+        div.example-2 {
+          border: 1px solid black;
+          outline-style: double;
+          outline-color: green;
+          outline-width: thick;
+        }
+      </pre>
+    </div>
+
+    <p><b>Note:</b> IE8 supports the outline properties only if a !DOCTYPE is specified.</p>
+  </section>
+<!-- CSS OUTLINE PROPERTIES: 4 -->
+  <section id="cssoutlineproperties4">
+    <p></b>Outline - Shorthand property</b></p>
+
+    <div class="longhand thispage11">
+      <b>Longhand</b>
+      <pre>
+        div.longhand {
+          border: 1px solid black;
+          outline-width: 5px;
+          outline-style: dotted;
+          outline-color: red;
+        }
+      </pre>
+    </div>
+
+    <br>
+
+    <div class="shorthand thispage11">
+      <b>Shorthand</b>
+      <pre>
+        div.shorthand {
+          border: 1px solid black;
+          outline: 5px dotted red;
+        }
+      </pre>
+    </div>
+
+    <p><b>Note:</b> IE8 supports the outline properties only if a !DOCTYPE is specified.</p>
+  </section>
+<!-- GRID-VIEW: 1 -->
+  <section id="responsivewebdesigngrid1">
+    <div class="thispage12">
+      <div class="first-column">
+        <p><b>This column has a width of 25% of its container.</b></p>
+        <p>1st Item First Column</p>
+        <p>2nd Item First Column</p>
+        <p>3rd Item First Column</p>
+        <p>4th Item First Column</p>
+      </div>
+
+      <div class="second-column">
+        <p><b>This column has a width of 50% of its container.</b></p>
+        <p>Bountiful is located in Northern Utah. I was born in Bountiful. It is in Davis County. Bountiful is located in Northern Utah. I was born in Bountiful. It is in Davis County.</p>
+        <p>Bountiful is located in Northern Utah. I was born in Bountiful. It is in Davis County.</p>
+      </div>
+
+      <div class="third-column">
+        <p><b>This column has a width of 25% of its container.</b></p>
+        <p>1st Item Third Column</p>
+        <p>2nd Item Third Column</p>
+        <p>3rd Item Third Column</p>
+        <p>4th Item Third Column</p>
+      </div>
+
+      <!-- This clears the left floats so that it does not overlap the container. -->
+      <div style="clear:left"></div>
+    </div>
   </section>
 <!-- topic# --> <!--
   <section id="topic#">
