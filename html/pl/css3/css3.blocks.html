@@ -330,6 +330,478 @@ No Explanation Provided
 <div class="anim2"></div>
 -->
 
+<!-- ----------------------- CSS3 ANIMATIONS: 3 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="css3animations3.header" language="text">
+CSS3 Animations: 3
+</script>
+
+<!-- EXPLANATION -->
+<script id="css3animations3.explanation" language="text">
+No Explanation Provided
+</script>
+
+<!-- TIDBIT -->
+<script id="css3animations3.tidbit" language="text"
+>&lt;style&gt;
+  div.anim3 {
+    width: 50px;
+    height: 50px;
+    left: 200px;
+    top: 0px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: exampleChangeColorAndMove;
+    animation-duration: 7s;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: exampleChangeColorAndMove;
+    -webkit-animation-duration: 7s;
+  }
+
+  /* Standard syntax */
+  @keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 200px; top: 0px;}
+    12.5% {background-color: green; left: 250px; top: 0px;}
+    25% {background-color: purple; left: 300px; top: 50px;}
+    37.5% {background-color: pink; left: 300px; top: 100px;}
+    50% {background-color: orange; left: 250px; top: 150px;}
+    62.5% {background-color: blue; left: 200px; top: 150px;}
+    75% {background-color: green; left: 150px; top: 100px;}
+    87.5% {background-color: purple; left: 150px; top: 50px;}
+    100% {background-color: pink; left: 200px; top: 0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 0px; top: 0px;}
+    20% {background-color: green; left: 50px; top: 0px;}
+    40% {background-color: purple; left: 100px; top: 50px;}
+    60% {background-color: pink; left: 100px; top: 100px;}
+    80% {background-color: orange; left: 50px; top: 150px;}
+    100% {background-color: yellow; left: 0px; top: 150px;}
+  }
+&lt;/style&gt;
+
+&lt;h3 class=&quot;text-info&quot;&gt;The @keyframes Rule: Animating background-color &amp; position&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This example does not work in Internet Explorer 9 and earlier versions.&lt;/p&gt;
+
+&lt;div id=&quot;animation-3&quot; class=&quot;anim3&quot;&gt;&lt;/div&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<style>
+  div.anim3 {
+    width: 50px;
+    height: 50px;
+    left: 200px;
+    top: 0px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: exampleChangeColorAndMove;
+    animation-duration: 7s;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: exampleChangeColorAndMove;
+    -webkit-animation-duration: 7s;
+  }
+
+  /* Standard syntax */
+  @keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 200px; top: 0px;}
+    12.5% {background-color: green; left: 250px; top: 0px;}
+    25% {background-color: purple; left: 300px; top: 50px;}
+    37.5% {background-color: pink; left: 300px; top: 100px;}
+    50% {background-color: orange; left: 250px; top: 150px;}
+    62.5% {background-color: blue; left: 200px; top: 150px;}
+    75% {background-color: green; left: 150px; top: 100px;}
+    87.5% {background-color: purple; left: 150px; top: 50px;}
+    100% {background-color: pink; left: 200px; top: 0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 0px; top: 0px;}
+    20% {background-color: green; left: 50px; top: 0px;}
+    40% {background-color: purple; left: 100px; top: 50px;}
+    60% {background-color: pink; left: 100px; top: 100px;}
+    80% {background-color: orange; left: 50px; top: 150px;}
+    100% {background-color: yellow; left: 0px; top: 150px;}
+  }
+</style>
+
+<h3 class="text-info">The @keyframes Rule: Animating background-color & position</h3>
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div id="animation-3" class="anim3"></div>
+-->
+
+<!-- MY CODE -->
+<script id="css3animations3.mycode" language="text"
+>&lt;style&gt;
+  div.anim3 {
+    width: 50px;
+    height: 50px;
+    left: 200px;
+    top: 0px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: exampleChangeColorAndMove;
+    animation-duration: 7s;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: exampleChangeColorAndMove;
+    -webkit-animation-duration: 7s;
+  }
+
+  /* Standard syntax */
+  @keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 200px; top: 0px;}
+    12.5% {background-color: green; left: 250px; top: 0px;}
+    25% {background-color: purple; left: 300px; top: 50px;}
+    37.5% {background-color: pink; left: 300px; top: 100px;}
+    50% {background-color: orange; left: 250px; top: 150px;}
+    62.5% {background-color: blue; left: 200px; top: 150px;}
+    75% {background-color: green; left: 150px; top: 100px;}
+    87.5% {background-color: purple; left: 150px; top: 50px;}
+    100% {background-color: pink; left: 200px; top: 0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 0px; top: 0px;}
+    20% {background-color: green; left: 50px; top: 0px;}
+    40% {background-color: purple; left: 100px; top: 50px;}
+    60% {background-color: pink; left: 100px; top: 100px;}
+    80% {background-color: orange; left: 50px; top: 150px;}
+    100% {background-color: yellow; left: 0px; top: 150px;}
+  }
+&lt;/style&gt;
+
+&lt;h3 class=&quot;text-info&quot;&gt;The @keyframes Rule: Animating background-color &amp; position&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This example does not work in Internet Explorer 9 and earlier versions.&lt;/p&gt;
+
+&lt;div id=&quot;animation-3&quot; class=&quot;anim3&quot;&gt;&lt;/div&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<style>
+  div.anim3 {
+    width: 50px;
+    height: 50px;
+    left: 200px;
+    top: 0px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: exampleChangeColorAndMove;
+    animation-duration: 7s;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: exampleChangeColorAndMove;
+    -webkit-animation-duration: 7s;
+  }
+
+  /* Standard syntax */
+  @keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 200px; top: 0px;}
+    12.5% {background-color: green; left: 250px; top: 0px;}
+    25% {background-color: purple; left: 300px; top: 50px;}
+    37.5% {background-color: pink; left: 300px; top: 100px;}
+    50% {background-color: orange; left: 250px; top: 150px;}
+    62.5% {background-color: blue; left: 200px; top: 150px;}
+    75% {background-color: green; left: 150px; top: 100px;}
+    87.5% {background-color: purple; left: 150px; top: 50px;}
+    100% {background-color: pink; left: 200px; top: 0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 0px; top: 0px;}
+    20% {background-color: green; left: 50px; top: 0px;}
+    40% {background-color: purple; left: 100px; top: 50px;}
+    60% {background-color: pink; left: 100px; top: 100px;}
+    80% {background-color: orange; left: 50px; top: 150px;}
+    100% {background-color: yellow; left: 0px; top: 150px;}
+  }
+</style>
+
+<h3 class="text-info">The @keyframes Rule: Animating background-color & position</h3>
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div id="animation-3" class="anim3"></div>
+-->
+
+<!-- ----------------------- CSS3 ANIMATIONS: 11 ------------------------------ -->
+
+<!-- HEADER -->
+<script id="css3animations11.header" language="text">
+CSS3 Animations: 11
+</script>
+
+<!-- EXPLANATION -->
+<script id="css3animations11.explanation" language="text">
+No Explanation Provided
+</script>
+
+<!-- TIDBIT -->
+<script id="css3animations11.tidbit" language="text"
+>&lt;style&gt;
+  .path {
+    /* Safari 4.0 - 8.0 */
+    -webkit-stroke-dasharray: 1000;
+    -webkit-stroke-dashoffset: 1000;
+    -webkit-animation: draw 5s linear forwards;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 5s linear forwards;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  /* Standard syntax */
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  .text {
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: textappear;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    animation-name: textappear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes textappear {
+    to {fill: white;}
+  }
+
+  /* Standard syntax */
+  @keyframes textappear {
+    to {fill: white;}
+  }
+&lt;/style&gt;
+
+&lt;svg&gt;
+  &lt;g&gt; &lt;!-- g tag is the group tag for svg --&gt;
+    &lt;polygon class=&quot;path&quot; points=&quot;200,0 250,0 300,50 300,100 250,150 200,150 150,100 150,50&quot; style=&quot;fill:transparent;stroke:black;stroke-width:10&quot; /&gt;
+    &lt;text class=&quot;text&quot; x=&quot;156&quot; y=&quot;92&quot; font-family=&quot;Verdana&quot; font-size=&quot;50&quot; fill=&quot;transparent&quot;&gt;STOP&lt;/text&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</script>
+
+<!-- TIDBIT: Unescaped
+<style>
+  .path {
+    /* Safari 4.0 - 8.0 */
+    -webkit-stroke-dasharray: 1000;
+    -webkit-stroke-dashoffset: 1000;
+    -webkit-animation: draw 5s linear forwards;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 5s linear forwards;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  /* Standard syntax */
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  .text {
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: textappear;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    animation-name: textappear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes textappear {
+    to {fill: white;}
+  }
+
+  /* Standard syntax */
+  @keyframes textappear {
+    to {fill: white;}
+  }
+</style>
+
+<svg>
+  <g> --> <!-- g tag is the group tag for svg --> <!--
+    <polygon class="path" points="200,0 250,0 300,50 300,100 250,150 200,150 150,100 150,50" style="fill:transparent;stroke:black;stroke-width:10" />
+    <text class="text" x="156" y="92" font-family="Verdana" font-size="50" fill="transparent">STOP</text>
+  </g>
+</svg>
+-->
+
+<!-- MY CODE -->
+<script id="css3animations11.mycode" language="text"
+>&lt;style&gt;
+  .path {
+    /* Safari 4.0 - 8.0 */
+    -webkit-stroke-dasharray: 1000;
+    -webkit-stroke-dashoffset: 1000;
+    -webkit-animation: draw 5s linear forwards;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 5s linear forwards;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  /* Standard syntax */
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  .text {
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: textappear;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    animation-name: textappear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes textappear {
+    to {fill: white;}
+  }
+
+  /* Standard syntax */
+  @keyframes textappear {
+    to {fill: white;}
+  }
+&lt;/style&gt;
+
+&lt;svg&gt;
+  &lt;g&gt; &lt;!-- g tag is the group tag for svg --&gt;
+    &lt;polygon class=&quot;path&quot; points=&quot;200,0 250,0 300,50 300,100 250,150 200,150 150,100 150,50&quot; style=&quot;fill:transparent;stroke:black;stroke-width:10&quot; /&gt;
+    &lt;text class=&quot;text&quot; x=&quot;156&quot; y=&quot;92&quot; font-family=&quot;Verdana&quot; font-size=&quot;50&quot; fill=&quot;transparent&quot;&gt;STOP&lt;/text&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</script>
+
+<!-- MY CODE: Unescaped
+<style>
+  .path {
+    /* Safari 4.0 - 8.0 */
+    -webkit-stroke-dasharray: 1000;
+    -webkit-stroke-dashoffset: 1000;
+    -webkit-animation: draw 5s linear forwards;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 5s linear forwards;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  /* Standard syntax */
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  .text {
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: textappear;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    animation-name: textappear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes textappear {
+    to {fill: white;}
+  }
+
+  /* Standard syntax */
+  @keyframes textappear {
+    to {fill: white;}
+  }
+</style>
+
+<svg>
+  <g> --> <!-- g tag is the group tag for svg --> <!--
+    <polygon class="path" points="200,0 250,0 300,50 300,100 250,150 200,150 150,100 150,50" style="fill:transparent;stroke:black;stroke-width:10" />
+    <text class="text" x="156" y="92" font-family="Verdana" font-size="50" fill="transparent">STOP</text>
+  </g>
+</svg>
+-->
+
 <!-- ----------------------- TOPIC: # ------------------------------ -->
 
 <!-- HEADER -->

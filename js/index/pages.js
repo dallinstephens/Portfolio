@@ -8,7 +8,7 @@ var href;
 
 $(document).ready(function(){
 	// Prevent href from loading when a tag is clicked
-	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault();});
+	$('#myPanel').on('click', 'li a', function(event) {event.preventDefault(href);});
 
 	// AngularJS V1: Used for loading my external hrefs upon mouseover
 	$('#ng1').find('li > a').add('.ng1-rcl a').mouseover(function(event) {

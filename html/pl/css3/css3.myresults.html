@@ -66,12 +66,105 @@
     80% {background-color: orange;}
     100% {background-color: yellow;}
   }
+
+/* CSS3 ANIMATIONS: 3 */
+  div.anim3 {
+    width: 50px;
+    height: 50px;
+    left: 200px;
+    top: 0px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: exampleChangeColorAndMove;
+    animation-duration: 7s;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: exampleChangeColorAndMove;
+    -webkit-animation-duration: 7s;
+  }
+
+  /* Standard syntax */
+  @keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 200px; top: 0px;}
+    12.5% {background-color: green; left: 250px; top: 0px;}
+    25% {background-color: purple; left: 300px; top: 50px;}
+    37.5% {background-color: pink; left: 300px; top: 100px;}
+    50% {background-color: orange; left: 250px; top: 150px;}
+    62.5% {background-color: blue; left: 200px; top: 150px;}
+    75% {background-color: green; left: 150px; top: 100px;}
+    87.5% {background-color: purple; left: 150px; top: 50px;}
+    100% {background-color: pink; left: 200px; top: 0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes exampleChangeColorAndMove {
+    0% {background-color: blue; left: 0px; top: 0px;}
+    20% {background-color: green; left: 50px; top: 0px;}
+    40% {background-color: purple; left: 100px; top: 50px;}
+    60% {background-color: pink; left: 100px; top: 100px;}
+    80% {background-color: orange; left: 50px; top: 150px;}
+    100% {background-color: yellow; left: 0px; top: 150px;}
+  }
+
+/* CSS3 ANIMATIONS: 11 */
+  .path {
+    /* Safari 4.0 - 8.0 */
+    -webkit-stroke-dasharray: 1000;
+    -webkit-stroke-dashoffset: 1000;
+    -webkit-animation: draw 5s linear forwards;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 5s linear forwards;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  /* Standard syntax */
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+      fill: red;
+    }
+  }
+
+  .text {
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: textappear;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+
+    /* Standard syntax */
+    animation-name: textappear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes textappear {
+    to {fill: white;}
+  }
+
+  /* Standard syntax */
+  @keyframes textappear {
+    to {fill: white;}
+  }
 </style>
 
 <body>
 
 <main id="my-result-code-css3">
-<!-- css3animations1 -->
+<!-- CSS3 ANIMATIONS: 1 -->
   <section id="css3animations1">
     <h3 class="text-info">The @keyframes Rule: Gradually change the background-color</h3>
 
@@ -79,16 +172,36 @@
 
     <button id="see-again-1">RE-SEE ANIMATION</button><br><br>
 
-    <div id="change-square-color-1" class="anim1"></div>
+    <div id="animation-1" class="anim1"></div>
   </section>
-<!-- css3animations2 -->
+<!-- CSS3 ANIMATIONS: 2 -->
   <section id="css3animations2">
     <h3 class="text-info">The @keyframes Rule: Using Percents (Complete)</h3>
     <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
 
     <button id="see-again-2">RE-SEE ANIMATION</button><br><br>
 
-    <div id="change-square-color-2" class="anim2"></div>
+    <div id="animation-2" class="anim2"></div>
+  </section>
+<!-- CSS3 ANIMATIONS: 3 -->
+  <section id="css3animations3">
+    <h3 class="text-info">The @keyframes Rule: Animating background-color & position</h3>
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <button id="see-again-3">RE-SEE ANIMATION</button><br><br>
+
+    <div id="animation-3" class="anim3"></div>
+
+    <p style="padding-bottom:150px"></p>
+  </section>
+<!-- CSS3 ANIMATIONS: 11 -->
+  <section id="css3animations11">
+    <svg>
+      <g> <!-- g tag is the group tag for svg -->
+        <polygon class="path" points="200,0 250,0 300,50 300,100 250,150 200,150 150,100 150,50" style="fill:transparent;stroke:black;stroke-width:10" />
+        <text class="text" x="156" y="92" font-family="Verdana" font-size="50" fill="transparent">STOP</text>
+      </g>
+    </svg>
   </section>
 <!-- topic# --> <!--
   <section id="topic#">
@@ -98,19 +211,27 @@
 
 <script>
 $(document).ready(function(){
-// css3amimations1
+// CSS3 ANIMATIONS: 1
     $("#see-again-1").click(function(){
-    	$('#change-square-color-1').removeClass('anim1').animate({'nothing':null}, 1,
+      $('#animation-1').removeClass('anim1').animate({'nothing':null}, 1,
         function () {
-				      $(this).addClass('anim1');
-			  }
+              $(this).addClass('anim1');
+        }
       );
     });
-// css3animations2
+// CSS3 ANIMATIONS: 2
     $("#see-again-2").click(function(){
-      $('#change-square-color-2').removeClass('anim2').animate({'nothing':null}, 1,
+      $('#animation-2').removeClass('anim2').animate({'nothing':null}, 1,
         function () {
               $(this).addClass('anim2');
+        }
+      );
+    });
+// CSS3 ANIMATIONS: 3
+    $("#see-again-3").click(function(){
+      $('#animation-3').removeClass('anim3').animate({'nothing':null}, 1,
+        function () {
+              $(this).addClass('anim3');
         }
       );
     });
