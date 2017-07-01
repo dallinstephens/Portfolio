@@ -159,6 +159,115 @@
   @keyframes textappear {
     to {fill: white;}
   }
+
+/* CSS3 ANIMATIONS: 4 */
+  div.anim4 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: ChangeColorAndMove4;
+    animation-duration: 7s;
+    animation-delay: 3s;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: ChangeColorAndMove4;
+    -webkit-animation-duration: 7s;
+  }
+
+  /* Standard syntax */
+  @keyframes ChangeColorAndMove4 {
+    0% {background-color: blue; left: 0px; top: 0px;}
+    20% {background-color: green; left: 50px; top: 0px;}
+    40% {background-color: purple; left: 100px; top: 50px;}
+    60% {background-color: pink; left: 100px; top: 100px;}
+    80% {background-color: orange; left: 50px; top: 150px;}
+    100% {background-color: yellow; left: 0px; top: 150px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes ChangeColorAndMove4 {
+    0% {background-color: blue; left: 0px; top: 0px;}
+    20% {background-color: green; left: 50px; top: 0px;}
+    40% {background-color: purple; left: 100px; top: 50px;}
+    60% {background-color: pink; left: 100px; top: 100px;}
+    80% {background-color: orange; left: 50px; top: 150px;}
+    100% {background-color: yellow; left: 0px; top: 150px;}
+  }
+
+/* CSS3 ANIMATIONS: 5 */
+  div.anim5 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: ChangeColorAndMove5;
+    animation-duration: 2s;
+    /* This indicates the number of times the animation runs. */
+    animation-iteration-count: 4;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: ChangeColorAndMove5;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 4;
+  }
+
+  /* Standard syntax */
+  @keyframes ChangeColorAndMove5 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes ChangeColorAndMove5 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+/* CSS3 ANIMATIONS: 6 */
+  div.anim6 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: ChangeColorAndMove6;
+    /* Note: 1 second = 1000 milliseconds; so, 0.5 s = 500 ms */
+    animation-duration: 500ms;
+    /* This indicates the number of times the animation runs. */
+    animation-iteration-count: infinite;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: ChangeColorAndMove6;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  /* Standard syntax */
+  @keyframes ChangeColorAndMove6 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes ChangeColorAndMove6 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
 </style>
 
 <body>
@@ -194,7 +303,44 @@
 
     <p style="padding-bottom:150px"></p>
   </section>
-<!-- CSS3 ANIMATIONS: 11 -->
+<!-- CSS3 ANIMATIONS: 4 -->
+  <section id="css3animations4">
+    <h3 class="text-info">Delay an Animation</h3>
+    <p><b>This example has a 3 seconds delay before starting the animation.</b></p>
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <button id="see-again-4">RE-SEE ANIMATION</button><br><br>
+
+    <div id="animation-4" class="anim4"></div>
+
+    <p style="padding-bottom:150px"></p>
+  </section>
+<!-- CSS3 ANIMATIONS: 5 -->
+  <section id="css3animations5">
+    <h3 class="text-info">Set How Many Times an Animation Should Run: Finite Times</h3>
+    <p><b>This example will run the animation 4 times before it stops.</b></p>
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <button id="see-again-5">RE-SEE ANIMATION</button><br><br>
+
+    <div id="animation-5" class="anim5"></div>
+
+    <p style="padding-bottom:150px"></p>
+  </section>
+<!-- CSS3 ANIMATIONS: 6 -->
+  <section id="css3animations6">
+    <h3 class="text-info">Set How Many Times an Animation Should Run: Infinite Times</h3>
+    <p><b>This example will run the animation infinite times which means the animation will continue forever.</b></p>
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <div class="anim6"></div>
+
+    <p style="padding-bottom:150px"></p>
+  </section>
+<!-- topic# --> <!--
+  <section id="topic#">
+      INPUT HERE
+  </section> -->
   <section id="css3animations11">
     <svg>
       <g> <!-- g tag is the group tag for svg -->
@@ -203,10 +349,6 @@
       </g>
     </svg>
   </section>
-<!-- topic# --> <!--
-  <section id="topic#">
-      INPUT HERE
-  </section> -->
 </main>
 
 <script>
@@ -232,6 +374,22 @@ $(document).ready(function(){
       $('#animation-3').removeClass('anim3').animate({'nothing':null}, 1,
         function () {
               $(this).addClass('anim3');
+        }
+      );
+    });
+// CSS3 ANIMATIONS: 4
+    $("#see-again-4").click(function(){
+      $('#animation-4').removeClass('anim4').animate({'nothing':null}, 1,
+        function () {
+              $(this).addClass('anim4');
+        }
+      );
+    });
+// CSS3 ANIMATIONS: 5
+    $("#see-again-5").click(function(){
+      $('#animation-5').removeClass('anim5').animate({'nothing':null}, 1,
+        function () {
+              $(this).addClass('anim5');
         }
       );
     });
