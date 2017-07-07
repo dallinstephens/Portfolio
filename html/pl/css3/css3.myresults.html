@@ -631,6 +631,64 @@
   #ease-out {-webkit-transition-timing-function: ease-out;}
   #ease-in-out {-webkit-transition-timing-function: ease-in-out;}
   #cubic-bezier {-webkit-transition-timing-function: cubic-bezier(1,0.5,1,0.5);}
+
+/* CSS3 TRANSITIONS: 4 */
+  div#change-width-and-color-4 {
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    transition: width 2s, background 2s;
+    transition-delay: 3s;
+
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 2s, background 2s;
+    -webkit-transition-delay: 3s;
+  }
+
+  div#change-width-and-color-4:hover {
+    width: 350px;
+    background: red;
+  }
+
+/* CSS3 TRANSITIONS: 5 */
+  div#change-color-and-rotate-360 {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    transition: background 2s, transform 2s;
+
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition: background 2s, transform 2s;
+  }
+
+  div#change-color-and-rotate-360:hover {
+    background: red;
+    transform: rotate(360deg);
+
+    /* Safari */
+    -webkit-transform: rotate(360deg);
+  }
+
+/* CSS3 TRANSITIONS: 6 */
+  div#change-color-6 {
+    width: 150px;
+    height: 150px;
+    background: yellow;
+
+    /* transition: transition-property transition-duration transition-timing-function transition-delay */
+    transition: background 2s ease-out 1s;
+
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition: background 2s ease-out 1s;
+  }
+
+  div#change-color-6:hover {
+    background: red;
+  }
+
+/* CSS3 2D TRANSFORMS: 1 */
+  
 </style>
 
 <body>
@@ -961,6 +1019,65 @@
       <li><span style="color:red;">cubic-bezier(n,n,n,n)</span> - lets you define your own values in a cubic-bezier function</li>
       <div id="cubic-bezier" class="change-width-and-color-3">cubic-bezier(1,0.5,1,0.5)</div>
     </div>
+  </section>
+<!-- CSS3 TRANSITIONS: 4 -->
+  <section id="css3transitions4">
+    <h3 class="text-info">Delay the Transition Effect</h3>
+
+    <p>Hover over the square below to see the transition effect.</p>
+    <p><b>Note:</b> The transition effect has a 3 second delay before starting.</p>
+
+    <div id="change-width-and-color-4"></div>
+
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+  </section>
+<!-- CSS3 TRANSITIONS: 5 -->
+  <section id="css3transitions5">
+    <h3 class="text-info">Transition + Transformation</h3>
+
+    <p>For the transition, the figure's color changes. For the transformation, the figure rotates 360 degrees.
+
+    <p>Hover over the square below to see the transition effect.</p>
+
+    <div id="change-color-and-rotate-360"></div>
+
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+  </section>
+<!-- CSS3 TRANSITIONS: 6 -->
+  <section id="css3transitions6">
+    <h3 class="text-info">Transition Example: Shorthand</h3>
+
+    <code>
+      <pre style="color:red;">
+      LONGHAND
+      div {
+          transition-property: background;
+          transition-duration: 2s;
+          transition-timing-function: ease-out;
+          transition-delay: 1s;
+      }
+
+      SHORTHAND
+      div {
+        /* transition: transition-property transition-duration
+           transition-timing-function transition-delay */
+        transition: background 2s ease-out 1s
+
+        /* For Safari 3.1 to 6.0 */
+        -webkit-transition: background 2s ease-out 1s;
+      }
+      </pre>
+    </code>
+
+    <p>Hover over the square below to see the transition effect.</p>
+
+    <div id="change-color-6"></div>
+
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+  </section>
+<!-- CSS3 2D TRANSFORMS: 1 -->
+  <section id="css32dtransforms1">
+      INPUT HERE
   </section>
 <!-- topic# --> <!--
   <section id="topic#">
