@@ -268,6 +268,369 @@
     75%  {background-color:green; left:0px; top:100px;}
     100% {background-color:red; left:0px; top:0px;}
   }
+
+/* CSS3 ANIMATIONS: 7 */
+  div.anim7 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: ChangeColorAndMove7;
+    /* Note: 1 second = 1000 milliseconds; so, 0.5 s = 500 ms */
+    animation-duration: 500ms;
+    /* This indicates the number of times the animation runs. */
+    animation-iteration-count: infinite;
+    /* This runs the animation in reverse direction */
+    animation-direction: reverse;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: ChangeColorAndMove7;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: reverse;
+  }
+
+  /* Standard syntax */
+  @keyframes ChangeColorAndMove7 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes ChangeColorAndMove7 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+/* CSS3 ANIMATIONS: 8 */
+  div.anim8 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: ChangeColor8;
+    /* Note: 1 second = 1000 milliseconds; so, 0.5 s = 500 ms */
+    animation-duration: 500ms;
+    /* This indicates the number of times the animation runs. */
+    animation-iteration-count: infinite;
+    /* This first runs the animation in regular direction and then reverse direction. */
+    animation-direction: alternate;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: ChangeColor8;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+  }
+
+  /* Standard syntax */
+  @keyframes ChangeColor8 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes ChangeColor8 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+/* CSS3 ANIMATIONS: 9 */
+  div.anim9 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 2s;
+    /* This indicates the number of times the animation runs. */
+    animation-iteration-count: infinite;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: mymove;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  /* Standard syntax */
+  #div1 {animation-timing-function: linear;}
+  #div2 {animation-timing-function: ease;}
+  #div3 {animation-timing-function: ease-in;}
+  #div4 {animation-timing-function: ease-out;}
+  #div5 {animation-timing-function: ease-in-out;}
+  #div6 {animation-timing-function: cubic-bezier(1,2,3,4);}
+
+  @keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  #div1 {-webkit-animation-timing-function: linear;}
+  #div2 {-webkit-animation-timing-function: ease;}
+  #div3 {-webkit-animation-timing-function: ease-in;}
+  #div4 {-webkit-animation-timing-function: ease-out;}
+  #div5 {-webkit-animation-timing-function: ease-in-out;}
+  #div6 {-webkit-animation-timing-function: cubic-bezier(1,2,3,4);}
+
+  @-webkit-keyframes mymove {
+    from {left: 0px;}
+    to {left: 300px;}
+  }
+
+/* CSS3 ANIMATIONS: 10 */
+  div.anim10 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    /* You need position: relative; to have the square move. */
+    position: relative;
+    /* LONGHAND
+        animation-name: ChangeColorAndMove10;
+        animation-duration: 500ms;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: reverse;
+    */
+    /* SHORTHAND */
+    animation: ChangeColorAndMove10 500ms linear 2s infinite reverse;
+
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation: ChangeColorAndMove10 500ms linear 2s infinite reverse;
+  }
+
+  /* Standard syntax */
+  @keyframes ChangeColorAndMove10 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes ChangeColorAndMove10 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:100px; top:0px;}
+    50%  {background-color:blue; left:100px; top:100px;}
+    75%  {background-color:green; left:0px; top:100px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+
+/* CSS3 BORDER IMAGES: 1 */
+  #border-img-1 {
+    border: 15px solid transparent;
+    padding: 20px;
+
+    /* Safari 3.1-5 */
+    -webkit-border-image: url(images/border.png) 25 round;
+    -webkit-border-image-width: 10px;
+
+    /* Opera 11-12.1 */
+    -o-border-image: url(images/border.png) 25 round;
+    -o-border-image-width: 10px;
+
+    /* Standard - Note: This has to go after Safari & Opera. Otherwise, it fills in the middle as well as the border. The word "round" makes an effect where the middle sections of the image are repeated to create the border.*/
+    border-image: url(images/border.png) 25 round;
+    border-image-width: 10px;
+  }
+
+/* CSS3 BORDER IMAGES: 2 */
+  #border-img-2 {
+    border: 15px solid transparent;
+    padding: 20px;
+
+    /* Safari 3.1-5 */
+    -webkit-border-image: url(images/border.png) 20 stretch;
+
+    /* Opera 11-12.1 */
+    -o-border-image: url(images/border.png) 20 stretch;
+
+    /* Standard - Note: This has to go after Safari & Opera. Otherwise, it fills in the middle as well as the border. The word "stretch" causes the middle sections of the image are stretched to create the border. */
+    border-image: url(images/border.png) 20 stretch;
+  }
+
+/* CSS3 BORDER IMAGES: 3 */
+  #border-img-3 {
+    border: 15px solid transparent;
+    padding: 20px;
+
+    /* Safari 3.1-5 */
+    -webkit-border-image: url(images/border.png) 50 round;
+
+    /* Opera 11-12.1 */
+    -o-border-image: url(images/border.png) 50 round;
+
+    /* Standard */
+    border-image: url(images/border.png) 50 round;
+  }
+
+  #border-img-4 {
+    border: 15px solid transparent;
+    padding: 20px;
+
+    /* Safari 3.1-5 */
+    -webkit-border-image: url(images/border.png) 20% round;
+
+    /* Opera 11-12.1 */
+    -o-border-image: url(images/border.png) 20% round;
+
+    /* Standard */
+    border-image: url(images/border.png) 20% round;
+  }
+
+  #border-img-5 {
+    border: 15px solid transparent;
+    padding: 20px;
+
+    /* Safari 3.1-5 */
+    -webkit-border-image: url(images/border.png) 30% round;
+
+    /* Opera 11-12.1 */
+    -o-border-image: url(images/border.png) 30% round;
+
+    /* Standard */
+    border-image: url(images/border.png) 30% round;
+  }
+
+/* CSS3 BORDERS-ROUNDED CORNERS: 1 */
+  #rounded-corners-example-1 {
+    border-radius: 30px;
+    background: #ffb3b3;
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+  }
+
+  #rounded-corners-example-2 {
+    border-radius: 30px;
+    border: 5px solid #ffb3b3;
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+  }
+
+  #rounded-corners-example-3 {
+    border-radius: 30px;
+    background: url(images/paper.gif);
+    background-position: left top;
+    background-repeat: repeat;
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+  }
+
+/* CSS3 BORDERS-ROUNDED CORNERS: 2 */
+  #rounded-corners-example-4 {
+    border-radius: 20px 80px 40px 5px;
+    background: #ff4d4d;
+    color: #FFF;
+    width: 350px;
+    height: 150px;
+    padding: 20px;
+  }
+
+  #rounded-corners-example-5 {
+    border-radius: 5px 80px 30px;
+    background: #00bfff;
+    width: 350px;
+    height: 150px;
+    padding: 20px;
+  }
+
+  #rounded-corners-example-6 {
+    border-radius: 8px 200px;
+    background: #00ff80;
+    width: 350px;
+    height: 150px;
+    padding: 20px;
+  }
+
+/* CSS3 TRANSITIONS: 1 */
+  div#change-width-and-color {
+    width: 150px;
+    height: 150px;
+    background: yellow;
+    transition: width 2s, background 2s;
+
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 2s, background 2s;
+  }
+
+  div#change-width-and-color:hover {
+    width: 100%;
+    background: red;
+  }
+
+/* CSS3 TRANSITIONS: 2 */
+  div#change-width-height-border-and-color {
+    width: 150px;
+    height: 150px;
+    background: blue;
+    border: none;
+    transition: width 2s, height 4s, background 2s, border 6s;
+
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 2s, height 4s, background 2s, border 6s;
+  }
+
+  div#change-width-height-border-and-color:hover {
+    width: 350px;
+    height: 350px;
+    background: orange;
+    border: 5px solid black;
+  }
+
+/* CSS3 TRANSITIONS: 3 */
+  div.change-width-and-color-3 {
+    width: 170px;
+    height: 50px;
+    background: pink;
+    border: none;
+    transition: width 2s, background 2s;
+
+    /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 2s, background 2s;
+  }
+
+  div.change-width-and-color-3:hover {
+    width: 100%;
+    background: green;
+    color: white;
+  }
+
+  /* Standard syntax */
+  #ease {transition-timing-function: ease;}
+  #linear {transition-timing-function: linear;}
+  #ease-in {transition-timing-function: ease-in;}
+  #ease-out {transition-timing-function: ease-out;}
+  #ease-in-out {transition-timing-function: ease-in-out;}
+  /* Values for cubic-bezier need to be between 0 and 1. */
+  #cubic-bezier {transition-timing-function: cubic-bezier(1,0.5,1,0.5);}
+
+  /* For Safari 3.1 to 6.0 */
+  #ease {-webkit-transition-timing-function: ease;}
+  #linear {-webkit-transition-timing-function: linear;}
+  #ease-in {-webkit-transition-timing-function: ease-in;}
+  #ease-out {-webkit-transition-timing-function: ease-out;}
+  #ease-in-out {-webkit-transition-timing-function: ease-in-out;}
+  #cubic-bezier {-webkit-transition-timing-function: cubic-bezier(1,0.5,1,0.5);}
 </style>
 
 <body>
@@ -337,10 +700,60 @@
 
     <p style="padding-bottom:150px"></p>
   </section>
-<!-- topic# --> <!--
-  <section id="topic#">
-      INPUT HERE
-  </section> -->
+<!-- CSS3 ANIMATIONS: 7 -->
+  <section id="css3animations7">
+    <h3 class="text-info">Run Animation in Reverse Direction</h3>
+    <p><b>This example will run the animation infinite times which means the animation will continue forever.</b></p>
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <div class="anim7"></div>
+
+    <p style="padding-bottom:150px"></p>
+  </section>
+<!-- CSS3 ANIMATIONS: 8 -->
+  <section id="css3animations8">
+    <h3 class="text-info">Run Animation in Alternate Cycles</h3>
+    <p><b>This example will run the animation infinite times which means the animation will continue forever.</b></p>
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <div class="anim8"></div>
+
+    <p style="padding-bottom:150px"></p>
+  </section>
+<!-- CSS3 ANIMATIONS: 9 -->
+  <section id="css3animations9">
+    <h3 class="text-info">Specify the Speed Curve of the Animation</h3>
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+    <p><b>animation-timing-function: linear;</b></p>
+    <p><i>(specifies an animation with the same speed from start to end)</i></p>
+    <div id="div1" class="anim9"></div>
+    <p><b>animation-timing-function: ease;</b></p>
+    <p><i>(specifies an animation with a slow start, then fast, then end slowly: this is default)</i></p>
+    <div id="div2" class="anim9"></div>
+    <p><b>animation-timing-function: ease-in;</b></p>
+    <p><i>(specifies an animation with a slow start)</i></p>
+    <div id="div3" class="anim9"></div>
+    <p><b>animation-timing-function: ease-out;</b></p>
+    <p><i>(specifies an animation with a slow end)</i></p>
+    <div id="div4" class="anim9"></div>
+    <p><b>animation-timing-function: ease-in-out;</b></p>
+    <p><i>(specifies an animation with a slow start and end)</i></p>
+    <div id="div5" class="anim9"></div>
+    <p><b>animation-timing-function: cubic-bezier(1,2,3,4);</b></p>
+    <p><i>(lets you define your own values in a cubic-bezier function)</i></p>
+    <div id="div6" class="anim9"></div>
+  </section>
+<!-- CSS3 ANIMATIONS: 10 -->
+  <section id="css3animations10">
+    <h3 class="text-info">Run Animation in Reverse Direction</h3>
+    <p><b>This example will run the animation infinite times which means the animation will continue forever.</b></p>
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <div class="anim10"></div>
+
+    <p style="padding-bottom:150px"></p>
+  </section>
+<!-- CSS3 ANIMATIONS: 11 -->
   <section id="css3animations11">
     <svg>
       <g> <!-- g tag is the group tag for svg -->
@@ -349,6 +762,210 @@
       </g>
     </svg>
   </section>
+<!-- CSS3 BORDER IMAGES: 1 -->
+  <section id="css3borderimages1">
+    <h3 class="text-info">Border-image Property</h3>
+
+    <p>The border-image property specifies an image to be used as the border around an element:</p>
+
+    <p id="border-img-1">Here, the middle sections of the image are repeated to create the border.</p>
+
+    <p>Here is the original image:</p>
+    <img src="images/border.png">
+
+    <p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p>
+  </section>
+<!-- CSS3 BORDER IMAGES: 2 -->
+  <section id="css3borderimages2">
+    <h3 class="text-info">Border-image Property: Middle Sections Stretched</h3>
+
+    <p>The border-image property specifies an image to be used as the border around an element:</p>
+
+    <p id="border-img-2">Here, the middle sections of the image are stretched to create the border.</p>
+
+    <p>Here is the original image:</p>
+    <img src="images/border.png">
+
+    <p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p>
+  </section>
+<!-- CSS3 BORDER IMAGES: 3 -->
+  <section id="css3borderimages3">
+    <h3 class="text-info">Different Slice Values</h3>
+
+    <p id="border-img-3">border-image: url(images/border.png) 50 round;</p>
+
+    <p id="border-img-4">border-image: url(images/border.png) 20% round;</p>
+
+    <p id="border-img-5">border-image: url(images/border.png) 30% round;</p>
+
+    <p>Here is the original image:</p>
+    <img src="images/border.png">
+
+    <p><strong>Note:</strong> Internet Explorer 10, and earlier versions, do not support the border-image property.</p>
+  </section>
+<!-- CSS3 BORDERS-ROUNDED CORNERS: 1 -->
+  <section id="css3bordersroundedcorners1">
+    <h3 class="text-info">CSS3 border-radius Property</h3>
+
+    <p>The border-radius property allows you to add rounded corners to elements.</p>
+
+    <p>Rounded corners for an element with a specified background color:</p>
+    <div id="rounded-corners-example-1">
+      <pre>
+        #rounded-corners-example-1 {
+          border-radius: 30px;
+          background: #ffb3b3;
+          width: 300px;
+          height: 150px;
+          padding: 20px;
+        }
+      </pre>
+    </div>
+
+    <p>Rounded corners for an element with a border:</p>
+    <div id="rounded-corners-example-2">
+      <pre>
+        #rounded-corners-example-2 {
+          border-radius: 30px;
+          border: 5px solid #ffb3b3;
+          width: 300px;
+          height: 150px;
+          padding: 20px;
+        }
+      </pre>
+    </div>
+
+    <p>Rounded corners for an element with a background image:</p>
+    <div id="rounded-corners-example-3">
+      <pre>
+        #rounded-corners-example-3 {
+          border-radius: 30px;
+          background: url(images/paper.gif);
+          background-position: left top;
+          background-repeat: repeat;
+          width: 300px;
+          height: 150px;
+          padding: 20px;
+        }
+      </pre>
+    </div>
+  </section>
+<!-- CSS3 BORDERS-ROUNDED CORNERS: 2 -->
+  <section id="css3bordersroundedcorners2">
+    <h3 class="text-info">CSS3 border-radius - Specify Each Corner</h3>
+
+    <p>The border-radius property allows you to add rounded corners to elements.</p>
+
+    <p><b>Four values:</b> first value applies to top-left, second value applies to top-right, third value applies to bottom-right, and fourth value applies to bottom-left corner</p>
+    <div id="rounded-corners-example-4">
+      <pre>
+        #rounded-corners-example-4 {
+          border-radius: 20px 80px 40px 5px;
+          background: #ff4d4d;
+          color: #FFF;
+          width: 350px;
+          height: 150px;
+          padding: 20px;
+        }
+      </pre>
+    </div>
+
+    <p><b>Three values:</b> first value applies to top-left, second value applies to top-right and bottom-left, and third value applies to bottom-right</p>
+    <div id="rounded-corners-example-5">
+      <pre>
+        #rounded-corners-example-5 {
+          border-radius: 5px 80px 30px;
+          background: #00bfff;
+          width: 350px;
+          height: 150px;
+          padding: 20px;
+        }
+      </pre>
+    </div>
+
+    <p><b>Two values:</b> first value applies to top-left and bottom-right corner, and the second value applies to top-right and bottom-left corner</p>
+    <div id="rounded-corners-example-6">
+      <pre>
+        #rounded-corners-example-6 {
+          border-radius: 8px 200px;
+          background: #00ff80;
+          width: 350px;
+          height: 150px;
+          padding: 20px;
+        }
+      </pre>
+    </div>
+  </section>
+<!-- CSS3 TRANSITIONS: 1 -->
+  <section id="css3transitions1">
+    <h3 class="text-info">How to Use CSS3 Transitions</h3>
+
+    <p>To create a transition effect, you must specify two things:</p>
+    <div style="margin-left:15px">
+      <li>the CSS property you want to add an effect to</li>
+      <li>the duration of the effect</li>
+    </div>
+
+    <p style="color:red">Hover over the square (the div element below) to see the transition effect.</p>
+
+    <div id="change-width-and-color"></div>
+
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+  </section>
+<!-- CSS3 TRANSITIONS: 2 -->
+  <section id="css3transitions2">
+    <h3 class="text-info">Change Several Property Values</h3>
+
+    <p>In this example, the width, height, background (color), and border change.</p>
+
+    <p>To create a transition effect, you must specify two things:</p>
+    <div style="margin-left:15px">
+      <li>the CSS property you want to add an effect to</li>
+      <li>the duration of the effect</li>
+    </div>
+
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <p style="color:red">Hover over the square (the div element below) to see the transition effect.</p>
+
+    <div id="change-width-height-border-and-color" style="float:left"></div>
+
+    <div style="padding-bottom:350px"></div>
+  </section>
+<!-- CSS3 TRANSITIONS: 3 -->
+  <section id="css3transitions3">
+    <h3 class="text-info">Specify the Speed Curve of the Transition</h3>
+
+    <p>The transition-timing-function property specifies the speed curve of the transition effect.</p>
+
+    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+    <p><b>The transition-timing-function property can have the following values:</b></p>
+    <p style="color:red">Hover over each of the pink rectangles below to see the transition effect.</p>
+    <div style="margin-left:15px">
+      <li><span style="color:red;">ease</span> - specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+      <div id="ease" class="change-width-and-color-3">ease</div><br>
+
+      <li><span style="color:red;">linear</span> - specifies a transition effect with the same speed from start to end</li>
+      <div id="linear" class="change-width-and-color-3">linear</div><br>
+
+      <li><span style="color:red;">ease-in</span> - specifies a transition effect with a slow start</li>
+      <div id="ease-in" class="change-width-and-color-3">ease-in</div><br>
+
+      <li><span style="color:red;">ease-out</span> - specifies a transition effect with a slow end</li>
+      <div id="ease-out" class="change-width-and-color-3">ease-out</div><br>
+
+      <li><span style="color:red;">ease-in-out</span> - specifies a transition effect with a slow start and end</li>
+      <div id="ease-in-out" class="change-width-and-color-3">ease-in-out</div><br>
+
+      <li><span style="color:red;">cubic-bezier(n,n,n,n)</span> - lets you define your own values in a cubic-bezier function</li>
+      <div id="cubic-bezier" class="change-width-and-color-3">cubic-bezier(1,0.5,1,0.5)</div>
+    </div>
+  </section>
+<!-- topic# --> <!--
+  <section id="topic#">
+      INPUT HERE
+  </section> -->
 </main>
 
 <script>

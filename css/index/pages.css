@@ -328,3 +328,15 @@ pre {
   box-shadow: 0 2px #777;
   transform: translateY(0.5px);
 }
+
+/* Text-Overflow for jQuery Mobile Collapsible Buttons */
+.text-overflow  a {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.text-overflow a:hover {
+    text-overflow: inherit !important;
+    overflow: visible !important;
+}
