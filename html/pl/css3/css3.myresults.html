@@ -688,6 +688,90 @@
   }
 
 /* CSS3 2D TRANSFORMS: 1 */
+  div.transforms-2d-1-original {
+    position:absolute;
+    float:left;
+    width: 380px;
+    height: 120px;
+    background-color: #ff4d4d;
+    border: 1px solid darkred;
+    color: #fff;
+  }
+
+  div.transforms-2d-1 {
+    width: 380px;
+    height: 120px;
+    background-color: red;
+    border: 1px solid darkred;
+    color: #fff;
+
+    /* Standard Syntax */
+    transform: translate(20px,40px);
+
+    /* IE 9 */
+    -ms-transform: translate(20px,40px);
+
+    /* Safari */
+    -webkit-transform: translate(20px,40px);
+  }
+
+/* CSS3 2D TRANSFORMS: 2 */
+  div.transforms-2d-2-original {
+    position:absolute;
+    float:left;
+    width: 200px;
+    height: 75px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid darkred;
+  }
+
+  div#rotate-clockwise-135-degrees {
+    width: 200px;
+    height: 75px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid darkred;
+
+    /* Standard Syntax */
+    transform: rotate(135deg);
+
+    /* IE 9 */
+    -ms-transform: rotate(135deg);
+
+    /* Safari */
+    -webkit-transform: rotate(135deg);
+  }
+
+/* CSS3 2D TRANSFORMS: 3 */
+  div.transforms-2d-3-original {
+    position:absolute;
+    float:left;
+    width: 200px;
+    height: 75px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid darkred;
+  }
+
+  div#rotate-counter-clockwise-45-degrees {
+    width: 200px;
+    height: 75px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid darkred;
+
+    /* Standard Syntax */
+    transform: rotate(-45deg);
+
+    /* IE 9 */
+    -ms-transform: rotate(-45deg);
+
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+  }
+
+/* CSS3 2D TRANSFORMS: 4 */
   
 </style>
 
@@ -1077,6 +1161,52 @@
   </section>
 <!-- CSS3 2D TRANSFORMS: 1 -->
   <section id="css32dtransforms1">
+    <h3 class="text-info">The translate() Method</h3>
+
+    <div class="transforms-2d-1-original">Original - before translate method applied</div>
+
+    <div class="transforms-2d-1">
+      <p>This example moves the &lt;div&gt; element 20 pixels to the right, and 40 pixels down from its current position.</p>
+    </div>
+
+    <div style="padding-bottom:30px"></div>
+  </section>
+<!-- CSS3 2D TRANSFORMS: 2 -->
+  <section id="css32dtransforms2">
+    <h3 class="text-info">The rotate() Method: Clockwise</h3>
+
+    <div style="padding-bottom:50px"></div>
+
+    <div class="transforms-2d-2-original">
+      Original<br>
+      &lt;div&gt;
+    </div>
+
+    <div id="rotate-clockwise-135-degrees">
+      <p>This example rotates the &lt;div&gt; element clockwise 135 degrees.</p>
+    </div>
+
+    <div style="padding-bottom:50px"></div>
+  </section>
+<!-- CSS3 2D TRANSFORMS: 3 -->
+  <section id="css32dtransforms3">
+    <h3 class="text-info">The rotate() Method: Counter-Clockwise</h3>
+
+    <div style="padding-bottom:50px"></div>
+
+    <div class="transforms-2d-3-original">
+      Original<br>
+      &lt;div&gt;
+    </div>
+
+    <div id="rotate-counter-clockwise-45-degrees">
+      <p>This example rotates the &lt;div&gt; element counter-clockwise 45 degrees.</p>
+    </div>
+
+    <div style="padding-bottom:50px"></div>
+  </section>
+<!-- CSS3 2D TRANSFORMS: 4 -->
+  <section id="css32dtransforms4">
       INPUT HERE
   </section>
 <!-- topic# --> <!--
