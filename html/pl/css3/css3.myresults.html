@@ -772,7 +772,109 @@
   }
 
 /* CSS3 2D TRANSFORMS: 4 */
-  
+  div.transforms-2d-4-original {
+    position:absolute;
+    float:left;
+    width: 125px;
+    height: 62px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid darkred;
+  }
+
+  div#scale-2x-width-3x-height {
+    width: 125px;
+    height: 62px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid darkred;
+
+    margin-top: 150px;
+    margin-left: 62px;
+    /* Standard Syntax */
+    transform: scale(2,3);
+
+    /* IE 9 */
+    -ms-transform: scale(2,3);
+
+    /* Safari */
+    -webkit-transform: scale(2,3);
+  }
+
+  p.do-not-scale-text {
+    width: 250px;
+    position: relative;
+    top: -33px;
+    left: -62px;
+    transform: scale(0.5,0.3);
+  }
+
+/* CSS3 2D TRANSFORMS: 5 */
+  div.transforms-2d-5-original {
+    width: 430px;
+    height: 300px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid darkred;
+  }
+
+  div#scale-half-width-quarter-height {
+    width: 430px;
+    height: 300px;
+    background-color: red;
+    color: #fff;
+    border: 1px solid darkred;
+
+    position:relative;
+    top:-100px;
+    left:-108px;
+    /* Standard Syntax */
+    transform: scale(0.5,0.25);
+
+    /* IE 9 */
+    -ms-transform: scale(0.5,0.25);
+
+    /* Safari */
+    -webkit-transform: scale(0.5,0.25);
+  }
+
+  p.rescale-text-5 {
+    position: relative;
+    width:215px;
+    top: 100px;
+    left: 110px;
+    transform: scale(2,3);
+  }
+
+/* CSS3 2D TRANSFORMS: 6 */
+  div.transforms-2d-6-original {
+    width: 200px;
+    height: 130px;
+    background-color: green;
+    color: #fff;
+    border: 1px solid darkgreen;
+  }
+
+  div#skewx-30-deg {
+    width: 200px;
+    height: 130px;
+    background-color: green;
+    color: #fff;
+    border: 1px solid darkgreen;
+
+    position:relative;
+    top:10px;
+    left:39px;
+
+    /* Standard Syntax */
+    transform: skewX(30deg);
+
+    /* IE 9 */
+    -ms-transform: skewX(30deg);
+
+    /* Safari */
+    -webkit-transform: skewX(30deg);
+  }
 </style>
 
 <body>
@@ -1207,7 +1309,41 @@
   </section>
 <!-- CSS3 2D TRANSFORMS: 4 -->
   <section id="css32dtransforms4">
-      INPUT HERE
+    <h3 class="text-info">The scale() Method: Increasing Size</h3>
+
+    <div class="transforms-2d-4-original">
+      Original &lt;div&gt;
+    </div>
+
+    <div id="scale-2x-width-3x-height">
+      <p class="do-not-scale-text">This example increases the &lt;div&gt; element to be two times of its original width, and three times of its original height.</p>
+    </div>
+
+    <div style="padding-bottom:50px"></div>
+  </section>
+<!-- CSS3 2D TRANSFORMS: 5 -->
+  <section id="css32dtransforms5">
+    <h3 class="text-info">The scale() Method: Decreasing Size</h3>
+
+    <div class="transforms-2d-5-original">
+      <p>Original &lt;div&gt;</p>
+    </div>
+
+    <div id="scale-half-width-quarter-height">
+      <p class="rescale-text-5">This example decreases the &lt;div&gt; element to be half of its original width and a quarter of its original height.</p>
+    </div>
+  </section>
+<!-- CSS3 2D TRANSFORMS: 6 -->
+  <section id="css32dtransforms6">
+    <h3 class="text-info">The skewX() Method</h3>
+
+    <div class="transforms-2d-6-original">
+      Original &lt;div&gt;
+    </div>
+
+    <div id="skewx-30-deg">
+      <p>This example skews the &lt;div&gt; element 30 degrees along the X-axis.</p>
+    </div>
   </section>
 <!-- topic# --> <!--
   <section id="topic#">
