@@ -875,6 +875,66 @@
     /* Safari */
     -webkit-transform: skewX(30deg);
   }
+
+/* CSS3 2D TRANSFORMS: 7 */
+  div.transforms-2d-7-original {
+    width: 200px;
+    height: 130px;
+    background-color: green;
+    color: #fff;
+    border: 1px solid darkgreen;
+  }
+
+  div#skewy-30-deg {
+    width: 200px;
+    height: 130px;
+    background-color: green;
+    color: #fff;
+    border: 1px solid darkgreen;
+
+    position:relative;
+    top:65px;
+    left:0px;
+
+    /* Standard Syntax */
+    transform: skewY(30deg);
+
+    /* IE 9 */
+    -ms-transform: skewY(30deg);
+
+    /* Safari */
+    -webkit-transform: skewY(30deg);
+  }
+
+/* CSS3 2D TRANSFORMS: 8 */
+  div.transforms-2d-8-original {
+    width: 200px;
+    height: 130px;
+    background-color: blue;
+    color: white;
+    border: 1px solid darkblue;
+  }
+
+  div#skew-30deg-x-40deg-y {
+    width: 200px;
+    height: 130px;
+    background-color: blue;
+    color: white;
+    border: 1px solid darkblue;
+
+    position:relative;
+    top:90px;
+    left:12px;
+
+    /* Standard Syntax */
+    transform: skew(10deg,40deg);
+
+    /* IE 9 */
+    -ms-transform: skew(10deg,40deg);
+
+    /* Safari */
+    -webkit-transform: skew(10deg,40deg);
+  }
 </style>
 
 <body>
@@ -1344,6 +1404,34 @@
     <div id="skewx-30-deg">
       <p>This example skews the &lt;div&gt; element 30 degrees along the X-axis.</p>
     </div>
+  </section>
+<!-- CSS3 2D TRANSFORMS: 7 -->
+  <section id="css32dtransforms7">
+    <h3 class="text-info">The skewY() Method</h3>
+
+    <div class="transforms-2d-7-original">
+      Original &lt;div&gt;
+    </div>
+
+    <div id="skewy-30-deg">
+      <p>This example skews the &lt;div&gt; element 30 degrees along the Y-axis.</p>
+    </div>
+
+    <div style="padding-bottom:110px"></div>
+  </section>
+<!-- CSS3 2D TRANSFORMS: 8 -->
+  <section id="css32dtransforms8">
+    <h3 class="text-info">The skew() Method</h3>
+
+    <div class="transforms-2d-8-original">
+      Original &lt;div&gt;
+    </div>
+
+    <div id="skew-30deg-x-40deg-y">
+      <p>This example skews the &lt;div&gt; element 10 degrees along the X-axis, and 40 degrees along the Y-axis.</p>
+    </div>
+
+    <div style="padding-bottom:160px"></div>
   </section>
 <!-- topic# --> <!--
   <section id="topic#">
