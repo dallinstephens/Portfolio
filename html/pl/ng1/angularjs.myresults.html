@@ -8,7 +8,7 @@
 <body>
 
 <main id="my-result-code-ng1" ng-app="CombineModule">
-<!-- applications1 -->
+<!-- APPLICATIONS: 1 -->
   <section id="applications1" ng-controller="MyController0">
     <p>Try changing the first and last names.</p>
     <div ng-app="MyModule0" ng-controller="MyController0">
@@ -26,7 +26,7 @@
       <p>Example Sentence: <span style="color:red;">{{"My name is " + firstName + " " + lastName + "."}}</span></p>
     </div>
   </section>
-<!-- applications2 -->
+<!-- APPLICATIONS: 2 -->
   <section id="applications2" ng-controller="MyController1">
     <div ng-app="MyModule1" ng-controller="MyController1">
       <ul style="margin-left:20px; list-style-type: disc !important;">
@@ -39,7 +39,7 @@
       <p>Click the small red x to remove an item from the grocery list.</p>
     </div>
   </section>
-<!-- directives1 -->
+<!-- DIRECTIVES: 1 -->
   <section id="directives1" ng-controller="MyController2">
     <div ng-app="MyModule2" ng-init="first.name='Dallin'">
 
@@ -47,7 +47,7 @@
 
     </div>
   </section>
-<!-- directives2 -->
+<!-- DIRECTIVES: 2 -->
   <section id="directives2" ng-controller="MyController3">
     <div ng-app="MyModule3" ng-init="vegetableName='asparagus'">
 
@@ -59,7 +59,7 @@
 
     </div>
   </section>
-<!-- directives3 -->
+<!-- DIRECTIVES: 3 -->
   <section id="directives3" ng-controller="MyController4">
     <div ng-app="MyModule4" ng-init="numberofproteinbars=15; pricefor1proteinbar=2">
       <h2 style="margin-top:0;">Cost Calculator</h2>
@@ -83,7 +83,7 @@
       </table>
     </div>
   </section>
-<!-- directives4 -->
+<!-- DIRECTIVES: 4 -->
   <section id="directives4" ng-controller="MyController5">
     <div ng-app="MyModule5" ng-init="fruits=['apples','oranges','grapefruits','pears','grapes', 'tangerines', 'peaches', 'pineapples']">
       <p>The directive ng-repeat is used for looping.</p>
@@ -94,7 +94,7 @@
       </ul>
     </div>
   </section>
-<!-- directives5 -->
+<!-- DIRECTIVES: 5 -->
   <section id="directives5" ng-controller="MyController6">
     <div ng-app="MyModule6" ng-init="people=[
         {name:'Henry',age:'59'},
@@ -110,19 +110,19 @@
       </ul>
     </div>
   </section>
-<!-- directives6 -->
+<!-- DIRECTIVES: 6 -->
   <section id="directives6" ng-controller="MyController7">
     <div ng-app="MyModule7">
       <directive-created-by-dallin></directive-created-by-dallin>
     </div>
   </section>
-<!-- directives7 -->
+<!-- DIRECTIVES: 7 -->
   <section id="directives7" ng-controller="MyController8">
     <div ng-app="MyModule8">
       <!-- directive: my-directive -->
     </div>
   </section>
-<!-- directives8 -->
+<!-- DIRECTIVES: 8 -->
   <section id="directives8" ng-controller="MyController9">
     <div ng-app="MyModule9">
       <my-directive-2></my-directive-2>
@@ -131,13 +131,13 @@
       <!-- directive: my-directive-2 -->
     </div>
   </section>
-<!-- expressions1 -->
+<!-- EXPRESSIONS: 1 -->
   <section id="expressions1" ng-controller="MyController10">
     <div ng-app="MyModule10">
       <p>Math is computed in this expression: {{ 5*2 + 3 }}</p>
     </div>
   </section>
-<!-- expressions2 -->
+<!-- EXPRESSIONS: 2 -->
   <section id="expressions2" ng-controller="MyController11">
     <div ng-app="MyModule11">
       <p>Expressions are written inside double curly braces.</p>
@@ -149,13 +149,25 @@
       <p><b style="color:red;">{{fruit}}</b></p><br>
     </div>
   </section>
-<!-- expressions3 -->
+<!-- EXPRESSIONS: 3 -->
   <section id="expressions3" ng-controller="MyController12">
     <div ng-app="MyModule12" ng-init="myColor='pink'">
 
       <p>Change the color of the input box by changing the value of the input field.</p>
 
       <input style="background-color:{{myColor}}" ng-model="myColor" value="{{myColor}}">
+
+    </div>
+  </section>
+<!-- EXPRESSIONS: 4 -->
+  <section id="expressions4" ng-controller="MyController13">
+    <div ng-app="MyModule13" ng-init="quantity=7; cost=2.25">
+
+      <p>Each toy car costs $2.25. Jimmy bought 7 toy cars.</p>
+
+      <p>Therefore, the total in dollars is ${{quantity*cost | number:2}}.</p>
+
+      <!-- Note: number:2 rounds the answer to 2 decimal places. -->
 
     </div>
   </section>
